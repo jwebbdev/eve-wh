@@ -34,6 +34,7 @@ class RollingShip:
     name: str
     cold_mass: int       # Base mass in kg (no prop mod)
     hot_mass: int        # Mass with MWD/AB active
+    zpm_mass: int | None = None  # Mass with Zero-Point Mass Entangler (HICs only, None = N/A)
 
 
 @dataclass

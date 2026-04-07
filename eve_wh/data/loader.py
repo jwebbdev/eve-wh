@@ -39,6 +39,7 @@ def load_common_ships() -> list[RollingShip]:
             name=s["name"],
             cold_mass=s["cold_mass"],
             hot_mass=s["hot_mass"],
+            zpm_mass=s.get("zpm_mass"),
         )
         for s in data["ships"]
     ]

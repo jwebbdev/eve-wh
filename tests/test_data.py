@@ -44,18 +44,28 @@ class TestWormholeTypes:
 class TestCommonShips:
     def test_load_ships(self):
         ships = load_common_ships()
-        assert len(ships) >= 15
+        assert len(ships) == 3  # Praxis, Sigil, Broadsword
 
-    def test_megathron(self):
+    def test_praxis(self):
         ships = load_common_ships()
-        mega = next(s for s in ships if s.name == "Megathron")
-        assert mega.cold_mass == 101_000_000
-        assert mega.hot_mass > mega.cold_mass
+        praxis = next(s for s in ships if s.name == "Praxis")
+        assert praxis.cold_mass == 200_000_000
+        assert praxis.hot_mass == 300_000_000
+        assert praxis.zpm_mass is None
 
     def test_sigil(self):
         ships = load_common_ships()
         sigil = next(s for s in ships if s.name == "Sigil")
-        assert sigil.cold_mass < 20_000_000  # Small enough for medium holes
+        assert sigil.cold_mass == 11_000_000
+        assert sigil.hot_mass == 61_000_000
+        assert sigil.zpm_mass is None
+
+    def test_broadsword_zpm(self):
+        ships = load_common_ships()
+        bs = next(s for s in ships if s.name == "Broadsword")
+        assert bs.cold_mass == 30_000_000
+        assert bs.hot_mass == 130_000_000
+        assert bs.zpm_mass == 1_000_000
 
     def test_hot_always_greater(self):
         ships = load_common_ships()
