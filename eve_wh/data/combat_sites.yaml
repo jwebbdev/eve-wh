@@ -1,0 +1,507 @@
+# Wormhole Combat Sites Database
+# Source: Rykki Atruin spreadsheet + EVE University Wiki (cross-referenced)
+# Blue loot values are fixed ISK drops per site
+# Salvage estimates are community averages (nanoribbon prices vary)
+#
+# type: anomaly | data | relic
+# threats: neut, scram, web, rr (remote rep), ecm
+# trigger: which NPC triggers the next wave
+
+sites:
+  # ============================
+  # CLASS 1
+  # ============================
+  - slug: perimeter-ambush-point
+    name: Perimeter Ambush Point
+    type: anomaly
+    classes: [1]
+    blue_loot: 8600000
+    salvage_est: 3000000
+    waves: 3
+    threats: []
+    notes: "Entry-level anomaly. Safe for T1 cruisers."
+
+  - slug: perimeter-camp
+    name: Perimeter Camp
+    type: anomaly
+    classes: [1]
+    blue_loot: 9600000
+    salvage_est: 3500000
+    waves: 3
+    threats: []
+    notes: "Slightly harder than Ambush Point."
+
+  - slug: phase-catalyst-node
+    name: Phase Catalyst Node
+    type: anomaly
+    classes: [1]
+    blue_loot: 9000000
+    salvage_est: 3000000
+    waves: 3
+    threats: []
+    notes: ""
+
+  - slug: the-line
+    name: The Line
+    type: anomaly
+    classes: [1]
+    blue_loot: 12000000
+    salvage_est: 4000000
+    waves: 3
+    threats: []
+    notes: "Best C1 anomaly by blue loot value."
+
+  - slug: forgotten-perimeter-coronation-platform
+    name: Forgotten Perimeter Coronation Platform
+    type: relic
+    classes: [1]
+    blue_loot: 12800000
+    salvage_est: 4000000
+    waves: 3
+    threats: []
+    notes: "Relic site. Hack after clearing NPCs."
+
+  - slug: forgotten-perimeter-power-array
+    name: Forgotten Perimeter Power Array
+    type: relic
+    classes: [1]
+    blue_loot: 9200000
+    salvage_est: 3000000
+    waves: 3
+    threats: []
+    notes: "Relic site."
+
+  - slug: unsecured-perimeter-amplifier
+    name: Unsecured Perimeter Amplifier
+    type: data
+    classes: [1]
+    blue_loot: 10200000
+    salvage_est: 3500000
+    waves: 3
+    threats: []
+    notes: "Data site."
+
+  - slug: unsecured-perimeter-information-center
+    name: Unsecured Perimeter Information Center
+    type: data
+    classes: [1]
+    blue_loot: 11800000
+    salvage_est: 4000000
+    waves: 3
+    threats: []
+    notes: "Data site. Multi-wave escalations."
+
+  # ============================
+  # CLASS 2
+  # ============================
+  - slug: perimeter-checkpoint
+    name: Perimeter Checkpoint
+    type: anomaly
+    classes: [2]
+    blue_loot: 12900000
+    salvage_est: 5000000
+    waves: 3
+    threats: [neut]
+    notes: "Tower-heavy composition."
+
+  - slug: perimeter-hangar
+    name: Perimeter Hangar
+    type: anomaly
+    classes: [2]
+    blue_loot: 15600000
+    salvage_est: 6000000
+    waves: 3
+    threats: [neut]
+    notes: "Sleepless variants present."
+
+  - slug: sleeper-data-sanctuary
+    name: Sleeper Data Sanctuary
+    type: anomaly
+    classes: [2]
+    blue_loot: 11600000
+    salvage_est: 4500000
+    waves: 3
+    threats: []
+    notes: ""
+
+  - slug: the-ruins-of-enclave-cohort-27
+    name: The Ruins of Enclave Cohort 27
+    type: anomaly
+    classes: [2]
+    blue_loot: 15600000
+    salvage_est: 6000000
+    waves: 3
+    threats: [neut]
+    notes: "Optional wave triggers."
+
+  - slug: forgotten-perimeter-gateway
+    name: Forgotten Perimeter Gateway
+    type: relic
+    classes: [2]
+    blue_loot: 19100000
+    salvage_est: 7000000
+    waves: 3
+    threats: [neut]
+    notes: "Introduces Sleepless-class NPCs."
+
+  - slug: forgotten-perimeter-habitation-coils
+    name: Forgotten Perimeter Habitation Coils
+    type: relic
+    classes: [2]
+    blue_loot: 25400000
+    salvage_est: 9000000
+    waves: 4
+    threats: [neut, rr]
+    notes: "4-wave relic site. Most valuable C2 relic."
+
+  - slug: unsecured-perimeter-comms-relay
+    name: Unsecured Perimeter Comms Relay
+    type: data
+    classes: [2]
+    blue_loot: 20200000
+    salvage_est: 7500000
+    waves: 3
+    threats: [neut]
+    notes: "Sleepless Outguard spawns."
+
+  - slug: unsecured-perimeter-transponder-farm
+    name: Unsecured Perimeter Transponder Farm
+    type: data
+    classes: [2]
+    blue_loot: 26700000
+    salvage_est: 10000000
+    waves: 4
+    threats: [neut, rr]
+    notes: "Most valuable C2 data site. 4 waves."
+
+  # ============================
+  # CLASS 3
+  # ============================
+  - slug: fortification-frontier-stronghold
+    name: Fortification Frontier Stronghold
+    type: anomaly
+    classes: [3]
+    blue_loot: 41100000
+    salvage_est: 15000000
+    waves: 3
+    threats: [neut, rr]
+    notes: ""
+
+  - slug: outpost-frontier-stronghold
+    name: Outpost Frontier Stronghold
+    type: anomaly
+    classes: [3]
+    blue_loot: 45100000
+    salvage_est: 17000000
+    waves: 3
+    threats: [neut, rr]
+    notes: ""
+
+  - slug: solar-cell
+    name: Solar Cell
+    type: anomaly
+    classes: [3]
+    blue_loot: 43000000
+    salvage_est: 16000000
+    waves: 3
+    threats: [neut, scram, rr]
+    notes: "Has scram frigates. Watch out."
+
+  - slug: the-oruze-construct
+    name: The Oruze Construct
+    type: anomaly
+    classes: [3]
+    blue_loot: 44500000
+    salvage_est: 17000000
+    waves: 3
+    threats: [neut, rr]
+    notes: ""
+
+  - slug: forgotten-frontier-quarantine-outpost
+    name: Forgotten Frontier Quarantine Outpost
+    type: relic
+    classes: [3]
+    blue_loot: 79400000
+    salvage_est: 30000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "4 waves. High value but dangerous. Watch for scram frigates."
+
+  - slug: forgotten-frontier-recursive-depot
+    name: Forgotten Frontier Recursive Depot
+    type: relic
+    classes: [3]
+    blue_loot: 92500000
+    salvage_est: 35000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "Most valuable C3 site. 4 waves with heavy ewar."
+
+  - slug: unsecured-frontier-database
+    name: Unsecured Frontier Database
+    type: data
+    classes: [3]
+    blue_loot: 88400000
+    salvage_est: 33000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "High value data site."
+
+  - slug: unsecured-frontier-receiver
+    name: Unsecured Frontier Receiver
+    type: data
+    classes: [3]
+    blue_loot: 75100000
+    salvage_est: 28000000
+    waves: 4
+    threats: [neut, scram, rr]
+    notes: ""
+
+  # ============================
+  # CLASS 4
+  # ============================
+  - slug: frontier-barracks
+    name: Frontier Barracks
+    type: anomaly
+    classes: [4]
+    blue_loot: 86700000
+    salvage_est: 30000000
+    waves: 3
+    threats: [neut, scram, web, rr]
+    notes: ""
+
+  - slug: frontier-command-post
+    name: Frontier Command Post
+    type: anomaly
+    classes: [4]
+    blue_loot: 92300000
+    salvage_est: 33000000
+    waves: 3
+    threats: [neut, scram, web, rr]
+    notes: ""
+
+  - slug: integrated-terminus
+    name: Integrated Terminus
+    type: anomaly
+    classes: [4]
+    blue_loot: 56800000
+    salvage_est: 20000000
+    waves: 3
+    threats: [neut, scram, rr]
+    notes: "Lowest value C4 anomaly."
+
+  - slug: sleeper-information-sanctum
+    name: Sleeper Information Sanctum
+    type: anomaly
+    classes: [4]
+    blue_loot: 86100000
+    salvage_est: 30000000
+    waves: 3
+    threats: [neut, scram, web, rr]
+    notes: ""
+
+  - slug: forgotten-frontier-conversion-module
+    name: Forgotten Frontier Conversion Module
+    type: relic
+    classes: [4]
+    blue_loot: 146500000
+    salvage_est: 50000000
+    waves: 3
+    threats: [neut, scram, web, rr]
+    notes: "Most valuable C4 site."
+
+  - slug: forgotten-frontier-evacuation-center
+    name: Forgotten Frontier Evacuation Center
+    type: relic
+    classes: [4]
+    blue_loot: 91600000
+    salvage_est: 33000000
+    waves: 3
+    threats: [neut, scram, web, rr]
+    notes: ""
+
+  - slug: unsecured-frontier-digital-nexus
+    name: Unsecured Frontier Digital Nexus
+    type: data
+    classes: [4]
+    blue_loot: 130100000
+    salvage_est: 45000000
+    waves: 3
+    threats: [neut, scram, web, rr]
+    notes: "High value data site."
+
+  - slug: unsecured-frontier-trinary-hub
+    name: Unsecured Frontier Trinary Hub
+    type: data
+    classes: [4]
+    blue_loot: 91600000
+    salvage_est: 33000000
+    waves: 3
+    threats: [neut, scram, web, rr]
+    notes: ""
+
+  # ============================
+  # CLASS 5
+  # ============================
+  - slug: core-garrison
+    name: Core Garrison
+    type: anomaly
+    classes: [5]
+    blue_loot: 253400000
+    salvage_est: 80000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "Capital escalation possible. 4 waves."
+
+  - slug: core-stronghold
+    name: Core Stronghold
+    type: anomaly
+    classes: [5]
+    blue_loot: 234900000
+    salvage_est: 75000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "Capital escalation possible."
+
+  - slug: oruze-osobnyk
+    name: Oruze Osobnyk
+    type: anomaly
+    classes: [5]
+    blue_loot: 164700000
+    salvage_est: 55000000
+    waves: 3
+    threats: [neut, scram, web, rr]
+    notes: "No capital escalation."
+
+  - slug: quarantine-area
+    name: Quarantine Area
+    type: anomaly
+    classes: [5]
+    blue_loot: 146900000
+    salvage_est: 50000000
+    waves: 3
+    threats: [neut, scram, web, rr]
+    notes: "No capital escalation."
+
+  - slug: forgotten-core-data-field
+    name: Forgotten Core Data Field
+    type: relic
+    classes: [5]
+    blue_loot: 279000000
+    salvage_est: 90000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "Capital escalation possible."
+
+  - slug: forgotten-core-information-pen
+    name: Forgotten Core Information Pen
+    type: relic
+    classes: [5]
+    blue_loot: 332900000
+    salvage_est: 100000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "Most valuable C5 site. Capital escalation."
+
+  - slug: unsecured-frontier-enclave-relay
+    name: Unsecured Frontier Enclave Relay
+    type: data
+    classes: [5]
+    blue_loot: 329900000
+    salvage_est: 100000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "Capital escalation possible."
+
+  - slug: unsecured-frontier-server-bank
+    name: Unsecured Frontier Server Bank
+    type: data
+    classes: [5]
+    blue_loot: 272100000
+    salvage_est: 85000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "Capital escalation possible."
+
+  # ============================
+  # CLASS 6
+  # ============================
+  - slug: core-bastion
+    name: Core Bastion
+    type: anomaly
+    classes: [6]
+    blue_loot: 445600000
+    salvage_est: 140000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "Highest value anomaly in the game. Capital escalation. Fleet required."
+
+  - slug: core-citadel
+    name: Core Citadel
+    type: anomaly
+    classes: [6]
+    blue_loot: 395000000
+    salvage_est: 120000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "Capital escalation. Fleet required."
+
+  - slug: strange-energy-readings
+    name: Strange Energy Readings
+    type: anomaly
+    classes: [6]
+    blue_loot: 300000000
+    salvage_est: 95000000
+    waves: 3
+    threats: [neut, scram, web, rr]
+    notes: "No capital escalation."
+
+  - slug: the-mirror
+    name: The Mirror
+    type: anomaly
+    classes: [6]
+    blue_loot: 320000000
+    salvage_est: 100000000
+    waves: 3
+    threats: [neut, scram, web, rr]
+    notes: "No capital escalation."
+
+  - slug: forgotten-core-assembly-hall
+    name: Forgotten Core Assembly Hall
+    type: relic
+    classes: [6]
+    blue_loot: 420000000
+    salvage_est: 130000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "Capital escalation. Fleet required."
+
+  - slug: forgotten-core-circuitry-disassembler
+    name: Forgotten Core Circuitry Disassembler
+    type: relic
+    classes: [6]
+    blue_loot: 380000000
+    salvage_est: 120000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "Capital escalation."
+
+  - slug: unsecured-core-backup-array
+    name: Unsecured Core Backup Array
+    type: data
+    classes: [6]
+    blue_loot: 410000000
+    salvage_est: 130000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "Capital escalation. Fleet required."
+
+  - slug: unsecured-core-emergence
+    name: Unsecured Core Emergence
+    type: data
+    classes: [6]
+    blue_loot: 370000000
+    salvage_est: 115000000
+    waves: 4
+    threats: [neut, scram, web, rr]
+    notes: "Capital escalation."
