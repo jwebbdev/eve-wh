@@ -1,0 +1,96 @@
+# Common Rolling Ships
+# cold_mass: base ship mass in kg
+# hot_mass: mass with 100MN MWD active (adds ~50M kg for battleships)
+# Players can add custom ships or modify these values.
+#
+# Note: Higgs Anchor rig doubles mass. The tool applies this separately.
+# These values are WITHOUT Higgs.
+
+ships:
+  # === BATTLESHIPS ===
+  - name: Megathron
+    cold_mass: 101000000
+    hot_mass: 151000000
+
+  - name: Tempest
+    cold_mass: 99400000
+    hot_mass: 149400000
+
+  - name: Apocalypse
+    cold_mass: 103000000
+    hot_mass: 153000000
+
+  - name: Raven
+    cold_mass: 97600000
+    hot_mass: 147600000
+
+  - name: Hyperion
+    cold_mass: 101000000
+    hot_mass: 151000000
+
+  - name: Dominix
+    cold_mass: 102000000
+    hot_mass: 152000000
+
+  - name: Typhoon
+    cold_mass: 100300000
+    hot_mass: 150300000
+
+  - name: Maelstrom
+    cold_mass: 102000000
+    hot_mass: 152000000
+
+  - name: Armageddon
+    cold_mass: 101000000
+    hot_mass: 151000000
+
+  - name: Scorpion
+    cold_mass: 103000000
+    hot_mass: 153000000
+
+  - name: Praxis
+    cold_mass: 99000000
+    hot_mass: 149000000
+
+  - name: Nestor
+    cold_mass: 62500000
+    hot_mass: 112500000
+
+  # === HEAVY INTERDICTION CRUISERS ===
+  - name: Broadsword
+    cold_mass: 14300000
+    hot_mass: 114300000
+
+  - name: Devoter
+    cold_mass: 13500000
+    hot_mass: 113500000
+
+  - name: Onyx
+    cold_mass: 14000000
+    hot_mass: 114000000
+
+  - name: Phobos
+    cold_mass: 13000000
+    hot_mass: 113000000
+
+  # === INDUSTRIAL COMMAND ===
+  - name: Orca
+    cold_mass: 250000000
+    hot_mass: 300000000
+
+  # === HAULERS (for small/medium holes) ===
+  - name: Sigil
+    cold_mass: 11500000
+    hot_mass: 61500000
+
+  - name: Badger
+    cold_mass: 13500000
+    hot_mass: 63500000
+
+  - name: Nereus
+    cold_mass: 12500000
+    hot_mass: 62500000
+
+  - name: Wreathe
+    cold_mass: 11800000
+    hot_mass: 61800000
