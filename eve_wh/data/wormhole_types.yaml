@@ -3,49 +3,49 @@
 # NOTE: Total mass has ±10% variance at spawn. Max jump mass is fixed.
 # Values in kg.
 #
-# size_class: frigate (<5M jump), medium (<20M), large (<300M), very_large (<1B), capital (<1.35B)
+# size_class: frigate (<5M jump), medium (<20M), large (<375M), very_large (<1B), capital (<1.35B)
 
 wormhole_types:
   # === HIGHSEC CONNECTIONS ===
   - id: B274
     destination: Highsec
     total_mass: 2000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 24
     size_class: large
 
   - id: A641
     destination: Highsec
     total_mass: 2000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
   - id: D382
     destination: Highsec
     total_mass: 2000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
   - id: N110
     destination: Highsec
     total_mass: 1000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 24
     size_class: large
 
   - id: Z971
     destination: Highsec
     total_mass: 3000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 24
     size_class: large
 
   - id: R943
     destination: Highsec
     total_mass: 750000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
@@ -53,21 +53,21 @@ wormhole_types:
   - id: A239
     destination: Lowsec
     total_mass: 2000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 24
     size_class: large
 
   - id: J244
     destination: Lowsec
     total_mass: 1000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 24
     size_class: large
 
   - id: U210
     destination: Lowsec
     total_mass: 3000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 24
     size_class: large
 
@@ -82,7 +82,7 @@ wormhole_types:
   - id: K346
     destination: Nullsec
     total_mass: 3000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 24
     size_class: large
 
@@ -96,7 +96,7 @@ wormhole_types:
   - id: N770
     destination: Nullsec
     total_mass: 3000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 24
     size_class: large
 
@@ -118,7 +118,7 @@ wormhole_types:
   - id: E175
     destination: C1
     total_mass: 2000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
@@ -133,21 +133,21 @@ wormhole_types:
   - id: O477
     destination: C2
     total_mass: 2000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
   - id: Y683
     destination: C2
     total_mass: 2000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
   - id: Z647
     destination: C2
     total_mass: 2000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
@@ -155,28 +155,28 @@ wormhole_types:
   - id: M267
     destination: C3
     total_mass: 1000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
   - id: N968
     destination: C3
     total_mass: 2000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
   - id: L031
     destination: C3
     total_mass: 1000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
   - id: O883
     destination: C3
     total_mass: 1000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
@@ -184,21 +184,21 @@ wormhole_types:
   - id: C247
     destination: C4
     total_mass: 2000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
   - id: X877
     destination: C4
     total_mass: 2000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
   - id: O128
     destination: C4
     total_mass: 1000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 24
     size_class: large
 
@@ -220,14 +220,14 @@ wormhole_types:
   - id: D364
     destination: C5
     total_mass: 1000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
   - id: H900
     destination: C5
     total_mass: 3000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 24
     size_class: large
 
@@ -249,7 +249,7 @@ wormhole_types:
   - id: U574
     destination: C6
     total_mass: 3000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 24
     size_class: large
 
@@ -314,7 +314,7 @@ wormhole_types:
   - id: M164
     destination: Thera
     total_mass: 2000000000
-    max_jump_mass: 300000000
+    max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
