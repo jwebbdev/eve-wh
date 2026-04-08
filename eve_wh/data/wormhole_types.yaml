@@ -3,7 +3,7 @@
 # NOTE: Total mass has ±10% variance at spawn. Max jump mass is fixed.
 # Values in kg.
 #
-# size_class: frigate (<5M jump), medium (<20M), large (<375M), very_large (<1B), capital (<1.35B)
+# size_class: frigate (<5M jump), medium (<62M), large (<375M), very_large (<1B), capital (<2B)
 
 wormhole_types:
   # === HIGHSEC CONNECTIONS ===
@@ -74,7 +74,7 @@ wormhole_types:
   - id: N432
     destination: Lowsec
     total_mass: 3000000000
-    max_jump_mass: 1350000000
+    max_jump_mass: 2000000000
     max_stable_hours: 24
     size_class: capital
 
@@ -89,7 +89,7 @@ wormhole_types:
   - id: Z142
     destination: Nullsec
     total_mass: 3000000000
-    max_jump_mass: 1350000000
+    max_jump_mass: 2000000000
     max_stable_hours: 24
     size_class: capital
 
@@ -103,7 +103,7 @@ wormhole_types:
   - id: S199
     destination: Nullsec
     total_mass: 3000000000
-    max_jump_mass: 1350000000
+    max_jump_mass: 2000000000
     max_stable_hours: 24
     size_class: capital
 
@@ -111,7 +111,7 @@ wormhole_types:
   - id: H121
     destination: C1
     total_mass: 500000000
-    max_jump_mass: 20000000
+    max_jump_mass: 62000000
     max_stable_hours: 16
     size_class: medium
 
@@ -125,7 +125,7 @@ wormhole_types:
   - id: Z060
     destination: C1
     total_mass: 1000000000
-    max_jump_mass: 20000000
+    max_jump_mass: 62000000
     max_stable_hours: 16
     size_class: medium
 
@@ -206,7 +206,7 @@ wormhole_types:
   - id: H296
     destination: C5
     total_mass: 3000000000
-    max_jump_mass: 1350000000
+    max_jump_mass: 2000000000
     max_stable_hours: 24
     size_class: capital
 
@@ -235,14 +235,14 @@ wormhole_types:
   - id: V911
     destination: C6
     total_mass: 3000000000
-    max_jump_mass: 1350000000
+    max_jump_mass: 2000000000
     max_stable_hours: 24
     size_class: capital
 
   - id: W237
     destination: C6
     total_mass: 3000000000
-    max_jump_mass: 1350000000
+    max_jump_mass: 2000000000
     max_stable_hours: 24
     size_class: capital
 
@@ -321,6 +321,6 @@ wormhole_types:
   - id: T458
     destination: Thera (small)
     total_mass: 500000000
-    max_jump_mass: 20000000
+    max_jump_mass: 62000000
     max_stable_hours: 16
     size_class: medium
