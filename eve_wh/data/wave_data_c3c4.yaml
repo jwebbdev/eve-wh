@@ -1,0 +1,932 @@
+# Wormhole Combat Site Wave Data - C3 and C4
+# Source: Eve University Wiki (https://wiki.eveuniversity.org)
+# Extracted: 2026-04-06
+#
+# NPC classes: frigate, cruiser, battleship, sentry
+# Threats: web, scram, neut, rr (remote repair)
+# DPS = turret + missile combined
+# EHP = effective hit points
+# Trigger = killing last of this NPC type spawns next wave
+
+# =============================================================================
+# C3 Anomalies
+# =============================================================================
+
+- slug: fortification-frontier-stronghold
+  name: Fortification Frontier Stronghold
+  wh_class: C3
+  site_type: anomaly
+  blue_loot_isk: 41100000
+  notes:
+    - "No warp scrambling NPCs in this site"
+    - "Killing the Awakened Preserver in wave 3 will prematurely despawn the site"
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Defender"
+      npcs:
+        - name: Emergent Defender
+          class: frigate
+          count: 2
+          dps: 24
+          ehp: 4200
+          threats: [web]
+        - name: Awakened Defender
+          class: cruiser
+          count: 2
+          dps: 56
+          ehp: 26833
+          threats: []
+      total_dps: 160
+
+    - name: "Wave 2"
+      trigger: "Awakened Upholder"
+      npcs:
+        - name: Awakened Defender
+          class: cruiser
+          count: 2
+          dps: 56
+          ehp: 26833
+          threats: []
+        - name: Awakened Upholder
+          class: cruiser
+          count: 2
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+      total_dps: 196
+
+    - name: "Wave 3"
+      trigger: "Awakened Preserver (DO NOT KILL - despawns site)"
+      npcs:
+        - name: Awakened Defender
+          class: cruiser
+          count: 2
+          dps: 56
+          ehp: 26833
+          threats: []
+        - name: Awakened Preserver
+          class: cruiser
+          count: 1
+          dps: 76
+          ehp: 16800
+          threats: [rr]
+        - name: Awakened Upholder
+          class: cruiser
+          count: 1
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+        - name: Sleepless Upholder
+          class: battleship
+          count: 1
+          dps: 442
+          ehp: 56400
+          threats: [neut]
+      total_dps: 672
+
+- slug: outpost-frontier-stronghold
+  name: Outpost Frontier Stronghold
+  wh_class: C3
+  site_type: anomaly
+  blue_loot_isk: 45100000
+  notes:
+    - "No neuts in this site"
+    - "Sentries generate high alpha on first wave and drop no loot"
+    - "Sleepless Defenders only web out to 30km"
+  waves:
+    - name: "Wave 1"
+      trigger: "Sleepless Defender"
+      npcs:
+        - name: Wakeful Sentry Tower
+          class: sentry
+          count: 3
+          dps: 74
+          ehp: 15167
+          threats: []
+        - name: Sleepless Defender
+          class: battleship
+          count: 1
+          dps: 364
+          ehp: 94000
+          threats: [web]
+      total_dps: 586
+
+    - name: "Wave 2"
+      trigger: "Awakened Defender"
+      npcs:
+        - name: Awakened Defender
+          class: cruiser
+          count: 4
+          dps: 56
+          ehp: 26833
+          threats: []
+      total_dps: 224
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Emergent Defender
+          class: frigate
+          count: 4
+          dps: 24
+          ehp: 4200
+          threats: [web]
+        - name: Sleepless Defender
+          class: battleship
+          count: 2
+          dps: 364
+          ehp: 94000
+          threats: [web]
+      total_dps: 824
+
+- slug: solar-cell
+  name: Solar Cell
+  wh_class: C3
+  site_type: anomaly
+  blue_loot_isk: 41100000
+  notes:
+    - "Only C3 anomaly that spawns a warp scrambling NPC (Emergent Preserver in wave 1)"
+    - "Killing the Preserver in the final wave prematurely despawns the site"
+  waves:
+    - name: "Wave 1"
+      trigger: "Emergent Preserver"
+      npcs:
+        - name: Emergent Preserver
+          class: frigate
+          count: 1
+          dps: 32
+          ehp: 1820
+          threats: [web, scram, neut]
+        - name: Awakened Upholder
+          class: cruiser
+          count: 1
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+        - name: Sleepless Defender
+          class: battleship
+          count: 1
+          dps: 364
+          ehp: 94000
+          threats: [web]
+      total_dps: 438
+
+    - name: "Wave 2"
+      trigger: "Emergent Upholder"
+      npcs:
+        - name: Emergent Defender
+          class: frigate
+          count: 2
+          dps: 24
+          ehp: 4200
+          threats: [web]
+        - name: Emergent Upholder
+          class: frigate
+          count: 2
+          dps: 18
+          ehp: 2800
+          threats: [neut, rr]
+        - name: Awakened Defender
+          class: cruiser
+          count: 3
+          dps: 56
+          ehp: 26833
+          threats: []
+        - name: Awakened Upholder
+          class: cruiser
+          count: 1
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+      total_dps: 294
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Awakened Defender
+          class: cruiser
+          count: 2
+          dps: 56
+          ehp: 26833
+          threats: []
+        - name: Sleepless Defender
+          class: battleship
+          count: 1
+          dps: 364
+          ehp: 94000
+          threats: [web]
+        - name: Sleepless Preserver
+          class: battleship
+          count: 1
+          dps: 310
+          ehp: 85867
+          threats: [rr]
+      total_dps: 786
+
+- slug: the-oruze-construct
+  name: The Oruze Construct
+  wh_class: C3
+  site_type: anomaly
+  blue_loot_isk: 41600000
+  notes:
+    - "Killing both Awakened Preservers in wave 3 despawns the site"
+    - "Warp to Snake-Shaped Asteroid at 100km to close distance"
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Upholder"
+      npcs:
+        - name: Wakeful Sentry Tower
+          class: sentry
+          count: 2
+          dps: 74
+          ehp: 15167
+          threats: []
+        - name: Awakened Upholder
+          class: cruiser
+          count: 4
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+        - name: Awakened Preserver
+          class: cruiser
+          count: 1
+          dps: 76
+          ehp: 16800
+          threats: [rr]
+      total_dps: 392
+
+    - name: "Wave 2"
+      trigger: "Sleepless Defender"
+      npcs:
+        - name: Emergent Defender
+          class: frigate
+          count: 4
+          dps: 24
+          ehp: 4200
+          threats: [web]
+        - name: Sleepless Defender
+          class: battleship
+          count: 1
+          dps: 364
+          ehp: 94000
+          threats: [web]
+      total_dps: 460
+
+    - name: "Wave 3"
+      trigger: "Awakened Preserver (DO NOT KILL BOTH - despawns site)"
+      npcs:
+        - name: Awakened Preserver
+          class: cruiser
+          count: 2
+          dps: 76
+          ehp: 16800
+          threats: [rr]
+        - name: Sleepless Upholder
+          class: battleship
+          count: 1
+          dps: 442
+          ehp: 56400
+          threats: [neut]
+      total_dps: 594
+
+# =============================================================================
+# C3 Data/Relic Sites
+# =============================================================================
+
+- slug: forgotten-frontier-quarantine-outpost
+  name: Forgotten Frontier Quarantine Outpost
+  wh_class: C3
+  site_type: data
+  blue_loot_isk: 76500000
+  notes:
+    - "Shoot triggers last"
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Preserver"
+      npcs:
+        - name: Emergent Defender
+          class: frigate
+          count: 6
+          dps: 24
+          ehp: 4200
+          threats: [web]
+        - name: Awakened Preserver
+          class: cruiser
+          count: 3
+          dps: 76
+          ehp: 16800
+          threats: [rr]
+      total_dps: 372
+
+    - name: "Wave 2"
+      trigger: "Awakened Defender"
+      npcs:
+        - name: Awakened Defender
+          class: cruiser
+          count: 3
+          dps: 56
+          ehp: 26833
+          threats: []
+        - name: Awakened Preserver
+          class: cruiser
+          count: 2
+          dps: 76
+          ehp: 16800
+          threats: [rr]
+        - name: Awakened Upholder
+          class: cruiser
+          count: 3
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+      total_dps: 446
+
+    - name: "Wave 3"
+      trigger: "Emergent Upholder"
+      npcs:
+        - name: Emergent Upholder
+          class: frigate
+          count: 4
+          dps: 18
+          ehp: 2800
+          threats: [neut, rr]
+        - name: Sleepless Defender
+          class: battleship
+          count: 1
+          dps: 364
+          ehp: 94000
+          threats: [web]
+      total_dps: 436
+
+    - name: "Wave 4"
+      trigger: ~
+      npcs:
+        - name: Emergent Defender
+          class: frigate
+          count: 4
+          dps: 24
+          ehp: 4200
+          threats: [web]
+        - name: Sleepless Preserver
+          class: battleship
+          count: 2
+          dps: 310
+          ehp: 85867
+          threats: [rr]
+      total_dps: 716
+
+- slug: forgotten-frontier-recursive-depot
+  name: Forgotten Frontier Recursive Depot
+  wh_class: C3
+  site_type: data
+  blue_loot_isk: 92500000
+  notes:
+    - "Lots of DPS - shoot triggers last"
+    - "Emergent Preservers have warp disruptors (scram)"
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Defender"
+      npcs:
+        - name: Emergent Preserver
+          class: frigate
+          count: 4
+          dps: 32
+          ehp: 1820
+          threats: [web, scram, neut]
+        - name: Awakened Defender
+          class: cruiser
+          count: 2
+          dps: 56
+          ehp: 26833
+          threats: []
+      total_dps: 240
+
+    - name: "Wave 2"
+      trigger: "Awakened Defender"
+      npcs:
+        - name: Awakened Defender
+          class: cruiser
+          count: 3
+          dps: 56
+          ehp: 26833
+          threats: []
+        - name: Awakened Upholder
+          class: cruiser
+          count: 4
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+      total_dps: 336
+
+    - name: "Wave 3"
+      trigger: "Sleepless Upholder"
+      npcs:
+        - name: Emergent Defender
+          class: frigate
+          count: 2
+          dps: 24
+          ehp: 4200
+          threats: [web]
+        - name: Awakened Upholder
+          class: cruiser
+          count: 2
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+        - name: Sleepless Upholder
+          class: battleship
+          count: 2
+          dps: 442
+          ehp: 56400
+          threats: [neut]
+      total_dps: 1016
+
+    - name: "Wave 4"
+      trigger: ~
+      npcs:
+        - name: Emergent Preserver
+          class: frigate
+          count: 2
+          dps: 32
+          ehp: 1820
+          threats: [web, scram, neut]
+        - name: Awakened Upholder
+          class: cruiser
+          count: 1
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+        - name: Sleepless Upholder
+          class: battleship
+          count: 3
+          dps: 442
+          ehp: 56400
+          threats: [neut]
+      total_dps: 1432
+
+- slug: unsecured-frontier-database
+  name: Unsecured Frontier Database
+  wh_class: C3
+  site_type: relic
+  blue_loot_isk: 88400000
+  notes:
+    - "Fairly serious neuting pressure - logistics beware, energy transfer may be necessary"
+  waves:
+    - name: "Wave 1"
+      trigger: "Emergent Preserver"
+      npcs:
+        - name: Emergent Preserver
+          class: frigate
+          count: 3
+          dps: 32
+          ehp: 1820
+          threats: [web, scram, neut]
+        - name: Awakened Defender
+          class: cruiser
+          count: 3
+          dps: 56
+          ehp: 26833
+          threats: []
+      total_dps: 264
+
+    - name: "Wave 2"
+      trigger: "Awakened Defender"
+      npcs:
+        - name: Awakened Defender
+          class: cruiser
+          count: 4
+          dps: 56
+          ehp: 26833
+          threats: []
+        - name: Awakened Upholder
+          class: cruiser
+          count: 4
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+      total_dps: 392
+
+    - name: "Wave 3"
+      trigger: "Sleepless Upholder"
+      npcs:
+        - name: Emergent Defender
+          class: frigate
+          count: 3
+          dps: 24
+          ehp: 4200
+          threats: [web]
+        - name: Awakened Upholder
+          class: cruiser
+          count: 3
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+        - name: Sleepless Upholder
+          class: battleship
+          count: 1
+          dps: 442
+          ehp: 56400
+          threats: [neut]
+      total_dps: 640
+
+    - name: "Wave 4"
+      trigger: ~
+      npcs:
+        - name: Emergent Preserver
+          class: frigate
+          count: 2
+          dps: 32
+          ehp: 1820
+          threats: [web, scram, neut]
+        - name: Awakened Upholder
+          class: cruiser
+          count: 3
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+        - name: Sleepless Upholder
+          class: battleship
+          count: 2
+          dps: 442
+          ehp: 56400
+          threats: [neut]
+      total_dps: 1074
+
+- slug: unsecured-frontier-receiver
+  name: Unsecured Frontier Receiver
+  wh_class: C3
+  site_type: relic
+  blue_loot_isk: 76500000
+  notes:
+    - "In wave 3, AGGRESSING (not destroying) the battleship triggers wave 4"
+    - "Set drones to passive to avoid accidental aggression"
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Preserver"
+      npcs:
+        - name: Emergent Defender
+          class: frigate
+          count: 5
+          dps: 24
+          ehp: 4200
+          threats: [web]
+        - name: Awakened Preserver
+          class: cruiser
+          count: 3
+          dps: 76
+          ehp: 16800
+          threats: [rr]
+      total_dps: 348
+
+    - name: "Wave 2"
+      trigger: "Awakened Preserver"
+      npcs:
+        - name: Awakened Defender
+          class: cruiser
+          count: 3
+          dps: 56
+          ehp: 26833
+          threats: []
+        - name: Awakened Preserver
+          class: cruiser
+          count: 1
+          dps: 76
+          ehp: 16800
+          threats: [rr]
+        - name: Awakened Upholder
+          class: cruiser
+          count: 3
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+      total_dps: 370
+
+    - name: "Wave 3"
+      trigger: "Sleepless Defender (AGGRO triggers wave 4 - do not shoot until ready)"
+      npcs:
+        - name: Emergent Upholder
+          class: frigate
+          count: 3
+          dps: 18
+          ehp: 2800
+          threats: [neut, rr]
+        - name: Sleepless Defender
+          class: battleship
+          count: 1
+          dps: 364
+          ehp: 94000
+          threats: [web]
+      total_dps: 418
+
+    - name: "Wave 4"
+      trigger: ~
+      npcs:
+        - name: Emergent Defender
+          class: frigate
+          count: 4
+          dps: 24
+          ehp: 4200
+          threats: [web]
+        - name: Sleepless Preserver
+          class: battleship
+          count: 2
+          dps: 310
+          ehp: 85867
+          threats: [rr]
+      total_dps: 716
+
+# =============================================================================
+# C4 Anomalies
+# =============================================================================
+
+- slug: frontier-barracks
+  name: Frontier Barracks
+  wh_class: C4
+  site_type: anomaly
+  blue_loot_isk: 86700000
+  notes: []
+  waves:
+    - name: "Wave 1"
+      trigger: "Sleepless Preserver"
+      npcs:
+        - name: Sleepless Preserver
+          class: battleship
+          count: 1
+          dps: 310
+          ehp: 85867
+          threats: [rr]
+        - name: Sleepless Upholder
+          class: battleship
+          count: 1
+          dps: 442
+          ehp: 56400
+          threats: [neut]
+      total_dps: 752
+
+    - name: "Wave 2"
+      trigger: "Sleepless Upholder"
+      npcs:
+        - name: Awakened Preserver
+          class: cruiser
+          count: 2
+          dps: 76
+          ehp: 16800
+          threats: [rr]
+        - name: Sleepless Upholder
+          class: battleship
+          count: 3
+          dps: 442
+          ehp: 56400
+          threats: [neut]
+      total_dps: 1478
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Emergent Preserver
+          class: frigate
+          count: 3
+          dps: 32
+          ehp: 1820
+          threats: [web, scram, neut]
+        - name: Awakened Preserver
+          class: cruiser
+          count: 4
+          dps: 76
+          ehp: 16800
+          threats: [rr]
+        - name: Sleepless Preserver
+          class: battleship
+          count: 2
+          dps: 310
+          ehp: 85867
+          threats: [rr]
+      total_dps: 1020
+
+- slug: frontier-command-post
+  name: Frontier Command Post
+  wh_class: C4
+  site_type: anomaly
+  blue_loot_isk: 92300000
+  notes: []
+  waves:
+    - name: "Wave 1"
+      trigger: "Emergent Preserver"
+      npcs:
+        - name: Wakeful Sentry Tower
+          class: sentry
+          count: 5
+          dps: 74
+          ehp: 15167
+          threats: []
+        - name: Emergent Defender
+          class: frigate
+          count: 4
+          dps: 24
+          ehp: 4200
+          threats: [web]
+        - name: Emergent Preserver
+          class: frigate
+          count: 4
+          dps: 32
+          ehp: 1820
+          threats: [web, scram, neut]
+      total_dps: 594
+
+    - name: "Wave 2"
+      trigger: "Awakened Defender"
+      npcs:
+        - name: Emergent Upholder
+          class: frigate
+          count: 4
+          dps: 18
+          ehp: 2800
+          threats: [neut, rr]
+        - name: Awakened Defender
+          class: cruiser
+          count: 6
+          dps: 56
+          ehp: 26833
+          threats: []
+        - name: Sleepless Defender
+          class: battleship
+          count: 2
+          dps: 364
+          ehp: 94000
+          threats: [web]
+      total_dps: 1136
+
+    - name: "Wave 3"
+      trigger: "Awakened Preserver"
+      npcs:
+        - name: Awakened Defender
+          class: cruiser
+          count: 2
+          dps: 56
+          ehp: 26833
+          threats: []
+        - name: Awakened Preserver
+          class: cruiser
+          count: 2
+          dps: 76
+          ehp: 16800
+          threats: [rr]
+        - name: Sleepless Preserver
+          class: battleship
+          count: 3
+          dps: 310
+          ehp: 85867
+          threats: [rr]
+      total_dps: 1194
+
+- slug: integrated-terminus
+  name: Integrated Terminus
+  wh_class: C4
+  site_type: anomaly
+  blue_loot_isk: 55300000
+  notes: []
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Defender"
+      npcs:
+        - name: Wakeful Sentry Tower
+          class: sentry
+          count: 4
+          dps: 74
+          ehp: 15167
+          threats: []
+        - name: Emergent Upholder
+          class: frigate
+          count: 3
+          dps: 18
+          ehp: 2800
+          threats: [neut, rr]
+        - name: Awakened Defender
+          class: cruiser
+          count: 4
+          dps: 56
+          ehp: 26833
+          threats: []
+      total_dps: 574
+
+    - name: "Wave 2"
+      trigger: "Awakened Upholder"
+      npcs:
+        - name: Emergent Preserver
+          class: frigate
+          count: 2
+          dps: 32
+          ehp: 1820
+          threats: [web, scram, neut]
+        - name: Awakened Preserver
+          class: cruiser
+          count: 2
+          dps: 76
+          ehp: 16800
+          threats: [rr]
+        - name: Awakened Upholder
+          class: cruiser
+          count: 4
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+      total_dps: 384
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Emergent Defender
+          class: frigate
+          count: 4
+          dps: 24
+          ehp: 4200
+          threats: [web]
+        - name: Emergent Upholder
+          class: frigate
+          count: 2
+          dps: 18
+          ehp: 2800
+          threats: [neut, rr]
+        - name: Sleepless Safeguard
+          class: battleship
+          count: 1
+          dps: 542
+          ehp: 157500
+          threats: [web, scram, neut]
+      total_dps: 674
+
+- slug: sleeper-information-sanctum
+  name: Sleeper Information Sanctum
+  wh_class: C4
+  site_type: anomaly
+  blue_loot_isk: 81800000
+  notes: []
+  waves:
+    - name: "Wave 1"
+      trigger: "Sleepless Preserver"
+      npcs:
+        - name: Awakened Upholder
+          class: cruiser
+          count: 2
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+        - name: Sleepless Preserver
+          class: battleship
+          count: 2
+          dps: 310
+          ehp: 85867
+          threats: [rr]
+        - name: Emergent Upholder
+          class: frigate
+          count: 2
+          dps: 18
+          ehp: 2800
+          threats: [neut, rr]
+      total_dps: 740
+
+    - name: "Wave 2"
+      trigger: "Sleepless Safeguard"
+      npcs:
+        - name: Sleepless Defender
+          class: battleship
+          count: 3
+          dps: 364
+          ehp: 94000
+          threats: [web]
+        - name: Sleepless Safeguard
+          class: battleship
+          count: 1
+          dps: 542
+          ehp: 157500
+          threats: [web, scram, neut]
+      total_dps: 1634
+
+    - name: "Wave 3"
+      trigger: "Awakened Preserver"
+      npcs:
+        - name: Emergent Preserver
+          class: frigate
+          count: 2
+          dps: 32
+          ehp: 1820
+          threats: [web, scram, neut]
+        - name: Emergent Upholder
+          class: frigate
+          count: 3
+          dps: 18
+          ehp: 2800
+          threats: [neut, rr]
+        - name: Awakened Preserver
+          class: cruiser
+          count: 2
+          dps: 76
+          ehp: 16800
+          threats: [rr]
+        - name: Awakened Upholder
+          class: cruiser
+          count: 2
+          dps: 42
+          ehp: 12250
+          threats: [web, neut]
+      total_dps: 354

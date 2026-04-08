@@ -1,0 +1,942 @@
+# Wormhole Combat Site Wave Data — C1 & C2
+# Source: EVE University Wiki (fetched 2026-04-06)
+# DPS = turret + missile combined per ship
+# threats: web, scram, neut, rr (remote rep)
+# Sentry towers are listed but not counted as ships
+
+# ============================
+# CLASS 1 — ANOMALIES
+# ============================
+
+- slug: perimeter-ambush-point
+  name: Perimeter Ambush Point
+  class: 1
+  type: anomaly
+  waves:
+    - name: "Initial Spawn"
+      trigger: "Awakened Escort"
+      npcs:
+        - name: Vigilant Sentry Tower
+          class: sentry
+          count: 2
+          dps: 52
+          threats: []
+        - name: Emergent Escort
+          class: frigate
+          count: 1
+          dps: 24
+          threats: [web]
+        - name: Awakened Escort
+          class: cruiser
+          count: 1
+          dps: 54
+          threats: []
+      total_dps: 182
+
+    - name: "Wave 2"
+      trigger: "Awakened Escort"
+      npcs:
+        - name: Emergent Patroller
+          class: frigate
+          count: 3
+          dps: 18
+          threats: []
+        - name: Awakened Escort
+          class: cruiser
+          count: 2
+          dps: 54
+          threats: []
+      total_dps: 162
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Awakened Escort
+          class: cruiser
+          count: 2
+          dps: 54
+          threats: []
+        - name: Awakened Patroller
+          class: cruiser
+          count: 2
+          dps: 40
+          threats: []
+      total_dps: 188
+
+- slug: perimeter-camp
+  name: Perimeter Camp
+  class: 1
+  type: anomaly
+  waves:
+    - name: "Wave 1"
+      trigger: "Emergent Watchman"
+      npcs:
+        - name: Vigilant Sentry Tower
+          class: sentry
+          count: 2
+          dps: 52
+          threats: []
+        - name: Emergent Patroller
+          class: frigate
+          count: 4
+          dps: 18
+          threats: []
+        - name: Emergent Watchman
+          class: frigate
+          count: 2
+          dps: 14
+          threats: [neut]
+      total_dps: 204
+
+    - name: "Wave 2"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Emergent Patroller
+          class: frigate
+          count: 5
+          dps: 18
+          threats: []
+        - name: Emergent Watchman
+          class: frigate
+          count: 3
+          dps: 14
+          threats: [neut]
+        - name: Awakened Patroller
+          class: cruiser
+          count: 1
+          dps: 40
+          threats: []
+      total_dps: 172
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Emergent Patroller
+          class: frigate
+          count: 2
+          dps: 18
+          threats: []
+        - name: Awakened Patroller
+          class: cruiser
+          count: 2
+          dps: 40
+          threats: []
+        - name: Awakened Watchman
+          class: cruiser
+          count: 1
+          dps: 30
+          threats: [neut]
+      total_dps: 146
+
+- slug: phase-catalyst-node
+  name: Phase Catalyst Node
+  class: 1
+  type: anomaly
+  waves:
+    - name: "Wave 1"
+      trigger: "Vigilant Sentry Tower"
+      npcs:
+        - name: Vigilant Sentry Tower
+          class: sentry
+          count: 4
+          dps: 52
+          threats: []
+        - name: Emergent Escort
+          class: frigate
+          count: 2
+          dps: 24
+          threats: [web]
+        - name: Emergent Watchman
+          class: frigate
+          count: 4
+          dps: 14
+          threats: [neut]
+      total_dps: 312
+
+    - name: "Wave 2"
+      trigger: "Awakened Escort"
+      npcs:
+        - name: Awakened Escort
+          class: cruiser
+          count: 1
+          dps: 54
+          threats: []
+        - name: Awakened Patroller
+          class: cruiser
+          count: 2
+          dps: 40
+          threats: []
+      total_dps: 134
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Emergent Patroller
+          class: frigate
+          count: 6
+          dps: 18
+          threats: []
+        - name: Emergent Watchman
+          class: frigate
+          count: 3
+          dps: 14
+          threats: [neut]
+      total_dps: 150
+
+- slug: the-line
+  name: The Line
+  class: 1
+  type: anomaly
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Watchman"
+      npcs:
+        - name: Emergent Patroller
+          class: frigate
+          count: 4
+          dps: 18
+          threats: []
+        - name: Emergent Watchman
+          class: frigate
+          count: 3
+          dps: 14
+          threats: [neut]
+        - name: Awakened Watchman
+          class: cruiser
+          count: 1
+          dps: 30
+          threats: [neut]
+      total_dps: 144
+
+    - name: "Wave 2"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Emergent Escort
+          class: frigate
+          count: 3
+          dps: 24
+          threats: [web]
+        - name: Awakened Patroller
+          class: cruiser
+          count: 2
+          dps: 40
+          threats: []
+      total_dps: 152
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Awakened Watchman
+          class: cruiser
+          count: 5
+          dps: 30
+          threats: [neut]
+      total_dps: 150
+
+# ============================
+# CLASS 1 — DATA / RELIC
+# ============================
+
+- slug: forgotten-perimeter-coronation-platform
+  name: Forgotten Perimeter Coronation Platform
+  class: 1
+  type: relic
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Emergent Escort
+          class: frigate
+          count: 1
+          dps: 24
+          threats: [web]
+        - name: Emergent Patroller
+          class: frigate
+          count: 2
+          dps: 18
+          threats: []
+        - name: Awakened Patroller
+          class: cruiser
+          count: 2
+          dps: 40
+          threats: []
+      total_dps: 140
+
+    - name: "Wave 2"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Emergent Escort
+          class: frigate
+          count: 1
+          dps: 24
+          threats: [web]
+        - name: Awakened Patroller
+          class: cruiser
+          count: 3
+          dps: 40
+          threats: []
+      total_dps: 144
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Emergent Patroller
+          class: frigate
+          count: 3
+          dps: 18
+          threats: []
+        - name: Awakened Patroller
+          class: cruiser
+          count: 2
+          dps: 40
+          threats: []
+        - name: Awakened Watchman
+          class: cruiser
+          count: 3
+          dps: 30
+          threats: [neut]
+      total_dps: 224
+
+- slug: forgotten-perimeter-power-array
+  name: Forgotten Perimeter Power Array
+  class: 1
+  type: relic
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Awakened Patroller
+          class: cruiser
+          count: 2
+          dps: 40
+          threats: []
+      total_dps: 80
+
+    - name: "Wave 2"
+      trigger: "Awakened Escort"
+      npcs:
+        - name: Emergent Watchman
+          class: frigate
+          count: 3
+          dps: 14
+          threats: [neut]
+        - name: Awakened Escort
+          class: cruiser
+          count: 3
+          dps: 54
+          threats: []
+      total_dps: 204
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Awakened Escort
+          class: cruiser
+          count: 2
+          dps: 54
+          threats: []
+        - name: Awakened Watchman
+          class: cruiser
+          count: 2
+          dps: 30
+          threats: [neut]
+      total_dps: 168
+
+- slug: unsecured-perimeter-amplifier
+  name: Unsecured Perimeter Amplifier
+  class: 1
+  type: data
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Awakened Patroller
+          class: cruiser
+          count: 2
+          dps: 40
+          threats: []
+      total_dps: 80
+
+    - name: "Wave 2"
+      trigger: "Awakened Escort"
+      npcs:
+        - name: Emergent Watchman
+          class: frigate
+          count: 3
+          dps: 14
+          threats: [neut]
+        - name: Awakened Escort
+          class: cruiser
+          count: 3
+          dps: 54
+          threats: []
+      total_dps: 204
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Awakened Escort
+          class: cruiser
+          count: 2
+          dps: 54
+          threats: []
+        - name: Awakened Watchman
+          class: cruiser
+          count: 2
+          dps: 30
+          threats: [neut]
+      total_dps: 168
+
+- slug: unsecured-perimeter-information-center
+  name: Unsecured Perimeter Information Center
+  class: 1
+  type: data
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Emergent Patroller
+          class: frigate
+          count: 3
+          dps: 18
+          threats: []
+        - name: Emergent Watchman
+          class: frigate
+          count: 1
+          dps: 14
+          threats: [neut]
+        - name: Awakened Patroller
+          class: cruiser
+          count: 1
+          dps: 40
+          threats: []
+      total_dps: 108
+
+    - name: "Wave 2"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Emergent Escort
+          class: frigate
+          count: 1
+          dps: 24
+          threats: [web]
+        - name: Awakened Patroller
+          class: cruiser
+          count: 3
+          dps: 40
+          threats: []
+      total_dps: 144
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Emergent Patroller
+          class: frigate
+          count: 2
+          dps: 18
+          threats: []
+        - name: Awakened Patroller
+          class: cruiser
+          count: 2
+          dps: 40
+          threats: []
+        - name: Awakened Watchman
+          class: cruiser
+          count: 3
+          dps: 30
+          threats: [neut]
+      total_dps: 206
+
+# ============================
+# CLASS 2 — ANOMALIES
+# ============================
+
+- slug: perimeter-checkpoint
+  name: Perimeter Checkpoint
+  class: 2
+  type: anomaly
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Vigilant Sentry Tower
+          class: sentry
+          count: 2
+          dps: 52
+          threats: []
+        - name: Emergent Patroller
+          class: frigate
+          count: 2
+          dps: 18
+          threats: []
+        - name: Awakened Patroller
+          class: cruiser
+          count: 3
+          dps: 40
+          threats: []
+      total_dps: 260
+
+    - name: "Wave 2"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Awakened Escort
+          class: cruiser
+          count: 2
+          dps: 54
+          threats: []
+        - name: Awakened Patroller
+          class: cruiser
+          count: 2
+          dps: 40
+          threats: []
+      total_dps: 188
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Emergent Patroller
+          class: frigate
+          count: 3
+          dps: 18
+          threats: []
+        - name: Sleepless Patroller
+          class: battleship
+          count: 1
+          dps: 260
+          threats: []
+      total_dps: 314
+
+- slug: perimeter-hangar
+  name: Perimeter Hangar
+  class: 2
+  type: anomaly
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Emergent Watchman
+          class: frigate
+          count: 2
+          dps: 14
+          threats: [neut]
+        - name: Awakened Patroller
+          class: cruiser
+          count: 3
+          dps: 40
+          threats: []
+      total_dps: 148
+
+    - name: "Wave 2"
+      trigger: "Awakened Escort"
+      npcs:
+        - name: Awakened Escort
+          class: cruiser
+          count: 2
+          dps: 54
+          threats: []
+        - name: Sleepless Watchman
+          class: battleship
+          count: 1
+          dps: 314
+          threats: []
+      total_dps: 422
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Awakened Escort
+          class: cruiser
+          count: 2
+          dps: 54
+          threats: []
+        - name: Sleepless Escort
+          class: battleship
+          count: 1
+          dps: 220
+          threats: []
+      total_dps: 328
+
+- slug: sleeper-data-sanctuary
+  name: Sleeper Data Sanctuary
+  class: 2
+  type: anomaly
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Escort"
+      npcs:
+        - name: Vigilant Sentry Tower
+          class: sentry
+          count: 3
+          dps: 52
+          threats: []
+        - name: Emergent Patroller
+          class: frigate
+          count: 3
+          dps: 18
+          threats: []
+        - name: Awakened Escort
+          class: cruiser
+          count: 2
+          dps: 54
+          threats: []
+      total_dps: 318
+
+    - name: "Wave 2"
+      trigger: "Sleepless Escort"
+      npcs:
+        - name: Emergent Escort
+          class: frigate
+          count: 4
+          dps: 24
+          threats: [web]
+        - name: Sleepless Escort
+          class: battleship
+          count: 1
+          dps: 220
+          threats: []
+      total_dps: 316
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Sleepless Outguard
+          class: battleship
+          count: 1
+          dps: 386
+          threats: [neut]
+      total_dps: 386
+
+- slug: the-ruins-of-enclave-cohort-27
+  name: The Ruins of Enclave Cohort 27
+  class: 2
+  type: anomaly
+  waves:
+    - name: "Wave 1"
+      trigger: "Emergent Patroller"
+      npcs:
+        - name: Emergent Patroller
+          class: frigate
+          count: 6
+          dps: 18
+          threats: []
+        - name: Sleepless Patroller
+          class: battleship
+          count: 1
+          dps: 260
+          threats: []
+      total_dps: 368
+
+    - name: "Wave 2"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Emergent Watchman
+          class: frigate
+          count: 1
+          dps: 14
+          threats: [neut]
+        - name: Awakened Patroller
+          class: cruiser
+          count: 5
+          dps: 40
+          threats: []
+      total_dps: 214
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Sleepless Escort
+          class: battleship
+          count: 1
+          dps: 220
+          threats: []
+      total_dps: 220
+
+# ============================
+# CLASS 2 — DATA / RELIC
+# ============================
+
+- slug: forgotten-perimeter-gateway
+  name: Forgotten Perimeter Gateway
+  class: 2
+  type: relic
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Watchman"
+      npcs:
+        - name: Awakened Patroller
+          class: cruiser
+          count: 4
+          dps: 40
+          threats: []
+        - name: Awakened Watchman
+          class: cruiser
+          count: 1
+          dps: 30
+          threats: [neut]
+      total_dps: 190
+
+    - name: "Wave 2"
+      trigger: "Sleepless Patroller"
+      npcs:
+        - name: Emergent Watchman
+          class: frigate
+          count: 2
+          dps: 14
+          threats: [neut]
+        - name: Sleepless Patroller
+          class: battleship
+          count: 1
+          dps: 260
+          threats: []
+      total_dps: 288
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Emergent Patroller
+          class: frigate
+          count: 4
+          dps: 18
+          threats: []
+        - name: Sleepless Escort
+          class: battleship
+          count: 1
+          dps: 220
+          threats: []
+        - name: Sleepless Watchman
+          class: battleship
+          count: 1
+          dps: 314
+          threats: []
+      total_dps: 606
+
+- slug: forgotten-perimeter-habitation-coils
+  name: Forgotten Perimeter Habitation Coils
+  class: 2
+  type: relic
+  waves:
+    - name: "Wave 1"
+      trigger: ~
+      npcs:
+        - name: Emergent Escort
+          class: frigate
+          count: 2
+          dps: 24
+          threats: [web]
+        - name: Emergent Patroller
+          class: frigate
+          count: 2
+          dps: 18
+          threats: []
+        - name: Awakened Patroller
+          class: cruiser
+          count: 3
+          dps: 40
+          threats: []
+      total_dps: 204
+
+    - name: "Wave 2"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Emergent Escort
+          class: frigate
+          count: 4
+          dps: 24
+          threats: [web]
+        - name: Awakened Patroller
+          class: cruiser
+          count: 4
+          dps: 40
+          threats: []
+      total_dps: 256
+
+    - name: "Wave 3"
+      trigger: "Sleepless Patroller"
+      npcs:
+        - name: Emergent Escort
+          class: frigate
+          count: 4
+          dps: 24
+          threats: [web]
+        - name: Emergent Patroller
+          class: frigate
+          count: 4
+          dps: 18
+          threats: []
+        - name: Sleepless Patroller
+          class: battleship
+          count: 1
+          dps: 260
+          threats: []
+      total_dps: 428
+
+    - name: "Wave 4"
+      trigger: ~
+      npcs:
+        - name: Emergent Escort
+          class: frigate
+          count: 3
+          dps: 24
+          threats: [web]
+        - name: Awakened Escort
+          class: cruiser
+          count: 2
+          dps: 54
+          threats: []
+        - name: Awakened Patroller
+          class: cruiser
+          count: 1
+          dps: 40
+          threats: []
+        - name: Sleepless Watchman
+          class: battleship
+          count: 1
+          dps: 314
+          threats: []
+      total_dps: 534
+
+- slug: unsecured-perimeter-comms-relay
+  name: Unsecured Perimeter Comms Relay
+  class: 2
+  type: data
+  waves:
+    - name: "Wave 1"
+      trigger: "Awakened Watchman"
+      npcs:
+        - name: Awakened Patroller
+          class: cruiser
+          count: 3
+          dps: 40
+          threats: []
+        - name: Awakened Watchman
+          class: cruiser
+          count: 2
+          dps: 30
+          threats: [neut]
+        - name: Sleepless Outguard
+          class: battleship
+          count: 1
+          dps: 386
+          threats: [neut]
+          note: "possible additional spawn"
+      total_dps: 566
+
+    - name: "Wave 2"
+      trigger: "Sleepless Patroller"
+      npcs:
+        - name: Emergent Watchman
+          class: frigate
+          count: 2
+          dps: 14
+          threats: [neut]
+        - name: Sleepless Patroller
+          class: battleship
+          count: 1
+          dps: 260
+          threats: []
+      total_dps: 288
+
+    - name: "Wave 3"
+      trigger: ~
+      npcs:
+        - name: Emergent Patroller
+          class: frigate
+          count: 2
+          dps: 18
+          threats: []
+        - name: Sleepless Escort
+          class: battleship
+          count: 1
+          dps: 220
+          threats: []
+        - name: Sleepless Watchman
+          class: battleship
+          count: 1
+          dps: 314
+          threats: []
+      total_dps: 570
+
+- slug: unsecured-perimeter-transponder-farm
+  name: Unsecured Perimeter Transponder Farm
+  class: 2
+  type: data
+  waves:
+    - name: "Wave 1"
+      trigger: "Emergent Escort"
+      npcs:
+        - name: Emergent Escort
+          class: frigate
+          count: 2
+          dps: 24
+          threats: [web]
+        - name: Emergent Patroller
+          class: frigate
+          count: 1
+          dps: 18
+          threats: []
+        - name: Awakened Patroller
+          class: cruiser
+          count: 3
+          dps: 40
+          threats: []
+      total_dps: 186
+
+    - name: "Wave 2"
+      trigger: "Awakened Patroller"
+      npcs:
+        - name: Emergent Escort
+          class: frigate
+          count: 2
+          dps: 24
+          threats: [web]
+        - name: Awakened Patroller
+          class: cruiser
+          count: 4
+          dps: 40
+          threats: []
+        - name: Awakened Watchman
+          class: cruiser
+          count: 1
+          dps: 30
+          threats: [neut]
+      total_dps: 238
+
+    - name: "Wave 3"
+      trigger: "Emergent Escort"
+      npcs:
+        - name: Emergent Escort
+          class: frigate
+          count: 4
+          dps: 24
+          threats: [web]
+        - name: Emergent Patroller
+          class: frigate
+          count: 4
+          dps: 18
+          threats: []
+        - name: Sleepless Patroller
+          class: battleship
+          count: 1
+          dps: 260
+          threats: []
+      total_dps: 428
+
+    - name: "Wave 4"
+      trigger: ~
+      npcs:
+        - name: Emergent Escort
+          class: frigate
+          count: 4
+          dps: 24
+          threats: [web]
+        - name: Awakened Escort
+          class: cruiser
+          count: 3
+          dps: 54
+          threats: []
+        - name: Awakened Patroller
+          class: cruiser
+          count: 5
+          dps: 40
+          threats: []
+      total_dps: 458
