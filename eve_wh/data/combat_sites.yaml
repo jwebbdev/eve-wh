@@ -1,11 +1,63 @@
 # Wormhole Combat Sites Database
-# Source: Rykki Atruin spreadsheet + EVE University Wiki (cross-referenced)
+# Source: EVE University Wiki + Rykki Atruin spreadsheet (cross-referenced)
 # Blue loot values are fixed ISK drops per site
 # Salvage estimates are community averages (nanoribbon prices vary)
 #
 # type: anomaly | data | relic
 # threats: neut, scram, web, rr (remote rep), ecm
-# trigger: which NPC triggers the next wave
+# trigger: which NPC triggers the next wave (null = last wave or random triggers)
+#
+# NPC taxonomy:
+#   Emergent = frigate class
+#   Awakened = cruiser class
+#   Sleepless = battleship class
+#   Sentry towers = stationary
+#
+# DPS = turret_dps + missile_dps (combined per NPC)
+# total_dps = sum of all NPC DPS in that wave (excludes sentry towers unless noted)
+
+# NPC reference (DPS per ship, threats):
+npc_reference:
+  # Frigates (Emergent)
+  Emergent Defender:     { class: frigate, dps: 24, threats: [web] }
+  Emergent Patroller:    { class: frigate, dps: 18, threats: [] }
+  Emergent Escort:       { class: frigate, dps: 24, threats: [web] }
+  Emergent Watchman:     { class: frigate, dps: 14, threats: [neut] }
+  Emergent Upholder:     { class: frigate, dps: 18, threats: [neut, rr] }
+  Emergent Preserver:    { class: frigate, dps: 32, threats: [web, scram, neut] }
+  Emergent Sentinel:     { class: frigate, dps: 32, threats: [web, scram] }
+  Emergent Keeper:       { class: frigate, dps: 24, threats: [neut, rr] }
+  Emergent Warden:       { class: frigate, dps: 42, threats: [web, scram, neut] }
+
+  # Cruisers (Awakened)
+  Awakened Defender:     { class: cruiser, dps: 56, threats: [] }
+  Awakened Patroller:    { class: cruiser, dps: 40, threats: [] }
+  Awakened Escort:       { class: cruiser, dps: 54, threats: [] }
+  Awakened Watchman:     { class: cruiser, dps: 30, threats: [neut] }
+  Awakened Upholder:     { class: cruiser, dps: 42, threats: [web, neut] }
+  Awakened Preserver:    { class: cruiser, dps: 76, threats: [rr] }
+  Awakened Sentinel:     { class: cruiser, dps: 72, threats: [web] }
+  Awakened Keeper:       { class: cruiser, dps: 54, threats: [web, scram, neut] }
+  Awakened Warden:       { class: cruiser, dps: 98, threats: [rr] }
+
+  # Battleships (Sleepless)
+  Sleepless Defender:    { class: battleship, dps: 364, threats: [web] }
+  Sleepless Patroller:   { class: battleship, dps: 260, threats: [] }
+  Sleepless Escort:      { class: battleship, dps: 220, threats: [] }
+  Sleepless Watchman:    { class: battleship, dps: 314, threats: [] }
+  Sleepless Outguard:    { class: battleship, dps: 386, threats: [neut] }
+  Sleepless Upholder:    { class: battleship, dps: 442, threats: [neut] }
+  Sleepless Preserver:   { class: battleship, dps: 310, threats: [rr] }
+  Sleepless Safeguard:   { class: battleship, dps: 542, threats: [web, scram, neut] }
+  Sleepless Sentinel:    { class: battleship, dps: 466, threats: [web, scram, neut] }
+  Sleepless Keeper:      { class: battleship, dps: 566, threats: [neut] }
+  Sleepless Warden:      { class: battleship, dps: 398, threats: [rr] }
+  Sleepless Guardian:    { class: battleship, dps: 694, threats: [web, scram, neut] }
+
+  # Sentry Towers
+  Vigilant Sentry Tower: { class: sentry, dps: 52, threats: [] }
+  Wakeful Sentry Tower:  { class: sentry, dps: 74, threats: [] }
+  Restless Sentry Tower: { class: sentry, dps: 94, threats: [] }
 
 sites:
   # ============================
@@ -17,9 +69,28 @@ sites:
     classes: [1]
     blue_loot: 8600000
     salvage_est: 3000000
-    waves: 3
-    threats: []
+    threats: [web]
     notes: "Entry-level anomaly. Safe for T1 cruisers."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Escort"
+        npcs:
+          - { name: Vigilant Sentry Tower, class: sentry, count: 2, dps: 52, threats: [] }
+          - { name: Emergent Escort, class: frigate, count: 1, dps: 24, threats: [web] }
+          - { name: Awakened Escort, class: cruiser, count: 1, dps: 54, threats: [] }
+        total_dps: 182
+      - name: "Wave 2"
+        trigger: "Awakened Escort"
+        npcs:
+          - { name: Emergent Patroller, class: frigate, count: 3, dps: 18, threats: [] }
+          - { name: Awakened Escort, class: cruiser, count: 2, dps: 54, threats: [] }
+        total_dps: 162
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Awakened Escort, class: cruiser, count: 2, dps: 54, threats: [] }
+          - { name: Awakened Patroller, class: cruiser, count: 2, dps: 40, threats: [] }
+        total_dps: 188
 
   - slug: perimeter-camp
     name: Perimeter Camp
@@ -27,9 +98,30 @@ sites:
     classes: [1]
     blue_loot: 9600000
     salvage_est: 3500000
-    waves: 3
-    threats: []
+    threats: [neut]
     notes: "Slightly harder than Ambush Point."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Emergent Watchman"
+        npcs:
+          - { name: Vigilant Sentry Tower, class: sentry, count: 2, dps: 52, threats: [] }
+          - { name: Emergent Patroller, class: frigate, count: 4, dps: 18, threats: [] }
+          - { name: Emergent Watchman, class: frigate, count: 2, dps: 14, threats: [neut] }
+        total_dps: 204
+      - name: "Wave 2"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Emergent Patroller, class: frigate, count: 5, dps: 18, threats: [] }
+          - { name: Emergent Watchman, class: frigate, count: 3, dps: 14, threats: [neut] }
+          - { name: Awakened Patroller, class: cruiser, count: 1, dps: 40, threats: [] }
+        total_dps: 172
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Patroller, class: frigate, count: 2, dps: 18, threats: [] }
+          - { name: Awakened Patroller, class: cruiser, count: 2, dps: 40, threats: [] }
+          - { name: Awakened Watchman, class: cruiser, count: 1, dps: 30, threats: [neut] }
+        total_dps: 146
 
   - slug: phase-catalyst-node
     name: Phase Catalyst Node
@@ -37,19 +129,56 @@ sites:
     classes: [1]
     blue_loot: 9000000
     salvage_est: 3000000
-    waves: 3
-    threats: []
-    notes: ""
+    threats: [web, neut]
+    notes: "Sentry towers are the trigger for wave 2."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Vigilant Sentry Tower"
+        npcs:
+          - { name: Vigilant Sentry Tower, class: sentry, count: 4, dps: 52, threats: [] }
+          - { name: Emergent Escort, class: frigate, count: 2, dps: 24, threats: [web] }
+          - { name: Emergent Watchman, class: frigate, count: 4, dps: 14, threats: [neut] }
+        total_dps: 312
+      - name: "Wave 2"
+        trigger: "Awakened Escort"
+        npcs:
+          - { name: Awakened Escort, class: cruiser, count: 1, dps: 54, threats: [] }
+          - { name: Awakened Patroller, class: cruiser, count: 2, dps: 40, threats: [] }
+        total_dps: 134
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Patroller, class: frigate, count: 6, dps: 18, threats: [] }
+          - { name: Emergent Watchman, class: frigate, count: 3, dps: 14, threats: [neut] }
+        total_dps: 150
 
   - slug: the-line
     name: The Line
     type: anomaly
     classes: [1]
-    blue_loot: 12000000
+    blue_loot: 10400000
     salvage_est: 4000000
-    waves: 3
-    threats: []
-    notes: "Best C1 anomaly by blue loot value."
+    threats: [web, neut]
+    notes: "Best C1 anomaly by blue loot value. Waves spawn at range."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Watchman"
+        npcs:
+          - { name: Emergent Patroller, class: frigate, count: 4, dps: 18, threats: [] }
+          - { name: Emergent Watchman, class: frigate, count: 3, dps: 14, threats: [neut] }
+          - { name: Awakened Watchman, class: cruiser, count: 1, dps: 30, threats: [neut] }
+        total_dps: 144
+      - name: "Wave 2 -- spawns 70-90km"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Emergent Escort, class: frigate, count: 3, dps: 24, threats: [web] }
+          - { name: Awakened Patroller, class: cruiser, count: 2, dps: 40, threats: [] }
+        total_dps: 152
+      - name: "Wave 3 -- Final, spawns 50km"
+        trigger: null
+        npcs:
+          - { name: Awakened Watchman, class: cruiser, count: 5, dps: 30, threats: [neut] }
+        total_dps: 150
 
   - slug: forgotten-perimeter-coronation-platform
     name: Forgotten Perimeter Coronation Platform
@@ -57,9 +186,29 @@ sites:
     classes: [1]
     blue_loot: 12800000
     salvage_est: 4000000
-    waves: 3
-    threats: []
+    threats: [web, neut]
     notes: "Relic site. Hack after clearing NPCs."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Emergent Escort, class: frigate, count: 1, dps: 24, threats: [web] }
+          - { name: Emergent Patroller, class: frigate, count: 2, dps: 18, threats: [] }
+          - { name: Awakened Patroller, class: cruiser, count: 2, dps: 40, threats: [] }
+        total_dps: 140
+      - name: "Wave 2"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Emergent Escort, class: frigate, count: 1, dps: 24, threats: [web] }
+          - { name: Awakened Patroller, class: cruiser, count: 3, dps: 40, threats: [] }
+        total_dps: 144
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Patroller, class: frigate, count: 3, dps: 18, threats: [] }
+          - { name: Awakened Patroller, class: cruiser, count: 2, dps: 40, threats: [] }
+          - { name: Awakened Watchman, class: cruiser, count: 3, dps: 30, threats: [neut] }
+        total_dps: 224
 
   - slug: forgotten-perimeter-power-array
     name: Forgotten Perimeter Power Array
@@ -67,9 +216,26 @@ sites:
     classes: [1]
     blue_loot: 9200000
     salvage_est: 3000000
-    waves: 3
-    threats: []
+    threats: [neut]
     notes: "Relic site."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Awakened Patroller, class: cruiser, count: 2, dps: 40, threats: [] }
+        total_dps: 80
+      - name: "Wave 2"
+        trigger: "Awakened Escort"
+        npcs:
+          - { name: Emergent Watchman, class: frigate, count: 3, dps: 14, threats: [neut] }
+          - { name: Awakened Escort, class: cruiser, count: 3, dps: 54, threats: [] }
+        total_dps: 204
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Awakened Escort, class: cruiser, count: 2, dps: 54, threats: [] }
+          - { name: Awakened Watchman, class: cruiser, count: 2, dps: 30, threats: [neut] }
+        total_dps: 168
 
   - slug: unsecured-perimeter-amplifier
     name: Unsecured Perimeter Amplifier
@@ -77,9 +243,26 @@ sites:
     classes: [1]
     blue_loot: 10200000
     salvage_est: 3500000
-    waves: 3
-    threats: []
+    threats: [neut]
     notes: "Data site."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Awakened Patroller, class: cruiser, count: 2, dps: 40, threats: [] }
+        total_dps: 80
+      - name: "Wave 2"
+        trigger: "Awakened Escort"
+        npcs:
+          - { name: Emergent Watchman, class: frigate, count: 3, dps: 14, threats: [neut] }
+          - { name: Awakened Escort, class: cruiser, count: 3, dps: 54, threats: [] }
+        total_dps: 204
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Awakened Escort, class: cruiser, count: 2, dps: 54, threats: [] }
+          - { name: Awakened Watchman, class: cruiser, count: 2, dps: 30, threats: [neut] }
+        total_dps: 168
 
   - slug: unsecured-perimeter-information-center
     name: Unsecured Perimeter Information Center
@@ -87,9 +270,29 @@ sites:
     classes: [1]
     blue_loot: 11800000
     salvage_est: 4000000
-    waves: 3
-    threats: []
-    notes: "Data site. Multi-wave escalations."
+    threats: [web, neut]
+    notes: "Data site. Contains 3 Malfunctioning Sleeper Databanks."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Emergent Patroller, class: frigate, count: 3, dps: 18, threats: [] }
+          - { name: Emergent Watchman, class: frigate, count: 1, dps: 14, threats: [neut] }
+          - { name: Awakened Patroller, class: cruiser, count: 1, dps: 40, threats: [] }
+        total_dps: 108
+      - name: "Wave 2"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Emergent Escort, class: frigate, count: 1, dps: 24, threats: [web] }
+          - { name: Awakened Patroller, class: cruiser, count: 3, dps: 40, threats: [] }
+        total_dps: 144
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Patroller, class: frigate, count: 2, dps: 18, threats: [] }
+          - { name: Awakened Patroller, class: cruiser, count: 2, dps: 40, threats: [] }
+          - { name: Awakened Watchman, class: cruiser, count: 3, dps: 30, threats: [neut] }
+        total_dps: 206
 
   # ============================
   # CLASS 2
@@ -100,9 +303,28 @@ sites:
     classes: [2]
     blue_loot: 12900000
     salvage_est: 5000000
-    waves: 3
-    threats: [neut]
-    notes: "Tower-heavy composition."
+    threats: []
+    notes: "No ewar documented. Introduces battleships."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Vigilant Sentry Tower, class: sentry, count: 2, dps: 52, threats: [] }
+          - { name: Emergent Patroller, class: frigate, count: 2, dps: 18, threats: [] }
+          - { name: Awakened Patroller, class: cruiser, count: 3, dps: 40, threats: [] }
+        total_dps: 260
+      - name: "Wave 2"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Awakened Escort, class: cruiser, count: 2, dps: 54, threats: [] }
+          - { name: Awakened Patroller, class: cruiser, count: 2, dps: 40, threats: [] }
+        total_dps: 188
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Patroller, class: frigate, count: 3, dps: 18, threats: [] }
+          - { name: Sleepless Patroller, class: battleship, count: 1, dps: 260, threats: [] }
+        total_dps: 314
 
   - slug: perimeter-hangar
     name: Perimeter Hangar
@@ -110,9 +332,27 @@ sites:
     classes: [2]
     blue_loot: 15600000
     salvage_est: 6000000
-    waves: 3
     threats: [neut]
     notes: "Sleepless variants present."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Emergent Watchman, class: frigate, count: 2, dps: 14, threats: [neut] }
+          - { name: Awakened Patroller, class: cruiser, count: 3, dps: 40, threats: [] }
+        total_dps: 148
+      - name: "Wave 2"
+        trigger: "Awakened Escort"
+        npcs:
+          - { name: Awakened Escort, class: cruiser, count: 2, dps: 54, threats: [] }
+          - { name: Sleepless Watchman, class: battleship, count: 1, dps: 314, threats: [] }
+        total_dps: 422
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Awakened Escort, class: cruiser, count: 2, dps: 54, threats: [] }
+          - { name: Sleepless Escort, class: battleship, count: 1, dps: 220, threats: [] }
+        total_dps: 328
 
   - slug: sleeper-data-sanctuary
     name: Sleeper Data Sanctuary
@@ -120,9 +360,27 @@ sites:
     classes: [2]
     blue_loot: 11600000
     salvage_est: 4500000
-    waves: 3
-    threats: []
-    notes: ""
+    threats: [web, neut]
+    notes: "Sleepless Outguard has energy neut."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Escort"
+        npcs:
+          - { name: Vigilant Sentry Tower, class: sentry, count: 3, dps: 52, threats: [] }
+          - { name: Emergent Patroller, class: frigate, count: 3, dps: 18, threats: [] }
+          - { name: Awakened Escort, class: cruiser, count: 2, dps: 54, threats: [] }
+        total_dps: 318
+      - name: "Wave 2"
+        trigger: "Sleepless Escort"
+        npcs:
+          - { name: Emergent Escort, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Sleepless Escort, class: battleship, count: 1, dps: 220, threats: [] }
+        total_dps: 316
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Sleepless Outguard, class: battleship, count: 1, dps: 386, threats: [neut] }
+        total_dps: 386
 
   - slug: the-ruins-of-enclave-cohort-27
     name: The Ruins of Enclave Cohort 27
@@ -130,9 +388,26 @@ sites:
     classes: [2]
     blue_loot: 15600000
     salvage_est: 6000000
-    waves: 3
     threats: [neut]
-    notes: "Optional wave triggers."
+    notes: "Optional wave triggers. Possible additional BS spawns."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Emergent Patroller"
+        npcs:
+          - { name: Emergent Patroller, class: frigate, count: 6, dps: 18, threats: [] }
+          - { name: Sleepless Patroller, class: battleship, count: 1, dps: 260, threats: [] }
+        total_dps: 368
+      - name: "Wave 2"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Emergent Watchman, class: frigate, count: 1, dps: 14, threats: [neut] }
+          - { name: Awakened Patroller, class: cruiser, count: 5, dps: 40, threats: [] }
+        total_dps: 214
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Sleepless Escort, class: battleship, count: 1, dps: 220, threats: [] }
+        total_dps: 220
 
   - slug: forgotten-perimeter-gateway
     name: Forgotten Perimeter Gateway
@@ -140,9 +415,28 @@ sites:
     classes: [2]
     blue_loot: 19100000
     salvage_est: 7000000
-    waves: 3
     threats: [neut]
-    notes: "Introduces Sleepless-class NPCs."
+    notes: "Introduces Sleepless-class NPCs. Peak DPS in wave 3."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Watchman"
+        npcs:
+          - { name: Awakened Patroller, class: cruiser, count: 4, dps: 40, threats: [] }
+          - { name: Awakened Watchman, class: cruiser, count: 1, dps: 30, threats: [neut] }
+        total_dps: 190
+      - name: "Wave 2"
+        trigger: "Sleepless Patroller"
+        npcs:
+          - { name: Emergent Watchman, class: frigate, count: 2, dps: 14, threats: [neut] }
+          - { name: Sleepless Patroller, class: battleship, count: 1, dps: 260, threats: [] }
+        total_dps: 288
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Patroller, class: frigate, count: 4, dps: 18, threats: [] }
+          - { name: Sleepless Escort, class: battleship, count: 1, dps: 220, threats: [] }
+          - { name: Sleepless Watchman, class: battleship, count: 1, dps: 314, threats: [] }
+        total_dps: 606
 
   - slug: forgotten-perimeter-habitation-coils
     name: Forgotten Perimeter Habitation Coils
@@ -150,19 +444,67 @@ sites:
     classes: [2]
     blue_loot: 25400000
     salvage_est: 9000000
-    waves: 4
-    threats: [neut, rr]
+    threats: [web]
     notes: "4-wave relic site. Most valuable C2 relic."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Emergent Escort"
+        npcs:
+          - { name: Emergent Escort, class: frigate, count: 2, dps: 24, threats: [web] }
+          - { name: Emergent Patroller, class: frigate, count: 2, dps: 18, threats: [] }
+          - { name: Awakened Patroller, class: cruiser, count: 3, dps: 40, threats: [] }
+        total_dps: 204
+      - name: "Wave 2"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Emergent Escort, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Awakened Patroller, class: cruiser, count: 4, dps: 40, threats: [] }
+        total_dps: 256
+      - name: "Wave 3"
+        trigger: "Sleepless Patroller"
+        npcs:
+          - { name: Emergent Escort, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Emergent Patroller, class: frigate, count: 4, dps: 18, threats: [] }
+          - { name: Sleepless Patroller, class: battleship, count: 1, dps: 260, threats: [] }
+        total_dps: 428
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Escort, class: frigate, count: 3, dps: 24, threats: [web] }
+          - { name: Awakened Escort, class: cruiser, count: 2, dps: 54, threats: [] }
+          - { name: Awakened Patroller, class: cruiser, count: 1, dps: 40, threats: [] }
+          - { name: Sleepless Watchman, class: battleship, count: 1, dps: 314, threats: [] }
+        total_dps: 534
 
   - slug: unsecured-perimeter-comms-relay
     name: Unsecured Perimeter Comms Relay
     type: data
     classes: [2]
-    blue_loot: 20200000
+    blue_loot: 15500000
     salvage_est: 7500000
-    waves: 3
     threats: [neut]
-    notes: "Sleepless Outguard spawns."
+    notes: "Sleepless Outguard possible spawn in wave 1."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Watchman"
+        npcs:
+          - { name: Awakened Patroller, class: cruiser, count: 3, dps: 40, threats: [] }
+          - { name: Awakened Watchman, class: cruiser, count: 2, dps: 30, threats: [neut] }
+          - { name: Sleepless Outguard, class: battleship, count: 1, dps: 386, threats: [neut] }
+        total_dps: 566
+      - name: "Wave 2"
+        trigger: "Sleepless Patroller"
+        npcs:
+          - { name: Emergent Watchman, class: frigate, count: 2, dps: 14, threats: [neut] }
+          - { name: Sleepless Patroller, class: battleship, count: 1, dps: 260, threats: [] }
+        total_dps: 288
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Patroller, class: frigate, count: 2, dps: 18, threats: [] }
+          - { name: Sleepless Escort, class: battleship, count: 1, dps: 220, threats: [] }
+          - { name: Sleepless Watchman, class: battleship, count: 1, dps: 314, threats: [] }
+        total_dps: 570
 
   - slug: unsecured-perimeter-transponder-farm
     name: Unsecured Perimeter Transponder Farm
@@ -170,9 +512,37 @@ sites:
     classes: [2]
     blue_loot: 26700000
     salvage_est: 10000000
-    waves: 4
-    threats: [neut, rr]
+    threats: [web, neut]
     notes: "Most valuable C2 data site. 4 waves."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: null
+        npcs:
+          - { name: Emergent Escort, class: frigate, count: 2, dps: 24, threats: [web] }
+          - { name: Emergent Patroller, class: frigate, count: 1, dps: 18, threats: [] }
+          - { name: Awakened Patroller, class: cruiser, count: 3, dps: 40, threats: [] }
+        total_dps: 186
+      - name: "Wave 2"
+        trigger: "Awakened Patroller"
+        npcs:
+          - { name: Emergent Escort, class: frigate, count: 2, dps: 24, threats: [web] }
+          - { name: Awakened Patroller, class: cruiser, count: 4, dps: 40, threats: [] }
+          - { name: Awakened Watchman, class: cruiser, count: 1, dps: 30, threats: [neut] }
+        total_dps: 238
+      - name: "Wave 3"
+        trigger: "Emergent Escort"
+        npcs:
+          - { name: Emergent Escort, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Emergent Patroller, class: frigate, count: 4, dps: 18, threats: [] }
+          - { name: Sleepless Patroller, class: battleship, count: 1, dps: 260, threats: [] }
+        total_dps: 428
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Escort, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Awakened Escort, class: cruiser, count: 3, dps: 54, threats: [] }
+          - { name: Awakened Patroller, class: cruiser, count: 5, dps: 40, threats: [] }
+        total_dps: 458
 
   # ============================
   # CLASS 3
@@ -183,9 +553,29 @@ sites:
     classes: [3]
     blue_loot: 41100000
     salvage_est: 15000000
-    waves: 3
-    threats: [neut, rr]
-    notes: ""
+    threats: [web, neut, rr]
+    notes: "WARNING: Killing Awakened Preserver in wave 3 despawns the site."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Defender"
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 2, dps: 24, threats: [web] }
+          - { name: Awakened Defender, class: cruiser, count: 2, dps: 56, threats: [] }
+        total_dps: 160
+      - name: "Wave 2"
+        trigger: "Awakened Upholder"
+        npcs:
+          - { name: Awakened Defender, class: cruiser, count: 2, dps: 56, threats: [] }
+          - { name: Awakened Upholder, class: cruiser, count: 2, dps: 42, threats: [web, neut] }
+        total_dps: 196
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Awakened Defender, class: cruiser, count: 2, dps: 56, threats: [] }
+          - { name: Awakened Preserver, class: cruiser, count: 1, dps: 76, threats: [rr] }
+          - { name: Awakened Upholder, class: cruiser, count: 1, dps: 42, threats: [web, neut] }
+          - { name: Sleepless Upholder, class: battleship, count: 1, dps: 442, threats: [neut] }
+        total_dps: 672
 
   - slug: outpost-frontier-stronghold
     name: Outpost Frontier Stronghold
@@ -193,9 +583,26 @@ sites:
     classes: [3]
     blue_loot: 45100000
     salvage_est: 17000000
-    waves: 3
-    threats: [neut, rr]
-    notes: ""
+    threats: [web]
+    notes: "No neuts. Sentry tower heavy. Straightforward site."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Sleepless Defender"
+        npcs:
+          - { name: Wakeful Sentry Tower, class: sentry, count: 3, dps: 74, threats: [] }
+          - { name: Sleepless Defender, class: battleship, count: 1, dps: 364, threats: [web] }
+        total_dps: 586
+      - name: "Wave 2"
+        trigger: "Awakened Defender"
+        npcs:
+          - { name: Awakened Defender, class: cruiser, count: 4, dps: 56, threats: [] }
+        total_dps: 224
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Sleepless Defender, class: battleship, count: 2, dps: 364, threats: [web] }
+        total_dps: 824
 
   - slug: solar-cell
     name: Solar Cell
@@ -203,9 +610,31 @@ sites:
     classes: [3]
     blue_loot: 43000000
     salvage_est: 16000000
-    waves: 3
-    threats: [neut, scram, rr]
-    notes: "Has scram frigates. Watch out."
+    threats: [web, scram, neut, rr]
+    notes: "Only C3 anomaly with warp scram (Emergent Preserver). Kill Preserver carefully -- premature kill despawns site."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Emergent Preserver"
+        npcs:
+          - { name: Emergent Preserver, class: frigate, count: 1, dps: 32, threats: [web, scram, neut] }
+          - { name: Awakened Upholder, class: cruiser, count: 1, dps: 42, threats: [web, neut] }
+          - { name: Sleepless Defender, class: battleship, count: 1, dps: 364, threats: [web] }
+        total_dps: 438
+      - name: "Wave 2"
+        trigger: "Emergent Upholder"
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 2, dps: 24, threats: [web] }
+          - { name: Emergent Upholder, class: frigate, count: 2, dps: 18, threats: [neut, rr] }
+          - { name: Awakened Defender, class: cruiser, count: 3, dps: 56, threats: [] }
+          - { name: Awakened Upholder, class: cruiser, count: 1, dps: 42, threats: [web, neut] }
+        total_dps: 294
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Awakened Defender, class: cruiser, count: 2, dps: 56, threats: [] }
+          - { name: Sleepless Defender, class: battleship, count: 1, dps: 364, threats: [web] }
+          - { name: Sleepless Preserver, class: battleship, count: 1, dps: 310, threats: [rr] }
+        total_dps: 786
 
   - slug: the-oruze-construct
     name: The Oruze Construct
@@ -213,9 +642,28 @@ sites:
     classes: [3]
     blue_loot: 44500000
     salvage_est: 17000000
-    waves: 3
-    threats: [neut, rr]
-    notes: ""
+    threats: [web, neut, rr]
+    notes: "Awakened Preserver possible additional spawn in wave 1."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Upholder"
+        npcs:
+          - { name: Wakeful Sentry Tower, class: sentry, count: 2, dps: 74, threats: [] }
+          - { name: Awakened Upholder, class: cruiser, count: 4, dps: 42, threats: [web, neut] }
+          - { name: Awakened Preserver, class: cruiser, count: 1, dps: 76, threats: [rr] }
+        total_dps: 392
+      - name: "Wave 2"
+        trigger: "Sleepless Defender"
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Sleepless Defender, class: battleship, count: 1, dps: 364, threats: [web] }
+        total_dps: 460
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Awakened Preserver, class: cruiser, count: 2, dps: 76, threats: [rr] }
+          - { name: Sleepless Upholder, class: battleship, count: 1, dps: 442, threats: [neut] }
+        total_dps: 594
 
   - slug: forgotten-frontier-quarantine-outpost
     name: Forgotten Frontier Quarantine Outpost
@@ -223,9 +671,34 @@ sites:
     classes: [3]
     blue_loot: 79400000
     salvage_est: 30000000
-    waves: 4
-    threats: [neut, scram, web, rr]
-    notes: "4 waves. High value but dangerous. Watch for scram frigates."
+    threats: [web, neut, rr]
+    notes: "4 waves. Lots of DPS -- shoot triggers last!"
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Preserver"
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 6, dps: 24, threats: [web] }
+          - { name: Awakened Preserver, class: cruiser, count: 3, dps: 76, threats: [rr] }
+        total_dps: 372
+      - name: "Wave 2"
+        trigger: "Awakened Defender"
+        npcs:
+          - { name: Awakened Defender, class: cruiser, count: 3, dps: 56, threats: [] }
+          - { name: Awakened Preserver, class: cruiser, count: 2, dps: 76, threats: [rr] }
+          - { name: Awakened Upholder, class: cruiser, count: 3, dps: 42, threats: [web, neut] }
+        total_dps: 446
+      - name: "Wave 3"
+        trigger: "Emergent Upholder"
+        npcs:
+          - { name: Emergent Upholder, class: frigate, count: 4, dps: 18, threats: [neut, rr] }
+          - { name: Sleepless Defender, class: battleship, count: 1, dps: 364, threats: [web] }
+        total_dps: 436
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Sleepless Preserver, class: battleship, count: 2, dps: 310, threats: [rr] }
+        total_dps: 716
 
   - slug: forgotten-frontier-recursive-depot
     name: Forgotten Frontier Recursive Depot
@@ -233,9 +706,35 @@ sites:
     classes: [3]
     blue_loot: 92500000
     salvage_est: 35000000
-    waves: 4
-    threats: [neut, scram, web, rr]
-    notes: "Most valuable C3 site. 4 waves with heavy ewar."
+    threats: [web, scram, neut, rr]
+    notes: "Most valuable C3 site. 4 waves with heavy ewar. Emergent Preservers have scram."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Defender"
+        npcs:
+          - { name: Emergent Preserver, class: frigate, count: 4, dps: 32, threats: [web, scram, neut] }
+          - { name: Awakened Defender, class: cruiser, count: 2, dps: 56, threats: [] }
+        total_dps: 240
+      - name: "Wave 2"
+        trigger: "Awakened Defender"
+        npcs:
+          - { name: Awakened Defender, class: cruiser, count: 3, dps: 56, threats: [] }
+          - { name: Awakened Upholder, class: cruiser, count: 4, dps: 42, threats: [web, neut] }
+        total_dps: 336
+      - name: "Wave 3"
+        trigger: "Sleepless Upholder"
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 2, dps: 24, threats: [web] }
+          - { name: Awakened Upholder, class: cruiser, count: 2, dps: 42, threats: [web, neut] }
+          - { name: Sleepless Upholder, class: battleship, count: 2, dps: 442, threats: [neut] }
+        total_dps: 1016
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Preserver, class: frigate, count: 2, dps: 32, threats: [web, scram, neut] }
+          - { name: Awakened Upholder, class: cruiser, count: 1, dps: 42, threats: [web, neut] }
+          - { name: Sleepless Upholder, class: battleship, count: 3, dps: 442, threats: [neut] }
+        total_dps: 1432
 
   - slug: unsecured-frontier-database
     name: Unsecured Frontier Database
@@ -243,9 +742,35 @@ sites:
     classes: [3]
     blue_loot: 88400000
     salvage_est: 33000000
-    waves: 4
-    threats: [neut, scram, web, rr]
-    notes: "High value data site."
+    threats: [web, scram, neut, rr]
+    notes: "High value data site. Emergent Preservers have scram."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Emergent Preserver"
+        npcs:
+          - { name: Emergent Preserver, class: frigate, count: 3, dps: 32, threats: [web, scram, neut] }
+          - { name: Awakened Defender, class: cruiser, count: 3, dps: 56, threats: [] }
+        total_dps: 264
+      - name: "Wave 2"
+        trigger: "Awakened Defender"
+        npcs:
+          - { name: Awakened Defender, class: cruiser, count: 4, dps: 56, threats: [] }
+          - { name: Awakened Upholder, class: cruiser, count: 4, dps: 42, threats: [web, neut] }
+        total_dps: 392
+      - name: "Wave 3"
+        trigger: "Sleepless Upholder"
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 3, dps: 24, threats: [web] }
+          - { name: Awakened Upholder, class: cruiser, count: 3, dps: 42, threats: [web, neut] }
+          - { name: Sleepless Upholder, class: battleship, count: 1, dps: 442, threats: [neut] }
+        total_dps: 640
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Preserver, class: frigate, count: 2, dps: 32, threats: [web, scram, neut] }
+          - { name: Awakened Upholder, class: cruiser, count: 3, dps: 42, threats: [web, neut] }
+          - { name: Sleepless Upholder, class: battleship, count: 2, dps: 442, threats: [neut] }
+        total_dps: 1074
 
   - slug: unsecured-frontier-receiver
     name: Unsecured Frontier Receiver
@@ -253,9 +778,34 @@ sites:
     classes: [3]
     blue_loot: 75100000
     salvage_est: 28000000
-    waves: 4
-    threats: [neut, scram, rr]
-    notes: ""
+    threats: [web, neut, rr]
+    notes: "Wave 3 trigger is on aggression of Sleepless Defender."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Preserver"
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 5, dps: 24, threats: [web] }
+          - { name: Awakened Preserver, class: cruiser, count: 3, dps: 76, threats: [rr] }
+        total_dps: 348
+      - name: "Wave 2"
+        trigger: "Awakened Preserver"
+        npcs:
+          - { name: Awakened Defender, class: cruiser, count: 3, dps: 56, threats: [] }
+          - { name: Awakened Preserver, class: cruiser, count: 1, dps: 76, threats: [rr] }
+          - { name: Awakened Upholder, class: cruiser, count: 3, dps: 42, threats: [web, neut] }
+        total_dps: 370
+      - name: "Wave 3"
+        trigger: "Sleepless Defender"
+        npcs:
+          - { name: Emergent Upholder, class: frigate, count: 3, dps: 18, threats: [neut, rr] }
+          - { name: Sleepless Defender, class: battleship, count: 1, dps: 364, threats: [web] }
+        total_dps: 418
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Sleepless Preserver, class: battleship, count: 2, dps: 310, threats: [rr] }
+        total_dps: 716
 
   # ============================
   # CLASS 4
@@ -266,9 +816,28 @@ sites:
     classes: [4]
     blue_loot: 86700000
     salvage_est: 30000000
-    waves: 3
-    threats: [neut, scram, web, rr]
-    notes: ""
+    threats: [web, scram, neut, rr]
+    notes: "Emergent Preservers have scram. Heavy remote repair."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Sleepless Preserver"
+        npcs:
+          - { name: Sleepless Preserver, class: battleship, count: 1, dps: 310, threats: [rr] }
+          - { name: Sleepless Upholder, class: battleship, count: 1, dps: 442, threats: [neut] }
+        total_dps: 752
+      - name: "Wave 2"
+        trigger: "Sleepless Upholder"
+        npcs:
+          - { name: Awakened Preserver, class: cruiser, count: 2, dps: 76, threats: [rr] }
+          - { name: Sleepless Upholder, class: battleship, count: 3, dps: 442, threats: [neut] }
+        total_dps: 1478
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Preserver, class: frigate, count: 3, dps: 32, threats: [web, scram, neut] }
+          - { name: Awakened Preserver, class: cruiser, count: 4, dps: 76, threats: [rr] }
+          - { name: Sleepless Preserver, class: battleship, count: 2, dps: 310, threats: [rr] }
+        total_dps: 1020
 
   - slug: frontier-command-post
     name: Frontier Command Post
@@ -276,9 +845,30 @@ sites:
     classes: [4]
     blue_loot: 92300000
     salvage_est: 33000000
-    waves: 3
-    threats: [neut, scram, web, rr]
-    notes: ""
+    threats: [web, scram, neut, rr]
+    notes: "Emergent Preservers have scram. Heavy composition."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Emergent Preserver"
+        npcs:
+          - { name: Wakeful Sentry Tower, class: sentry, count: 5, dps: 74, threats: [] }
+          - { name: Emergent Defender, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Emergent Preserver, class: frigate, count: 4, dps: 32, threats: [web, scram, neut] }
+        total_dps: 594
+      - name: "Wave 2"
+        trigger: "Awakened Defender"
+        npcs:
+          - { name: Emergent Upholder, class: frigate, count: 4, dps: 18, threats: [neut, rr] }
+          - { name: Awakened Defender, class: cruiser, count: 6, dps: 56, threats: [] }
+          - { name: Sleepless Defender, class: battleship, count: 2, dps: 364, threats: [web] }
+        total_dps: 1136
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Awakened Defender, class: cruiser, count: 2, dps: 56, threats: [] }
+          - { name: Awakened Preserver, class: cruiser, count: 2, dps: 76, threats: [rr] }
+          - { name: Sleepless Preserver, class: battleship, count: 3, dps: 310, threats: [rr] }
+        total_dps: 1194
 
   - slug: integrated-terminus
     name: Integrated Terminus
@@ -286,49 +876,150 @@ sites:
     classes: [4]
     blue_loot: 56800000
     salvage_est: 20000000
-    waves: 3
-    threats: [neut, scram, rr]
-    notes: "Lowest value C4 anomaly."
+    threats: [web, scram, neut, rr]
+    notes: "Lowest value C4 anomaly. Sleepless Safeguard has scram."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Defender"
+        npcs:
+          - { name: Wakeful Sentry Tower, class: sentry, count: 4, dps: 74, threats: [] }
+          - { name: Emergent Upholder, class: frigate, count: 3, dps: 18, threats: [neut, rr] }
+          - { name: Awakened Defender, class: cruiser, count: 4, dps: 56, threats: [] }
+        total_dps: 574
+      - name: "Wave 2"
+        trigger: "Awakened Upholder"
+        npcs:
+          - { name: Emergent Preserver, class: frigate, count: 2, dps: 32, threats: [web, scram, neut] }
+          - { name: Awakened Preserver, class: cruiser, count: 2, dps: 76, threats: [rr] }
+          - { name: Awakened Upholder, class: cruiser, count: 4, dps: 42, threats: [web, neut] }
+        total_dps: 384
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Emergent Upholder, class: frigate, count: 2, dps: 18, threats: [neut, rr] }
+          - { name: Sleepless Safeguard, class: battleship, count: 1, dps: 542, threats: [web, scram, neut] }
+        total_dps: 674
 
   - slug: sleeper-information-sanctum
     name: Sleeper Information Sanctum
     type: anomaly
     classes: [4]
-    blue_loot: 86100000
+    blue_loot: 81800000
     salvage_est: 30000000
-    waves: 3
-    threats: [neut, scram, web, rr]
-    notes: ""
+    threats: [web, scram, neut, rr]
+    notes: "Sleepless Safeguard has scram."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Sleepless Preserver"
+        npcs:
+          - { name: Emergent Upholder, class: frigate, count: 2, dps: 18, threats: [neut, rr] }
+          - { name: Awakened Upholder, class: cruiser, count: 2, dps: 42, threats: [web, neut] }
+          - { name: Sleepless Preserver, class: battleship, count: 2, dps: 310, threats: [rr] }
+        total_dps: 740
+      - name: "Wave 2"
+        trigger: "Sleepless Safeguard"
+        npcs:
+          - { name: Sleepless Defender, class: battleship, count: 3, dps: 364, threats: [web] }
+          - { name: Sleepless Safeguard, class: battleship, count: 1, dps: 542, threats: [web, scram, neut] }
+        total_dps: 1634
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Preserver, class: frigate, count: 2, dps: 32, threats: [web, scram, neut] }
+          - { name: Emergent Upholder, class: frigate, count: 3, dps: 18, threats: [neut, rr] }
+          - { name: Awakened Preserver, class: cruiser, count: 2, dps: 76, threats: [rr] }
+          - { name: Awakened Upholder, class: cruiser, count: 2, dps: 42, threats: [web, neut] }
+        total_dps: 282
 
   - slug: forgotten-frontier-conversion-module
     name: Forgotten Frontier Conversion Module
     type: relic
     classes: [4]
-    blue_loot: 146500000
+    blue_loot: 115000000
     salvage_est: 50000000
-    waves: 3
-    threats: [neut, scram, web, rr]
-    notes: "Most valuable C4 site."
+    threats: [web, scram, neut]
+    notes: "Most valuable C4 site. Sleepless Safeguard has scram. Conditional spawn if Talocan relic can appears."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: null
+        npcs:
+          - { name: Wakeful Sentry Tower, class: sentry, count: 1, dps: 74, threats: [] }
+          - { name: Emergent Defender, class: frigate, count: 6, dps: 24, threats: [web] }
+          - { name: Awakened Defender, class: cruiser, count: 6, dps: 56, threats: [] }
+          - { name: Sleepless Upholder, class: battleship, count: 1, dps: 442, threats: [neut] }
+          - { name: Sleepless Safeguard, class: battleship, count: 1, dps: 542, threats: [web, scram, neut] }
+        total_dps: 1606
+      - name: "Wave 2"
+        trigger: "Sleepless Defender"
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 5, dps: 24, threats: [web] }
+          - { name: Awakened Defender, class: cruiser, count: 5, dps: 56, threats: [] }
+          - { name: Sleepless Defender, class: battleship, count: 3, dps: 364, threats: [web] }
+        total_dps: 1492
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Sleepless Safeguard, class: battleship, count: 4, dps: 542, threats: [web, scram, neut] }
+        total_dps: 2168
 
   - slug: forgotten-frontier-evacuation-center
     name: Forgotten Frontier Evacuation Center
     type: relic
     classes: [4]
-    blue_loot: 91600000
+    blue_loot: 115000000
     salvage_est: 33000000
-    waves: 3
-    threats: [neut, scram, web, rr]
-    notes: ""
+    threats: [web, rr]
+    notes: "Conditional BS spawn if Talocan relic can spawns."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Sleepless Preserver"
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Sleepless Preserver, class: battleship, count: 1, dps: 310, threats: [rr] }
+          - { name: Sleepless Defender, class: battleship, count: 1, dps: 364, threats: [web] }
+        total_dps: 770
+      - name: "Wave 2"
+        trigger: "Sleepless Preserver"
+        npcs:
+          - { name: Awakened Defender, class: cruiser, count: 4, dps: 56, threats: [] }
+          - { name: Sleepless Preserver, class: battleship, count: 2, dps: 310, threats: [rr] }
+        total_dps: 844
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Sleepless Defender, class: battleship, count: 2, dps: 364, threats: [web] }
+          - { name: Sleepless Preserver, class: battleship, count: 2, dps: 310, threats: [rr] }
+        total_dps: 1348
 
   - slug: unsecured-frontier-digital-nexus
     name: Unsecured Frontier Digital Nexus
     type: data
     classes: [4]
-    blue_loot: 130100000
+    blue_loot: 115000000
     salvage_est: 45000000
-    waves: 3
-    threats: [neut, scram, web, rr]
-    notes: "High value data site."
+    threats: [web, scram, neut]
+    notes: "Wave 2 triggered by hacking cans. Sleepless Safeguard has scram."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "hack"
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Awakened Defender, class: cruiser, count: 6, dps: 56, threats: [] }
+          - { name: Sleepless Safeguard, class: battleship, count: 1, dps: 542, threats: [web, scram, neut] }
+        total_dps: 974
+      - name: "Wave 2"
+        trigger: "Sleepless Defender"
+        npcs:
+          - { name: Emergent Preserver, class: frigate, count: 4, dps: 32, threats: [web, scram, neut] }
+          - { name: Awakened Defender, class: cruiser, count: 4, dps: 56, threats: [] }
+          - { name: Sleepless Defender, class: battleship, count: 3, dps: 364, threats: [web] }
+        total_dps: 1444
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Sleepless Safeguard, class: battleship, count: 4, dps: 542, threats: [web, scram, neut] }
+        total_dps: 2168
 
   - slug: unsecured-frontier-trinary-hub
     name: Unsecured Frontier Trinary Hub
@@ -336,9 +1027,28 @@ sites:
     classes: [4]
     blue_loot: 91600000
     salvage_est: 33000000
-    waves: 3
-    threats: [neut, scram, web, rr]
-    notes: ""
+    threats: [web, rr]
+    notes: "Wave 2 triggered by failing a hack."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "hack"
+        npcs:
+          - { name: Emergent Defender, class: frigate, count: 4, dps: 24, threats: [web] }
+          - { name: Sleepless Preserver, class: battleship, count: 1, dps: 310, threats: [rr] }
+          - { name: Sleepless Defender, class: battleship, count: 1, dps: 364, threats: [web] }
+        total_dps: 770
+      - name: "Wave 2"
+        trigger: "Sleepless Preserver"
+        npcs:
+          - { name: Awakened Defender, class: cruiser, count: 4, dps: 56, threats: [] }
+          - { name: Sleepless Preserver, class: battleship, count: 2, dps: 310, threats: [rr] }
+        total_dps: 844
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Sleepless Defender, class: battleship, count: 2, dps: 364, threats: [web] }
+          - { name: Sleepless Preserver, class: battleship, count: 2, dps: 310, threats: [rr] }
+        total_dps: 1348
 
   # ============================
   # CLASS 5
@@ -349,9 +1059,39 @@ sites:
     classes: [5]
     blue_loot: 253400000
     salvage_est: 80000000
-    waves: 4
-    threats: [neut, scram, web, rr]
-    notes: "Capital escalation possible. 4 waves."
+    threats: [web, scram, neut, rr]
+    notes: "Capital escalation possible. 4 waves. Heavy neut pressure."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Sentinel"
+        npcs:
+          - { name: Restless Sentry Tower, class: sentry, count: 3, dps: 94, threats: [] }
+          - { name: Emergent Sentinel, class: frigate, count: 5, dps: 32, threats: [web, scram] }
+          - { name: Awakened Sentinel, class: cruiser, count: 5, dps: 72, threats: [web] }
+        total_dps: 802
+      - name: "Wave 2"
+        trigger: "Emergent Keeper"
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 6, dps: 24, threats: [neut, rr] }
+          - { name: Sleepless Sentinel, class: battleship, count: 3, dps: 466, threats: [web, scram, neut] }
+        total_dps: 1542
+      - name: "Wave 3"
+        trigger: "Sleepless Sentinel"
+        npcs:
+          - { name: Awakened Sentinel, class: cruiser, count: 5, dps: 72, threats: [web] }
+          - { name: Awakened Keeper, class: cruiser, count: 3, dps: 54, threats: [web, scram, neut] }
+          - { name: Sleepless Sentinel, class: battleship, count: 3, dps: 466, threats: [web, scram, neut] }
+        total_dps: 1920
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Warden, class: frigate, count: 3, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Sentinel, class: cruiser, count: 2, dps: 72, threats: [web] }
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+        total_dps: 1402
+    capital_escalation:
+      - { wave: 1, npcs: [{ name: Sleepless Guardian, class: battleship, count: 6, dps: 694, threats: [web, scram, neut] }], total_dps: 4164 }
+      - { wave: 2, npcs: [{ name: Sleepless Guardian, class: battleship, count: 8, dps: 694, threats: [web, scram, neut] }], total_dps: 5552 }
 
   - slug: core-stronghold
     name: Core Stronghold
@@ -359,9 +1099,37 @@ sites:
     classes: [5]
     blue_loot: 234900000
     salvage_est: 75000000
-    waves: 4
-    threats: [neut, scram, web, rr]
+    threats: [web, scram, neut, rr]
     notes: "Capital escalation possible."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Emergent Sentinel"
+        npcs:
+          - { name: Restless Sentry Tower, class: sentry, count: 6, dps: 94, threats: [] }
+          - { name: Emergent Sentinel, class: frigate, count: 4, dps: 32, threats: [web, scram] }
+        total_dps: 692
+      - name: "Wave 2"
+        trigger: "Sleepless Warden"
+        npcs:
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+          - { name: Sleepless Warden, class: battleship, count: 2, dps: 398, threats: [rr] }
+        total_dps: 1928
+      - name: "Wave 3"
+        trigger: "Awakened Sentinel"
+        npcs:
+          - { name: Emergent Warden, class: frigate, count: 6, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Sentinel, class: cruiser, count: 7, dps: 72, threats: [web] }
+        total_dps: 756
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Awakened Warden, class: cruiser, count: 4, dps: 98, threats: [rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+          - { name: Sleepless Warden, class: battleship, count: 3, dps: 398, threats: [rr] }
+        total_dps: 2718
+    capital_escalation:
+      - { wave: 1, npcs: [{ name: Sleepless Guardian, class: battleship, count: 6, dps: 694, threats: [web, scram, neut] }], total_dps: 4164 }
+      - { wave: 2, npcs: [{ name: Sleepless Guardian, class: battleship, count: 8, dps: 694, threats: [web, scram, neut] }], total_dps: 5552 }
 
   - slug: oruze-osobnyk
     name: Oruze Osobnyk
@@ -369,9 +1137,29 @@ sites:
     classes: [5]
     blue_loot: 164700000
     salvage_est: 55000000
-    waves: 3
-    threats: [neut, scram, web, rr]
+    threats: [web, scram, neut, rr]
     notes: "No capital escalation."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Sleepless Sentinel"
+        npcs:
+          - { name: Emergent Sentinel, class: frigate, count: 4, dps: 32, threats: [web, scram] }
+          - { name: Sleepless Keeper, class: battleship, count: 1, dps: 566, threats: [neut] }
+          - { name: Sleepless Sentinel, class: battleship, count: 3, dps: 466, threats: [web, scram, neut] }
+        total_dps: 2092
+      - name: "Wave 2"
+        trigger: "Sleepless Guardian"
+        npcs:
+          - { name: Awakened Sentinel, class: cruiser, count: 6, dps: 72, threats: [web] }
+          - { name: Sleepless Guardian, class: battleship, count: 1, dps: 694, threats: [web, scram, neut] }
+        total_dps: 1126
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 4, dps: 24, threats: [neut, rr] }
+          - { name: Emergent Warden, class: frigate, count: 2, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Warden, class: cruiser, count: 3, dps: 98, threats: [rr] }
+        total_dps: 474
 
   - slug: quarantine-area
     name: Quarantine Area
@@ -379,9 +1167,30 @@ sites:
     classes: [5]
     blue_loot: 146900000
     salvage_est: 50000000
-    waves: 3
-    threats: [neut, scram, web, rr]
-    notes: "No capital escalation."
+    threats: [web, scram, neut, rr]
+    notes: "No capital escalation. TRIGGERS ARE RANDOM."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "random"
+        npcs:
+          - { name: Restless Sentry Tower, class: sentry, count: 4, dps: 94, threats: [] }
+          - { name: Emergent Escort, class: frigate, count: 3, dps: 24, threats: [web] }
+          - { name: Awakened Keeper, class: cruiser, count: 2, dps: 54, threats: [web, scram, neut] }
+          - { name: Sleepless Sentinel, class: battleship, count: 1, dps: 466, threats: [web, scram, neut] }
+        total_dps: 920
+      - name: "Wave 2"
+        trigger: "random"
+        npcs:
+          - { name: Awakened Sentinel, class: cruiser, count: 4, dps: 72, threats: [web] }
+          - { name: Sleepless Sentinel, class: battleship, count: 2, dps: 466, threats: [web, scram, neut] }
+        total_dps: 1220
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Sentinel, class: frigate, count: 5, dps: 32, threats: [web, scram] }
+          - { name: Awakened Warden, class: cruiser, count: 3, dps: 98, threats: [rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+        total_dps: 1586
 
   - slug: forgotten-core-data-field
     name: Forgotten Core Data Field
@@ -389,9 +1198,42 @@ sites:
     classes: [5]
     blue_loot: 279000000
     salvage_est: 90000000
-    waves: 4
-    threats: [neut, scram, web, rr]
+    threats: [web, scram, neut, rr]
     notes: "Capital escalation possible."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Keeper"
+        npcs:
+          - { name: Emergent Sentinel, class: frigate, count: 5, dps: 32, threats: [web, scram] }
+          - { name: Awakened Keeper, class: cruiser, count: 5, dps: 54, threats: [web, scram, neut] }
+        total_dps: 430
+      - name: "Wave 2"
+        trigger: "Awakened Keeper"
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 4, dps: 24, threats: [neut, rr] }
+          - { name: Emergent Warden, class: frigate, count: 4, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Keeper, class: cruiser, count: 3, dps: 54, threats: [web, scram, neut] }
+          - { name: Awakened Sentinel, class: cruiser, count: 2, dps: 72, threats: [web] }
+          - { name: Awakened Warden, class: cruiser, count: 3, dps: 98, threats: [rr] }
+        total_dps: 862
+      - name: "Wave 3"
+        trigger: "Sleepless Keeper"
+        npcs:
+          - { name: Emergent Warden, class: frigate, count: 6, dps: 42, threats: [web, scram, neut] }
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+          - { name: Sleepless Sentinel, class: battleship, count: 2, dps: 466, threats: [web, scram, neut] }
+        total_dps: 2316
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Awakened Keeper, class: cruiser, count: 2, dps: 54, threats: [web, scram, neut] }
+          - { name: Awakened Warden, class: cruiser, count: 2, dps: 98, threats: [rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+          - { name: Sleepless Warden, class: battleship, count: 2, dps: 398, threats: [rr] }
+        total_dps: 2232
+    capital_escalation:
+      - { wave: 1, npcs: [{ name: Sleepless Guardian, class: battleship, count: 6, dps: 694, threats: [web, scram, neut] }], total_dps: 4164 }
+      - { wave: 2, npcs: [{ name: Sleepless Guardian, class: battleship, count: 8, dps: 694, threats: [web, scram, neut] }], total_dps: 5552 }
 
   - slug: forgotten-core-information-pen
     name: Forgotten Core Information Pen
@@ -399,9 +1241,38 @@ sites:
     classes: [5]
     blue_loot: 332900000
     salvage_est: 100000000
-    waves: 4
-    threats: [neut, scram, web, rr]
-    notes: "Most valuable C5 site. Capital escalation."
+    threats: [web, scram, neut, rr]
+    notes: "Most valuable C5 site. Capital escalation. Wave 3 triggered by hacking."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Sleepless Keeper"
+        npcs:
+          - { name: Sleepless Keeper, class: battleship, count: 3, dps: 566, threats: [neut] }
+          - { name: Sleepless Sentinel, class: battleship, count: 1, dps: 466, threats: [web, scram, neut] }
+        total_dps: 2164
+      - name: "Wave 2"
+        trigger: null
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 4, dps: 24, threats: [neut, rr] }
+          - { name: Awakened Warden, class: cruiser, count: 4, dps: 98, threats: [rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+        total_dps: 1620
+      - name: "Wave 3"
+        trigger: "Awakened Warden"
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 3, dps: 24, threats: [neut, rr] }
+          - { name: Emergent Warden, class: frigate, count: 3, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Sentinel, class: cruiser, count: 3, dps: 72, threats: [web] }
+          - { name: Awakened Warden, class: cruiser, count: 4, dps: 98, threats: [rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 3, dps: 566, threats: [neut] }
+        total_dps: 2504
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Warden, class: frigate, count: 4, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Keeper, class: cruiser, count: 4, dps: 54, threats: [web, scram, neut] }
+          - { name: Sleepless Keeper, class: battleship, count: 5, dps: 566, threats: [neut] }
+        total_dps: 3214
 
   - slug: unsecured-frontier-enclave-relay
     name: Unsecured Frontier Enclave Relay
@@ -409,9 +1280,41 @@ sites:
     classes: [5]
     blue_loot: 329900000
     salvage_est: 100000000
-    waves: 4
-    threats: [neut, scram, web, rr]
+    threats: [web, scram, neut, rr]
     notes: "Capital escalation possible."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Sleepless Keeper"
+        npcs:
+          - { name: Sleepless Keeper, class: battleship, count: 3, dps: 566, threats: [neut] }
+          - { name: Sleepless Sentinel, class: battleship, count: 1, dps: 466, threats: [web, scram, neut] }
+        total_dps: 2164
+      - name: "Wave 2"
+        trigger: "Sleepless Keeper"
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 5, dps: 24, threats: [neut, rr] }
+          - { name: Awakened Warden, class: cruiser, count: 4, dps: 98, threats: [rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 3, dps: 566, threats: [neut] }
+        total_dps: 2210
+      - name: "Wave 3"
+        trigger: "Sleepless Keeper"
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 3, dps: 24, threats: [neut, rr] }
+          - { name: Emergent Warden, class: frigate, count: 4, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Sentinel, class: cruiser, count: 3, dps: 72, threats: [web] }
+          - { name: Awakened Warden, class: cruiser, count: 4, dps: 98, threats: [rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+        total_dps: 1888
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Warden, class: frigate, count: 3, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Warden, class: cruiser, count: 3, dps: 98, threats: [rr] }
+          - { name: Sleepless Warden, class: battleship, count: 5, dps: 398, threats: [rr] }
+        total_dps: 2410
+    capital_escalation:
+      - { wave: 1, npcs: [{ name: Sleepless Guardian, class: battleship, count: 6, dps: 694, threats: [web, scram, neut] }], total_dps: 4164 }
+      - { wave: 2, npcs: [{ name: Sleepless Guardian, class: battleship, count: 8, dps: 694, threats: [web, scram, neut] }], total_dps: 5552 }
 
   - slug: unsecured-frontier-server-bank
     name: Unsecured Frontier Server Bank
@@ -419,9 +1322,42 @@ sites:
     classes: [5]
     blue_loot: 272100000
     salvage_est: 85000000
-    waves: 4
-    threats: [neut, scram, web, rr]
+    threats: [web, scram, neut, rr]
     notes: "Capital escalation possible."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Keeper"
+        npcs:
+          - { name: Emergent Sentinel, class: frigate, count: 5, dps: 32, threats: [web, scram] }
+          - { name: Awakened Keeper, class: cruiser, count: 5, dps: 54, threats: [web, scram, neut] }
+        total_dps: 430
+      - name: "Wave 2"
+        trigger: "Awakened Keeper"
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 3, dps: 24, threats: [neut, rr] }
+          - { name: Emergent Warden, class: frigate, count: 3, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Keeper, class: cruiser, count: 4, dps: 54, threats: [web, scram, neut] }
+          - { name: Awakened Sentinel, class: cruiser, count: 2, dps: 72, threats: [web] }
+          - { name: Awakened Warden, class: cruiser, count: 4, dps: 98, threats: [rr] }
+        total_dps: 854
+      - name: "Wave 3"
+        trigger: "Sleepless Keeper"
+        npcs:
+          - { name: Emergent Warden, class: frigate, count: 5, dps: 42, threats: [web, scram, neut] }
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+          - { name: Sleepless Sentinel, class: battleship, count: 1, dps: 466, threats: [web, scram, neut] }
+        total_dps: 1808
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Awakened Keeper, class: cruiser, count: 2, dps: 54, threats: [web, scram, neut] }
+          - { name: Awakened Warden, class: cruiser, count: 3, dps: 98, threats: [rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+          - { name: Sleepless Warden, class: battleship, count: 2, dps: 398, threats: [rr] }
+        total_dps: 2198
+    capital_escalation:
+      - { wave: 1, npcs: [{ name: Sleepless Guardian, class: battleship, count: 6, dps: 694, threats: [web, scram, neut] }], total_dps: 4164 }
+      - { wave: 2, npcs: [{ name: Sleepless Guardian, class: battleship, count: 8, dps: 694, threats: [web, scram, neut] }], total_dps: 5552 }
 
   # ============================
   # CLASS 6
@@ -430,21 +1366,85 @@ sites:
     name: Core Bastion
     type: anomaly
     classes: [6]
-    blue_loot: 445600000
+    blue_loot: 455600000
     salvage_est: 140000000
-    waves: 4
-    threats: [neut, scram, web, rr]
+    threats: [web, scram, neut, rr]
     notes: "Highest value anomaly in the game. Capital escalation. Fleet required."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Emergent Keeper"
+        npcs:
+          - { name: Restless Sentry Tower, class: sentry, count: 3, dps: 94, threats: [] }
+          - { name: Emergent Keeper, class: frigate, count: 3, dps: 24, threats: [neut, rr] }
+          - { name: Emergent Sentinel, class: frigate, count: 3, dps: 32, threats: [web, scram] }
+          - { name: Awakened Keeper, class: cruiser, count: 3, dps: 54, threats: [web, scram, neut] }
+          - { name: Awakened Sentinel, class: cruiser, count: 3, dps: 72, threats: [web] }
+          - { name: Awakened Warden, class: cruiser, count: 3, dps: 98, threats: [rr] }
+          - { name: Sleepless Sentinel, class: battleship, count: 2, dps: 466, threats: [web, scram, neut] }
+        total_dps: 2282
+      - name: "Wave 2"
+        trigger: "Awakened Warden"
+        npcs:
+          - { name: Awakened Sentinel, class: cruiser, count: 4, dps: 72, threats: [web] }
+          - { name: Awakened Warden, class: cruiser, count: 4, dps: 98, threats: [rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 4, dps: 566, threats: [neut] }
+        total_dps: 2944
+      - name: "Wave 3"
+        trigger: "Sleepless Guardian"
+        npcs:
+          - { name: Emergent Warden, class: frigate, count: 6, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Warden, class: cruiser, count: 5, dps: 98, threats: [rr] }
+          - { name: Sleepless Guardian, class: battleship, count: 5, dps: 694, threats: [web, scram, neut] }
+        total_dps: 4212
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Sleepless Sentinel, class: battleship, count: 4, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Guardian, class: battleship, count: 2, dps: 694, threats: [web, scram, neut] }
+        total_dps: 3252
+    capital_escalation:
+      - { wave: 1, npcs: [{ name: Sleepless Warden, class: battleship, count: 6, dps: 398, threats: [rr] }], total_dps: 2388 }
+      - { wave: 2, npcs: [{ name: Sleepless Warden, class: battleship, count: 8, dps: 398, threats: [rr] }], total_dps: 3184 }
 
   - slug: core-citadel
     name: Core Citadel
     type: anomaly
     classes: [6]
-    blue_loot: 395000000
+    blue_loot: 610100000
     salvage_est: 120000000
-    waves: 4
-    threats: [neut, scram, web, rr]
+    threats: [web, scram, neut, rr]
     notes: "Capital escalation. Fleet required."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Sleepless Warden"
+        npcs:
+          - { name: Sleepless Keeper, class: battleship, count: 1, dps: 566, threats: [neut] }
+          - { name: Sleepless Sentinel, class: battleship, count: 1, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Warden, class: battleship, count: 1, dps: 398, threats: [rr] }
+        total_dps: 1430
+      - name: "Wave 2"
+        trigger: "Sleepless Warden"
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 8, dps: 24, threats: [neut, rr] }
+          - { name: Sleepless Sentinel, class: battleship, count: 3, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Warden, class: battleship, count: 1, dps: 398, threats: [rr] }
+        total_dps: 1988
+      - name: "Wave 3"
+        trigger: "Sleepless Keeper"
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 8, dps: 24, threats: [neut, rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 3, dps: 566, threats: [neut] }
+          - { name: Sleepless Warden, class: battleship, count: 3, dps: 398, threats: [rr] }
+        total_dps: 3084
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 8, dps: 24, threats: [neut, rr] }
+          - { name: Sleepless Guardian, class: battleship, count: 2, dps: 694, threats: [web, scram, neut] }
+        total_dps: 1580
+    capital_escalation:
+      - { wave: 1, npcs: [{ name: Sleepless Warden, class: battleship, count: 6, dps: 398, threats: [rr] }], total_dps: 2388 }
+      - { wave: 2, npcs: [{ name: Sleepless Warden, class: battleship, count: 8, dps: 398, threats: [rr] }], total_dps: 3184 }
 
   - slug: strange-energy-readings
     name: Strange Energy Readings
@@ -452,9 +1452,29 @@ sites:
     classes: [6]
     blue_loot: 300000000
     salvage_est: 95000000
-    waves: 3
-    threats: [neut, scram, web, rr]
+    threats: [web, scram, neut, rr]
     notes: "No capital escalation."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Awakened Warden"
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 5, dps: 24, threats: [neut, rr] }
+          - { name: Awakened Warden, class: cruiser, count: 5, dps: 98, threats: [rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+        total_dps: 1742
+      - name: "Wave 2"
+        trigger: "Sleepless Guardian"
+        npcs:
+          - { name: Awakened Keeper, class: cruiser, count: 6, dps: 54, threats: [web, scram, neut] }
+          - { name: Sleepless Guardian, class: battleship, count: 3, dps: 694, threats: [web, scram, neut] }
+        total_dps: 2406
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 6, dps: 24, threats: [neut, rr] }
+          - { name: Awakened Warden, class: cruiser, count: 4, dps: 98, threats: [rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 5, dps: 566, threats: [neut] }
+        total_dps: 3366
 
   - slug: the-mirror
     name: The Mirror
@@ -462,29 +1482,136 @@ sites:
     classes: [6]
     blue_loot: 320000000
     salvage_est: 100000000
-    waves: 3
-    threats: [neut, scram, web, rr]
+    threats: [web, scram, neut, rr]
     notes: "No capital escalation."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Sleepless Warden"
+        npcs:
+          - { name: Restless Sentry Tower, class: sentry, count: 6, dps: 94, threats: [] }
+          - { name: Emergent Warden, class: frigate, count: 6, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Warden, class: cruiser, count: 4, dps: 98, threats: [rr] }
+          - { name: Sleepless Sentinel, class: battleship, count: 2, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Warden, class: battleship, count: 3, dps: 398, threats: [rr] }
+        total_dps: 3392
+      - name: "Wave 2"
+        trigger: "Sleepless Guardian"
+        npcs:
+          - { name: Emergent Sentinel, class: frigate, count: 6, dps: 32, threats: [web, scram] }
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+          - { name: Sleepless Guardian, class: battleship, count: 3, dps: 694, threats: [web, scram, neut] }
+        total_dps: 3406
+      - name: "Wave 3 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Keeper, class: frigate, count: 4, dps: 24, threats: [neut, rr] }
+          - { name: Emergent Warden, class: frigate, count: 4, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Keeper, class: cruiser, count: 4, dps: 54, threats: [web, scram, neut] }
+          - { name: Awakened Warden, class: cruiser, count: 4, dps: 98, threats: [rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 4, dps: 566, threats: [neut] }
+        total_dps: 3216
+    capital_escalation:
+      - { wave: 1, npcs: [{ name: Sleepless Warden, class: battleship, count: 6, dps: 398, threats: [rr] }], total_dps: 2388 }
+      - { wave: 2, npcs: [{ name: Sleepless Warden, class: battleship, count: 8, dps: 398, threats: [rr] }], total_dps: 3184 }
 
   - slug: forgotten-core-assembly-hall
     name: Forgotten Core Assembly Hall
     type: relic
     classes: [6]
-    blue_loot: 420000000
+    blue_loot: 642500000
     salvage_est: 130000000
-    waves: 4
-    threats: [neut, scram, web, rr]
-    notes: "Capital escalation. Fleet required."
+    threats: [web, scram, neut, rr]
+    notes: "Capital escalation. Fleet required. Conditional Guardian spawn in wave 1."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Sleepless Warden"
+        npcs:
+          - { name: Restless Sentry Tower, class: sentry, count: 6, dps: 94, threats: [] }
+          - { name: Emergent Sentinel, class: frigate, count: 5, dps: 32, threats: [web, scram] }
+          - { name: Sleepless Keeper, class: battleship, count: 3, dps: 566, threats: [neut] }
+          - { name: Sleepless Sentinel, class: battleship, count: 3, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Warden, class: battleship, count: 3, dps: 398, threats: [rr] }
+          - { name: Sleepless Guardian, class: battleship, count: 1, dps: 694, threats: [web, scram, neut] }
+        total_dps: 5208
+      - name: "Wave 2"
+        trigger: "Sleepless Warden"
+        npcs:
+          - { name: Awakened Keeper, class: cruiser, count: 6, dps: 54, threats: [web, scram, neut] }
+          - { name: Sleepless Keeper, class: battleship, count: 3, dps: 566, threats: [neut] }
+          - { name: Sleepless Sentinel, class: battleship, count: 2, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Warden, class: battleship, count: 1, dps: 398, threats: [rr] }
+        total_dps: 3248
+      - name: "Wave 3"
+        trigger: "Sleepless Warden"
+        npcs:
+          - { name: Awakened Warden, class: cruiser, count: 6, dps: 98, threats: [rr] }
+          - { name: Sleepless Keeper, class: battleship, count: 3, dps: 566, threats: [neut] }
+          - { name: Sleepless Sentinel, class: battleship, count: 2, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Warden, class: battleship, count: 2, dps: 398, threats: [rr] }
+        total_dps: 3914
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Sentinel, class: frigate, count: 10, dps: 32, threats: [web, scram] }
+          - { name: Awakened Sentinel, class: cruiser, count: 6, dps: 72, threats: [web] }
+          - { name: Sleepless Guardian, class: battleship, count: 6, dps: 694, threats: [web, scram, neut] }
+        total_dps: 4916
+    capital_escalation:
+      - { wave: 1, npcs: [{ name: Sleepless Guardian, class: battleship, count: 6, dps: 694, threats: [web, scram, neut] }], total_dps: 4164 }
+      - { wave: 2, npcs: [{ name: Sleepless Guardian, class: battleship, count: 8, dps: 694, threats: [web, scram, neut] }], total_dps: 5552 }
 
   - slug: forgotten-core-circuitry-disassembler
     name: Forgotten Core Circuitry Disassembler
     type: relic
     classes: [6]
-    blue_loot: 380000000
+    blue_loot: 657600000
     salvage_est: 120000000
-    waves: 4
-    threats: [neut, scram, web, rr]
-    notes: "Capital escalation."
+    threats: [web, scram, neut, rr]
+    notes: "Capital escalation. Massive frigate swarm in wave 1."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Emergent Warden"
+        npcs:
+          - { name: Wakeful Sentry Tower, class: sentry, count: 3, dps: 74, threats: [] }
+          - { name: Restless Sentry Tower, class: sentry, count: 4, dps: 94, threats: [] }
+          - { name: Emergent Sentinel, class: frigate, count: 9, dps: 32, threats: [web, scram] }
+          - { name: Emergent Keeper, class: frigate, count: 9, dps: 24, threats: [neut, rr] }
+          - { name: Emergent Warden, class: frigate, count: 9, dps: 42, threats: [web, scram, neut] }
+          - { name: Sleepless Guardian, class: battleship, count: 1, dps: 694, threats: [web, scram, neut] }
+        total_dps: 2268
+      - name: "Wave 2"
+        trigger: "Awakened Warden"
+        npcs:
+          - { name: Emergent Warden, class: frigate, count: 4, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Sentinel, class: cruiser, count: 7, dps: 72, threats: [web] }
+          - { name: Awakened Keeper, class: cruiser, count: 7, dps: 54, threats: [web, scram, neut] }
+          - { name: Awakened Warden, class: cruiser, count: 7, dps: 98, threats: [rr] }
+        total_dps: 1918
+      - name: "Wave 3"
+        trigger: "Sleepless Guardian"
+        npcs:
+          - { name: Emergent Sentinel, class: frigate, count: 5, dps: 32, threats: [web, scram] }
+          - { name: Sleepless Sentinel, class: battleship, count: 3, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Keeper, class: battleship, count: 3, dps: 566, threats: [neut] }
+          - { name: Sleepless Warden, class: battleship, count: 3, dps: 398, threats: [rr] }
+          - { name: Sleepless Guardian, class: battleship, count: 1, dps: 694, threats: [web, scram, neut] }
+        total_dps: 4944
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Sentinel, class: frigate, count: 4, dps: 32, threats: [web, scram] }
+          - { name: Emergent Keeper, class: frigate, count: 4, dps: 24, threats: [neut, rr] }
+          - { name: Awakened Sentinel, class: cruiser, count: 4, dps: 72, threats: [web] }
+          - { name: Awakened Keeper, class: cruiser, count: 4, dps: 54, threats: [web, scram, neut] }
+          - { name: Awakened Warden, class: cruiser, count: 4, dps: 98, threats: [rr] }
+          - { name: Sleepless Sentinel, class: battleship, count: 2, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+          - { name: Sleepless Warden, class: battleship, count: 2, dps: 398, threats: [rr] }
+          - { name: Sleepless Guardian, class: battleship, count: 3, dps: 694, threats: [web, scram, neut] }
+        total_dps: 6638
+    capital_escalation:
+      - { wave: 1, npcs: [{ name: Sleepless Warden, class: battleship, count: 6, dps: 398, threats: [rr] }], total_dps: 2388 }
+      - { wave: 2, npcs: [{ name: Sleepless Warden, class: battleship, count: 8, dps: 398, threats: [rr] }], total_dps: 3184 }
 
   - slug: unsecured-core-backup-array
     name: Unsecured Core Backup Array
@@ -492,9 +1619,46 @@ sites:
     classes: [6]
     blue_loot: 410000000
     salvage_est: 130000000
-    waves: 4
-    threats: [neut, scram, web, rr]
-    notes: "Capital escalation. Fleet required."
+    threats: [web, scram, neut, rr]
+    notes: "Capital escalation. Fleet required. Conditional Guardian spawn in wave 1."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Sleepless Warden"
+        npcs:
+          - { name: Wakeful Sentry Tower, class: sentry, count: 3, dps: 74, threats: [] }
+          - { name: Restless Sentry Tower, class: sentry, count: 3, dps: 94, threats: [] }
+          - { name: Emergent Sentinel, class: frigate, count: 10, dps: 32, threats: [web, scram] }
+          - { name: Sleepless Keeper, class: battleship, count: 3, dps: 566, threats: [neut] }
+          - { name: Sleepless Sentinel, class: battleship, count: 2, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Warden, class: battleship, count: 2, dps: 398, threats: [rr] }
+          - { name: Sleepless Guardian, class: battleship, count: 1, dps: 694, threats: [web, scram, neut] }
+        total_dps: 4946
+      - name: "Wave 2"
+        trigger: "Sleepless Warden"
+        npcs:
+          - { name: Awakened Keeper, class: cruiser, count: 6, dps: 54, threats: [web, scram, neut] }
+          - { name: Sleepless Sentinel, class: battleship, count: 3, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Keeper, class: battleship, count: 3, dps: 566, threats: [neut] }
+          - { name: Sleepless Warden, class: battleship, count: 2, dps: 398, threats: [rr] }
+        total_dps: 3718
+      - name: "Wave 3"
+        trigger: "Sleepless Warden"
+        npcs:
+          - { name: Awakened Warden, class: cruiser, count: 4, dps: 98, threats: [rr] }
+          - { name: Sleepless Sentinel, class: battleship, count: 3, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Keeper, class: battleship, count: 3, dps: 566, threats: [neut] }
+          - { name: Sleepless Warden, class: battleship, count: 3, dps: 398, threats: [rr] }
+        total_dps: 4486
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Sentinel, class: frigate, count: 10, dps: 32, threats: [web, scram] }
+          - { name: Awakened Sentinel, class: cruiser, count: 8, dps: 72, threats: [web] }
+          - { name: Sleepless Guardian, class: battleship, count: 6, dps: 694, threats: [web, scram, neut] }
+        total_dps: 4960
+    capital_escalation:
+      - { wave: 1, npcs: [{ name: Sleepless Warden, class: battleship, count: 6, dps: 398, threats: [rr] }], total_dps: 2388 }
+      - { wave: 2, npcs: [{ name: Sleepless Warden, class: battleship, count: 8, dps: 398, threats: [rr] }], total_dps: 3184 }
 
   - slug: unsecured-core-emergence
     name: Unsecured Core Emergence
@@ -502,6 +1666,48 @@ sites:
     classes: [6]
     blue_loot: 370000000
     salvage_est: 115000000
-    waves: 4
-    threats: [neut, scram, web, rr]
-    notes: "Capital escalation."
+    threats: [web, scram, neut, rr]
+    notes: "Capital escalation. Massive frigate swarm in wave 1."
+    wave_data:
+      - name: "Wave 1 -- Initial"
+        trigger: "Emergent Warden"
+        npcs:
+          - { name: Wakeful Sentry Tower, class: sentry, count: 4, dps: 74, threats: [] }
+          - { name: Restless Sentry Tower, class: sentry, count: 4, dps: 94, threats: [] }
+          - { name: Emergent Sentinel, class: frigate, count: 9, dps: 32, threats: [web, scram] }
+          - { name: Emergent Keeper, class: frigate, count: 9, dps: 24, threats: [neut, rr] }
+          - { name: Emergent Warden, class: frigate, count: 9, dps: 42, threats: [web, scram, neut] }
+          - { name: Sleepless Guardian, class: battleship, count: 1, dps: 694, threats: [web, scram, neut] }
+        total_dps: 2268
+      - name: "Wave 2"
+        trigger: "Awakened Warden"
+        npcs:
+          - { name: Emergent Warden, class: frigate, count: 4, dps: 42, threats: [web, scram, neut] }
+          - { name: Awakened Sentinel, class: cruiser, count: 7, dps: 72, threats: [web] }
+          - { name: Awakened Keeper, class: cruiser, count: 7, dps: 54, threats: [web, scram, neut] }
+          - { name: Awakened Warden, class: cruiser, count: 7, dps: 98, threats: [rr] }
+        total_dps: 1918
+      - name: "Wave 3"
+        trigger: "Sleepless Guardian"
+        npcs:
+          - { name: Emergent Sentinel, class: frigate, count: 5, dps: 32, threats: [web, scram] }
+          - { name: Sleepless Sentinel, class: battleship, count: 3, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Keeper, class: battleship, count: 3, dps: 566, threats: [neut] }
+          - { name: Sleepless Warden, class: battleship, count: 3, dps: 398, threats: [rr] }
+          - { name: Sleepless Guardian, class: battleship, count: 1, dps: 694, threats: [web, scram, neut] }
+        total_dps: 4944
+      - name: "Wave 4 -- Final"
+        trigger: null
+        npcs:
+          - { name: Emergent Sentinel, class: frigate, count: 4, dps: 32, threats: [web, scram] }
+          - { name: Emergent Keeper, class: frigate, count: 4, dps: 24, threats: [neut, rr] }
+          - { name: Awakened Sentinel, class: cruiser, count: 4, dps: 72, threats: [web] }
+          - { name: Awakened Keeper, class: cruiser, count: 4, dps: 54, threats: [web, scram, neut] }
+          - { name: Awakened Warden, class: cruiser, count: 4, dps: 98, threats: [rr] }
+          - { name: Sleepless Sentinel, class: battleship, count: 2, dps: 466, threats: [web, scram, neut] }
+          - { name: Sleepless Keeper, class: battleship, count: 2, dps: 566, threats: [neut] }
+          - { name: Sleepless Warden, class: battleship, count: 2, dps: 398, threats: [rr] }
+        total_dps: 4756
+    capital_escalation:
+      - { wave: 1, npcs: [{ name: Sleepless Warden, class: battleship, count: 6, dps: 398, threats: [rr] }], total_dps: 2388 }
+      - { wave: 2, npcs: [{ name: Sleepless Warden, class: battleship, count: 8, dps: 398, threats: [rr] }], total_dps: 3184 }

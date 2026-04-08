@@ -1,0 +1,6868 @@
+- slug: forgotten-perimeter-coronation-platform
+  name: Forgotten Perimeter Coronation Platform
+  type: relic
+  wh_class: 1
+  blue_loot: 12800000
+  waves:
+  - name: Wave 1
+    total_dps: 139
+    total_alpha: 1257
+    total_ehp: 45633
+    trigger: Emergent Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 1
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Emergent Patroller
+      class: frigate
+      count: 2
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Awakened Patroller
+      class: cruiser
+      count: 2
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+  - name: Wave 2
+    total_dps: 149
+    total_alpha: 1459
+    total_ehp: 58800
+    trigger: Awakened Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 1
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 3
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 226
+    total_alpha: 2007
+    total_ehp: 73583
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 3
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 2
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Watchman
+      class: cruiser
+      count: 3
+      dps: 31
+      alpha: 266
+      ehp: 8750
+      scram: false
+      web: false
+      neut: -6
+      rrep: 0
+- slug: forgotten-perimeter-power-array
+  name: Forgotten Perimeter Power Array
+  type: relic
+  wh_class: 1
+  blue_loot: 9200000
+  waves:
+  - name: Wave 1
+    total_dps: 84
+    total_alpha: 864
+    total_ehp: 38333
+    trigger: Awakened Patroller
+    trigger_note: null
+    npcs:
+    - name: Awakened Patroller
+      class: cruiser
+      count: 2
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 147
+    total_alpha: 1057
+    total_ehp: 30000
+    trigger: Awakened Escort
+    trigger_note: null
+    npcs:
+    - name: Emergent Watchman
+      class: frigate
+      count: 3
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+    - name: Awakened Escort
+      class: cruiser
+      count: 2
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 172
+    total_alpha: 1304
+    total_ehp: 41500
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Escort
+      class: cruiser
+      count: 2
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Watchman
+      class: cruiser
+      count: 2
+      dps: 31
+      alpha: 266
+      ehp: 8750
+      scram: false
+      web: false
+      neut: -6
+      rrep: 0
+- slug: perimeter-ambush-point
+  name: Perimeter Ambush Point
+  type: anomaly
+  wh_class: 1
+  blue_loot: 8600000
+  waves:
+  - name: Wave 1
+    total_dps: 182
+    total_alpha: 2109
+    total_ehp: 34967
+    trigger: Awakened Escort
+    trigger_note: null
+    npcs:
+    - name: Vigilant Sentry Tower
+      class: tower
+      count: 2
+      dps: 52
+      alpha: 780
+      ehp: 10833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Escort
+      class: frigate
+      count: 1
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Escort
+      class: cruiser
+      count: 1
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 159
+    total_alpha: 1117
+    total_ehp: 33000
+    trigger: Awakened Escort
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 3
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Escort
+      class: cruiser
+      count: 2
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 194
+    total_alpha: 1636
+    total_ehp: 62333
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Escort
+      class: cruiser
+      count: 2
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 2
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: perimeter-camp
+  name: Perimeter Camp
+  type: anomaly
+  wh_class: 1
+  blue_loot: 9600000
+  waves:
+  - name: Wave 1
+    total_dps: 194
+    total_alpha: 2210
+    total_ehp: 37667
+    trigger: Emergent Watchman
+    trigger_note: null
+    npcs:
+    - name: Vigilant Sentry Tower
+      class: tower
+      count: 2
+      dps: 52
+      alpha: 780
+      ehp: 10833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Patroller
+      class: frigate
+      count: 4
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Watchman
+      class: frigate
+      count: 2
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 128
+    total_alpha: 1062
+    total_ehp: 34167
+    trigger: Awakened Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 3
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Watchman
+      class: frigate
+      count: 3
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 1
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 148
+    total_alpha: 1360
+    total_ehp: 53083
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 2
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 2
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Watchman
+      class: cruiser
+      count: 1
+      dps: 31
+      alpha: 266
+      ehp: 8750
+      scram: false
+      web: false
+      neut: -6
+      rrep: 0
+- slug: phase-catalyst-node
+  name: Phase Catalyst Node
+  type: anomaly
+  wh_class: 1
+  blue_loot: 9000000
+  waves:
+  - name: Wave 1
+    total_dps: 302
+    total_alpha: 3825
+    total_ehp: 53933
+    trigger: Emergent Escort
+    trigger_note: first death
+    npcs:
+    - name: Vigilant Sentry Tower
+      class: tower
+      count: 4
+      dps: 52
+      alpha: 780
+      ehp: 10833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Emergent Escort
+      class: frigate
+      count: 2
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Emergent Watchman
+      class: frigate
+      count: 4
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+  - name: Wave 2
+    total_dps: 139
+    total_alpha: 1250
+    total_ehp: 50333
+    trigger: Awakened Escort
+    trigger_note: null
+    npcs:
+    - name: Awakened Escort
+      class: cruiser
+      count: 1
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Awakened Patroller
+      class: cruiser
+      count: 2
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+  - name: Wave 3
+    total_dps: 135
+    total_alpha: 975
+    total_ehp: 24000
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 6
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Watchman
+      class: frigate
+      count: 3
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+- slug: the-line
+  name: The Line
+  type: anomaly
+  wh_class: 1
+  blue_loot: 12000000
+  waves:
+  - name: Wave 1
+    total_dps: 133
+    total_alpha: 1011
+    total_ehp: 26750
+    trigger: Awakened Watchman
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 4
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Watchman
+      class: frigate
+      count: 3
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+    - name: Awakened Watchman
+      class: cruiser
+      count: 1
+      dps: 31
+      alpha: 266
+      ehp: 8750
+      scram: false
+      web: false
+      neut: -6
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 152
+    total_alpha: 1352
+    total_ehp: 42233
+    trigger: Awakened Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 3
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 2
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 155
+    total_alpha: 1330
+    total_ehp: 43750
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Watchman
+      class: cruiser
+      count: 5
+      dps: 31
+      alpha: 266
+      ehp: 8750
+      scram: false
+      web: false
+      neut: -6
+      rrep: 0
+- slug: unsecured-perimeter-amplifier
+  name: Unsecured Perimeter Amplifier
+  type: data
+  wh_class: 1
+  blue_loot: 10200000
+  waves:
+  - name: Wave 1
+    total_dps: 84
+    total_alpha: 864
+    total_ehp: 38333
+    trigger: Awakened Patroller
+    trigger_note: null
+    npcs:
+    - name: Awakened Patroller
+      class: cruiser
+      count: 2
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 202
+    total_alpha: 1443
+    total_ehp: 42000
+    trigger: Awakened Escort
+    trigger_note: null
+    npcs:
+    - name: Emergent Watchman
+      class: frigate
+      count: 3
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+    - name: Awakened Escort
+      class: cruiser
+      count: 3
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 172
+    total_alpha: 1304
+    total_ehp: 41500
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Escort
+      class: cruiser
+      count: 2
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Watchman
+      class: cruiser
+      count: 2
+      dps: 31
+      alpha: 266
+      ehp: 8750
+      scram: false
+      web: false
+      neut: -6
+      rrep: 0
+- slug: unsecured-perimeter-information-center
+  name: Unsecured Perimeter Information Center
+  type: data
+  wh_class: 1
+  blue_loot: 11800000
+  waves:
+  - name: Wave 1
+    total_dps: 103
+    total_alpha: 872
+    total_ehp: 30167
+    trigger: Awakened Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 3
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Watchman
+      class: frigate
+      count: 1
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 1
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 139
+    total_alpha: 1391
+    total_ehp: 59500
+    trigger: Awakened Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Watchman
+      class: frigate
+      count: 1
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 3
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 210
+    total_alpha: 1892
+    total_ehp: 70583
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 2
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 2
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Watchman
+      class: cruiser
+      count: 3
+      dps: 31
+      alpha: 266
+      ehp: 8750
+      scram: false
+      web: false
+      neut: -6
+      rrep: 0
+- slug: forgotten-perimeter-gateway
+  name: Forgotten Perimeter Gateway
+  type: relic
+  wh_class: 2
+  blue_loot: 19100000
+  waves:
+  - name: Wave 1
+    total_dps: 200
+    total_alpha: 1994
+    total_ehp: 85417
+    trigger: Awakened Watchman
+    trigger_note: null
+    npcs:
+    - name: Awakened Patroller
+      class: cruiser
+      count: 4
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Watchman
+      class: cruiser
+      count: 1
+      dps: 31
+      alpha: 266
+      ehp: 8750
+      scram: false
+      web: false
+      neut: -6
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 283
+    total_alpha: 3382
+    total_ehp: 94000
+    trigger: Sleepless Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Watchman
+      class: frigate
+      count: 2
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+    - name: Sleepless Patroller
+      class: battleship
+      count: 1
+      dps: 258
+      alpha: 3192
+      ehp: 90000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 599
+    total_alpha: 6116
+    total_ehp: 113619
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 4
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Escort
+      class: battleship
+      count: 1
+      dps: 220
+      alpha: 3544
+      ehp: 61333
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Watchman
+      class: battleship
+      count: 1
+      dps: 314
+      alpha: 2112
+      ehp: 40286
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: forgotten-perimeter-habitation-coils
+  name: Forgotten Perimeter Habitation Coils
+  type: relic
+  wh_class: 2
+  blue_loot: 25400000
+  waves:
+  - name: Wave 1
+    total_dps: 204
+    total_alpha: 1851
+    total_ehp: 66100
+    trigger: Emergent Escort
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 2
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Emergent Patroller
+      class: frigate
+      count: 2
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 3
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+  - name: Wave 2
+    total_dps: 259
+    total_alpha: 2378
+    total_ehp: 81867
+    trigger: Awakened Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 4
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 414
+    total_alpha: 4302
+    total_ehp: 107200
+    trigger: Sleepless Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Emergent Patroller
+      class: frigate
+      count: 4
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Patroller
+      class: battleship
+      count: 1
+      dps: 258
+      alpha: 3192
+      ehp: 90000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 4
+    total_dps: 478
+    total_alpha: 4884
+    total_ehp: 137067
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 3
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Escort
+      class: cruiser
+      count: 2
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 1
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Patroller
+      class: battleship
+      count: 1
+      dps: 258
+      alpha: 3192
+      ehp: 90000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: perimeter-checkpoint
+  name: Perimeter Checkpoint
+  type: anomaly
+  wh_class: 2
+  blue_loot: 12900000
+  waves:
+  - name: Wave 1
+    total_dps: 263
+    total_alpha: 3086
+    total_ehp: 85167
+    trigger: Awakened Patroller
+    trigger_note: null
+    npcs:
+    - name: Vigilant Sentry Tower
+      class: tower
+      count: 2
+      dps: 52
+      alpha: 780
+      ehp: 10833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Patroller
+      class: frigate
+      count: 2
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 3
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 194
+    total_alpha: 1636
+    total_ehp: 62333
+    trigger: Awakened Patroller
+    trigger_note: null
+    npcs:
+    - name: Awakened Escort
+      class: cruiser
+      count: 2
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 2
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 307
+    total_alpha: 3537
+    total_ehp: 99000
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 3
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Patroller
+      class: battleship
+      count: 1
+      dps: 258
+      alpha: 3192
+      ehp: 90000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: perimeter-hangar
+  name: Perimeter Hangar
+  type: anomaly
+  wh_class: 2
+  blue_loot: 11600000
+  waves:
+  - name: Wave 1
+    total_dps: 151
+    total_alpha: 1486
+    total_ehp: 61500
+    trigger: Awakened Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Watchman
+      class: frigate
+      count: 2
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 3
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 424
+    total_alpha: 2884
+    total_ehp: 64286
+    trigger: Awakened Escort
+    trigger_note: null
+    npcs:
+    - name: Awakened Escort
+      class: cruiser
+      count: 2
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Watchman
+      class: battleship
+      count: 1
+      dps: 314
+      alpha: 2112
+      ehp: 40286
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+  - name: Wave 3
+    total_dps: 330
+    total_alpha: 4316
+    total_ehp: 85333
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Escort
+      class: cruiser
+      count: 2
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Escort
+      class: battleship
+      count: 1
+      dps: 220
+      alpha: 3544
+      ehp: 61333
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+  - name: Wave 1
+    total_dps: 315
+    total_alpha: 3457
+    total_ehp: 65500
+    trigger: Awakened Escort
+    trigger_note: null
+    npcs:
+    - name: Vigilant Sentry Tower
+      class: tower
+      count: 3
+      dps: 52
+      alpha: 780
+      ehp: 10833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Patroller
+      class: frigate
+      count: 3
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Escort
+      class: cruiser
+      count: 2
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 310
+    total_alpha: 4194
+    total_ehp: 66533
+    trigger: Sleepless Escort
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Escort
+      class: battleship
+      count: 1
+      dps: 220
+      alpha: 3544
+      ehp: 61333
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 385
+    total_alpha: 4640
+    total_ehp: 117763
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Sleepless Outguard
+      class: battleship
+      count: 1
+      dps: 385
+      alpha: 4640
+      ehp: 117763
+      scram: false
+      web: false
+      neut: -10
+      rrep: 0
+- slug: the-ruins-of-enclave-cohort-27
+  name: The Ruins of Enclave Cohort 27
+  type: anomaly
+  wh_class: 2
+  blue_loot: 15600000
+  waves:
+  - name: Wave 1
+    total_dps: 356
+    total_alpha: 3882
+    total_ehp: 108000
+    trigger: Emergent Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 6
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Patroller
+      class: battleship
+      count: 1
+      dps: 258
+      alpha: 3192
+      ehp: 90000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+  - name: Wave 3
+    total_dps: 223
+    total_alpha: 2255
+    total_ehp: 97833
+    trigger: Awakened Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Watchman
+      class: frigate
+      count: 1
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 5
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 220
+    total_alpha: 3544
+    total_ehp: 61333
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Sleepless Escort
+      class: battleship
+      count: 1
+      dps: 220
+      alpha: 3544
+      ehp: 61333
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_optional: true
+- slug: unsecured-perimeter-comms-relay
+  name: Unsecured Perimeter Comms Relay
+  type: data
+  wh_class: 2
+  blue_loot: 20200000
+  waves:
+  - name: Wave 1
+    total_dps: 531
+    total_alpha: 6036
+    total_ehp: 173596
+    trigger: Awakened Watchman
+    trigger_note: null
+    npcs:
+    - name: Awakened Patroller
+      class: cruiser
+      count: 2
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Watchman
+      class: cruiser
+      count: 2
+      dps: 31
+      alpha: 266
+      ehp: 8750
+      scram: false
+      web: false
+      neut: -6
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Outguard
+      class: battleship
+      count: 1
+      dps: 385
+      alpha: 4640
+      ehp: 117763
+      scram: false
+      web: false
+      neut: -10
+      rrep: 0
+      is_optional: true
+  - name: Wave 2
+    total_dps: 283
+    total_alpha: 3382
+    total_ehp: 94000
+    trigger: Sleepless Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Watchman
+      class: frigate
+      count: 2
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+    - name: Sleepless Patroller
+      class: battleship
+      count: 1
+      dps: 258
+      alpha: 3192
+      ehp: 90000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 566
+    total_alpha: 5886
+    total_ehp: 107619
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 2
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Escort
+      class: battleship
+      count: 1
+      dps: 220
+      alpha: 3544
+      ehp: 61333
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Watchman
+      class: battleship
+      count: 1
+      dps: 314
+      alpha: 2112
+      ehp: 40286
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: unsecured-perimeter-transponder-farm
+  name: Unsecured Perimeter Transponder Farm
+  type: data
+  wh_class: 2
+  blue_loot: 26700000
+  waves:
+  - name: Wave 1
+    total_dps: 188
+    total_alpha: 1736
+    total_ehp: 63100
+    trigger: Emergent Escort
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 2
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Emergent Patroller
+      class: frigate
+      count: 1
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 3
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+  - name: Wave 2
+    total_dps: 245
+    total_alpha: 2319
+    total_ehp: 88017
+    trigger: Awakened Patroller
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 2
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 4
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Awakened Watchman
+      class: cruiser
+      count: 1
+      dps: 31
+      alpha: 266
+      ehp: 8750
+      scram: false
+      web: false
+      neut: -6
+      rrep: 0
+  - name: Wave 3
+    total_dps: 414
+    total_alpha: 4302
+    total_ehp: 107200
+    trigger: Emergent Escort
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Emergent Patroller
+      class: frigate
+      count: 4
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Patroller
+      class: battleship
+      count: 1
+      dps: 258
+      alpha: 3192
+      ehp: 90000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+  - name: Wave 4
+    total_dps: 466
+    total_alpha: 3968
+    total_ehp: 137033
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Escort
+      class: cruiser
+      count: 3
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 5
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: forgotten-frontier-quarantine-outpost
+  name: Forgotten Frontier Quarantine Outpost
+  type: relic
+  wh_class: 3
+  blue_loot: 79400000
+  waves:
+  - name: Wave 1
+    total_dps: 368
+    total_alpha: 2587
+    total_ehp: 75600
+    trigger: Awakened Preserver
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 6
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Preserver
+      class: cruiser
+      count: 3
+      dps: 77
+      alpha: 540
+      ehp: 16800
+      scram: false
+      web: false
+      neut: 0
+      rrep: 52
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 462
+    total_alpha: 4012
+    total_ehp: 150850
+    trigger: Awakened Defender
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 3
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Awakened Preserver
+      class: cruiser
+      count: 2
+      dps: 77
+      alpha: 540
+      ehp: 16800
+      scram: false
+      web: false
+      neut: 0
+      rrep: 52
+    - name: Awakened Upholder
+      class: cruiser
+      count: 3
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+  - name: Wave 3
+    total_dps: 431
+    total_alpha: 5001
+    total_ehp: 105200
+    trigger: Emergent Upholder
+    trigger_note: null
+    npcs:
+    - name: Emergent Upholder
+      class: frigate
+      count: 4
+      dps: 17
+      alpha: 133
+      ehp: 2800
+      scram: false
+      web: false
+      neut: -3
+      rrep: 19
+      is_trigger: true
+    - name: Sleepless Defender
+      class: battleship
+      count: 1
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+  - name: Wave 4
+    total_dps: 707
+    total_alpha: 10567
+    total_ehp: 188533
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Preserver
+      class: battleship
+      count: 2
+      dps: 308
+      alpha: 4962
+      ehp: 85867
+      scram: false
+      web: false
+      neut: 0
+      rrep: 65
+- slug: forgotten-frontier-recursive-depot
+  name: Forgotten Frontier Recursive Depot
+  type: relic
+  wh_class: 3
+  blue_loot: 92500000
+  waves:
+  - name: Wave 1
+    total_dps: 244
+    total_alpha: 2120
+    total_ehp: 60947
+    trigger: Awakened Defender
+    trigger_note: null
+    npcs:
+    - name: Emergent Preserver
+      class: frigate
+      count: 4
+      dps: 32
+      alpha: 228
+      ehp: 1820
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Defender
+      class: cruiser
+      count: 2
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 351
+    total_alpha: 3304
+    total_ehp: 129500
+    trigger: Awakened Defender
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 3
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Awakened Upholder
+      class: cruiser
+      count: 4
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+  - name: Wave 3
+    total_dps: 1011
+    total_alpha: 6980
+    total_ehp: 145700
+    trigger: Sleepless Upholder
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 2
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Upholder
+      class: cruiser
+      count: 2
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Sleepless Upholder
+      class: battleship
+      count: 2
+      dps: 439
+      alpha: 2957
+      ehp: 56400
+      scram: false
+      web: false
+      neut: -10
+      rrep: 0
+      is_trigger: true
+  - name: Wave 4
+    total_dps: 1424
+    total_alpha: 9698
+    total_ehp: 185090
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Preserver
+      class: frigate
+      count: 2
+      dps: 32
+      alpha: 228
+      ehp: 1820
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Upholder
+      class: cruiser
+      count: 1
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Sleepless Upholder
+      class: battleship
+      count: 3
+      dps: 439
+      alpha: 2957
+      ehp: 56400
+      scram: false
+      web: false
+      neut: -10
+      rrep: 0
+- slug: fortification-frontier-stronghold
+  name: Fortification Frontier Stronghold
+  type: anomaly
+  wh_class: 3
+  blue_loot: 41100000
+  waves:
+  - name: Wave 1
+    total_dps: 164
+    total_alpha: 1532
+    total_ehp: 62067
+    trigger: Awakened Defender
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 2
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Defender
+      class: cruiser
+      count: 2
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 205
+    total_alpha: 1954
+    total_ehp: 78167
+    trigger: Awakened Upholder
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 2
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Upholder
+      class: cruiser
+      count: 2
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 678
+    total_alpha: 5079
+    total_ehp: 139117
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 2
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Preserver
+      class: cruiser
+      count: 1
+      dps: 77
+      alpha: 540
+      ehp: 16800
+      scram: false
+      web: false
+      neut: 0
+      rrep: 52
+    - name: Awakened Upholder
+      class: cruiser
+      count: 1
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Sleepless Upholder
+      class: battleship
+      count: 1
+      dps: 439
+      alpha: 2957
+      ehp: 56400
+      scram: false
+      web: false
+      neut: -10
+      rrep: 0
+- slug: outpost-frontier-stronghold
+  name: Outpost Frontier Stronghold
+  type: anomaly
+  wh_class: 3
+  blue_loot: 45100000
+  waves:
+  - name: Wave 1
+    total_dps: 580
+    total_alpha: 7745
+    total_ehp: 139500
+    trigger: Sleepless Defender
+    trigger_note: null
+    npcs:
+    - name: Wakeful Sentry Tower
+      class: tower
+      count: 3
+      dps: 73
+      alpha: 1092
+      ehp: 15167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Defender
+      class: battleship
+      count: 1
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 236
+    total_alpha: 2419
+    total_ehp: 107333
+    trigger: Awakened Defender
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 4
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 814
+    total_alpha: 9582
+    total_ehp: 204800
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Defender
+      class: battleship
+      count: 2
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+- slug: solar-cell
+  name: Solar Cell
+  type: anomaly
+  wh_class: 3
+  blue_loot: 43000000
+  waves:
+  - name: Wave 1
+    total_dps: 437
+    total_alpha: 5069
+    total_ehp: 108070
+    trigger: Emergent Preserver
+    trigger_note: null
+    npcs:
+    - name: Emergent Preserver
+      class: frigate
+      count: 1
+      dps: 32
+      alpha: 228
+      ehp: 1820
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+      is_trigger: true
+    - name: Awakened Upholder
+      class: cruiser
+      count: 1
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Sleepless Defender
+      class: battleship
+      count: 1
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_optional: true
+  - name: Wave 2
+    total_dps: 301
+    total_alpha: 2775
+    total_ehp: 106750
+    trigger: Emergent Upholder
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 2
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Emergent Upholder
+      class: frigate
+      count: 2
+      dps: 17
+      alpha: 133
+      ehp: 2800
+      scram: false
+      web: false
+      neut: -3
+      rrep: 19
+      is_trigger: true
+    - name: Awakened Defender
+      class: cruiser
+      count: 3
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Upholder
+      class: cruiser
+      count: 1
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+  - name: Wave 3
+    total_dps: 787
+    total_alpha: 10640
+    total_ehp: 233533
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 2
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Defender
+      class: battleship
+      count: 1
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Preserver
+      class: battleship
+      count: 1
+      dps: 308
+      alpha: 4962
+      ehp: 85867
+      scram: false
+      web: false
+      neut: 0
+      rrep: 65
+- slug: the-oruze-construct
+  name: The Oruze Construct
+  type: anomaly
+  wh_class: 3
+  blue_loot: 44500000
+  waves:
+  - name: Wave 1
+    total_dps: 397
+    total_alpha: 4214
+    total_ehp: 96133
+    trigger: Awakened Upholder
+    trigger_note: null
+    npcs:
+    - name: Wakeful Sentry Tower
+      class: tower
+      count: 2
+      dps: 73
+      alpha: 1092
+      ehp: 15167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Upholder
+      class: cruiser
+      count: 4
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+      is_trigger: true
+    - name: Awakened Preserver
+      class: cruiser
+      count: 1
+      dps: 77
+      alpha: 540
+      ehp: 16800
+      scram: false
+      web: false
+      neut: 0
+      rrep: 52
+      is_optional: true
+  - name: Wave 2
+    total_dps: 453
+    total_alpha: 5113
+    total_ehp: 110800
+    trigger: Sleepless Defender
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Defender
+      class: battleship
+      count: 1
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 593
+    total_alpha: 4038
+    total_ehp: 90000
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Preserver
+      class: cruiser
+      count: 2
+      dps: 77
+      alpha: 540
+      ehp: 16800
+      scram: false
+      web: false
+      neut: 0
+      rrep: 52
+    - name: Sleepless Upholder
+      class: battleship
+      count: 1
+      dps: 439
+      alpha: 2957
+      ehp: 56400
+      scram: false
+      web: false
+      neut: -10
+      rrep: 0
+- slug: unsecured-frontier-database
+  name: Unsecured Frontier Database
+  type: data
+  wh_class: 3
+  blue_loot: 88400000
+  waves:
+  - name: Wave 1
+    total_dps: 271
+    total_alpha: 2497
+    total_ehp: 85960
+    trigger: Emergent Preserver
+    trigger_note: null
+    npcs:
+    - name: Emergent Preserver
+      class: frigate
+      count: 3
+      dps: 32
+      alpha: 228
+      ehp: 1820
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+      is_trigger: true
+    - name: Awakened Defender
+      class: cruiser
+      count: 3
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+  - name: Wave 2
+    total_dps: 410
+    total_alpha: 3909
+    total_ehp: 156333
+    trigger: Awakened Defender
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 4
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Awakened Upholder
+      class: cruiser
+      count: 4
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+  - name: Wave 3
+    total_dps: 638
+    total_alpha: 4557
+    total_ehp: 105750
+    trigger: Sleepless Upholder
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 3
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Upholder
+      class: cruiser
+      count: 3
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Sleepless Upholder
+      class: battleship
+      count: 1
+      dps: 439
+      alpha: 2957
+      ehp: 56400
+      scram: false
+      web: false
+      neut: -10
+      rrep: 0
+      is_trigger: true
+  - name: Wave 4
+    total_dps: 1072
+    total_alpha: 7486
+    total_ehp: 153190
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Preserver
+      class: frigate
+      count: 2
+      dps: 32
+      alpha: 228
+      ehp: 1820
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Upholder
+      class: cruiser
+      count: 3
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Sleepless Upholder
+      class: battleship
+      count: 2
+      dps: 439
+      alpha: 2957
+      ehp: 56400
+      scram: false
+      web: false
+      neut: -10
+      rrep: 0
+- slug: unsecured-frontier-receiver
+  name: Unsecured Frontier Receiver
+  type: data
+  wh_class: 3
+  blue_loot: 75100000
+  waves:
+  - name: Wave 1
+    total_dps: 346
+    total_alpha: 2426
+    total_ehp: 71400
+    trigger: Awakened Preserver
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 5
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Preserver
+      class: cruiser
+      count: 3
+      dps: 77
+      alpha: 540
+      ehp: 16800
+      scram: false
+      web: false
+      neut: 0
+      rrep: 52
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 385
+    total_alpha: 3472
+    total_ehp: 134050
+    trigger: Awakened Preserver
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 3
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Preserver
+      class: cruiser
+      count: 1
+      dps: 77
+      alpha: 540
+      ehp: 16800
+      scram: false
+      web: false
+      neut: 0
+      rrep: 52
+      is_trigger: true
+    - name: Awakened Upholder
+      class: cruiser
+      count: 3
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+  - name: Wave 3
+    total_dps: 431
+    total_alpha: 5001
+    total_ehp: 105200
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Upholder
+      class: frigate
+      count: 4
+      dps: 17
+      alpha: 133
+      ehp: 2800
+      scram: false
+      web: false
+      neut: -3
+      rrep: 19
+  - name: Wave 4
+    total_dps: 707
+    total_alpha: 10567
+    total_ehp: 188533
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Preserver
+      class: battleship
+      count: 2
+      dps: 308
+      alpha: 4962
+      ehp: 85867
+      scram: false
+      web: false
+      neut: 0
+      rrep: 65
+- slug: forgotten-frontier-conversion-module
+  name: Forgotten Frontier Conversion Module
+  type: relic
+  wh_class: 4
+  blue_loot: 146500000
+  waves:
+  - name: Wave 1
+    total_dps: 1542
+    total_alpha: 15140
+    total_ehp: 422635
+    trigger: null
+    trigger_note: on hack
+    npcs:
+    - name: Wakeful Sentry Tower
+      class: tower
+      count: 1
+      dps: 73
+      alpha: 1092
+      ehp: 15167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Defender
+      class: frigate
+      count: 6
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Defender
+      class: cruiser
+      count: 6
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Upholder
+      class: battleship
+      count: 1
+      dps: 439
+      alpha: 2957
+      ehp: 56400
+      scram: false
+      web: false
+      neut: -10
+      rrep: 0
+    - name: Sleepless Safeguard
+      class: battleship
+      count: 1
+      dps: 539
+      alpha: 6496
+      ehp: 164868
+      scram: true
+      web: true
+      neut: -20
+      rrep: 0
+      is_optional: true
+  - name: Wave 2
+    total_dps: 1494
+    total_alpha: 17235
+    total_ehp: 437167
+    trigger: Sleepless Defender
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 5
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Defender
+      class: cruiser
+      count: 5
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Defender
+      class: battleship
+      count: 3
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 2155
+    total_alpha: 25984
+    total_ehp: 659474
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Sleepless Safeguard
+      class: battleship
+      count: 4
+      dps: 539
+      alpha: 6496
+      ehp: 164868
+      scram: true
+      web: true
+      neut: -20
+      rrep: 0
+- slug: forgotten-frontier-evacuation-center
+  name: Forgotten Frontier Evacuation Center
+  type: relic
+  wh_class: 4
+  blue_loot: 91600000
+  waves:
+  - name: Wave 1
+    total_dps: 761
+    total_alpha: 10074
+    total_ehp: 196667
+    trigger: null
+    trigger_note: on hack
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Preserver
+      class: battleship
+      count: 1
+      dps: 308
+      alpha: 4962
+      ehp: 85867
+      scram: false
+      web: false
+      neut: 0
+      rrep: 65
+    - name: Sleepless Defender
+      class: battleship
+      count: 1
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_optional: true
+  - name: Wave 2
+    total_dps: 852
+    total_alpha: 12342
+    total_ehp: 279067
+    trigger: Sleepless Preserver
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 4
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Preserver
+      class: battleship
+      count: 2
+      dps: 308
+      alpha: 4962
+      ehp: 85867
+      scram: false
+      web: false
+      neut: 0
+      rrep: 65
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 1339
+    total_alpha: 18861
+    total_ehp: 359733
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Sleepless Defender
+      class: battleship
+      count: 2
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Preserver
+      class: battleship
+      count: 2
+      dps: 308
+      alpha: 4962
+      ehp: 85867
+      scram: false
+      web: false
+      neut: 0
+      rrep: 65
+- slug: frontier-barracks
+  name: Frontier Barracks
+  type: anomaly
+  wh_class: 4
+  blue_loot: 86700000
+  waves:
+  - name: Wave 1
+    total_dps: 747
+    total_alpha: 7918
+    total_ehp: 142267
+    trigger: Sleepless Preserver
+    trigger_note: null
+    npcs:
+    - name: Sleepless Preserver
+      class: battleship
+      count: 1
+      dps: 308
+      alpha: 4962
+      ehp: 85867
+      scram: false
+      web: false
+      neut: 0
+      rrep: 65
+      is_trigger: true
+    - name: Sleepless Upholder
+      class: battleship
+      count: 1
+      dps: 439
+      alpha: 2957
+      ehp: 56400
+      scram: false
+      web: false
+      neut: -10
+      rrep: 0
+  - name: Wave 2
+    total_dps: 1472
+    total_alpha: 9951
+    total_ehp: 202800
+    trigger: Sleepless Upholder
+    trigger_note: null
+    npcs:
+    - name: Awakened Preserver
+      class: cruiser
+      count: 2
+      dps: 77
+      alpha: 540
+      ehp: 16800
+      scram: false
+      web: false
+      neut: 0
+      rrep: 52
+    - name: Sleepless Upholder
+      class: battleship
+      count: 3
+      dps: 439
+      alpha: 2957
+      ehp: 56400
+      scram: false
+      web: false
+      neut: -10
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 1019
+    total_alpha: 12767
+    total_ehp: 244393
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Preserver
+      class: frigate
+      count: 3
+      dps: 32
+      alpha: 228
+      ehp: 1820
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Preserver
+      class: cruiser
+      count: 4
+      dps: 77
+      alpha: 540
+      ehp: 16800
+      scram: false
+      web: false
+      neut: 0
+      rrep: 52
+    - name: Sleepless Preserver
+      class: battleship
+      count: 2
+      dps: 308
+      alpha: 4962
+      ehp: 85867
+      scram: false
+      web: false
+      neut: 0
+      rrep: 65
+- slug: frontier-command-post
+  name: Frontier Command Post
+  type: anomaly
+  wh_class: 4
+  blue_loot: 92300000
+  waves:
+  - name: Wave 1
+    total_dps: 581
+    total_alpha: 7014
+    total_ehp: 99913
+    trigger: Emergent Preserver
+    trigger_note: null
+    npcs:
+    - name: Wakeful Sentry Tower
+      class: tower
+      count: 5
+      dps: 73
+      alpha: 1092
+      ehp: 15167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Defender
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Emergent Preserver
+      class: frigate
+      count: 4
+      dps: 32
+      alpha: 228
+      ehp: 1820
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 1146
+    total_alpha: 13098
+    total_ehp: 360200
+    trigger: Awakened Defender
+    trigger_note: null
+    npcs:
+    - name: Emergent Upholder
+      class: frigate
+      count: 4
+      dps: 17
+      alpha: 133
+      ehp: 2800
+      scram: false
+      web: false
+      neut: -3
+      rrep: 19
+    - name: Awakened Defender
+      class: cruiser
+      count: 6
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Defender
+      class: battleship
+      count: 2
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+  - name: Wave 3
+    total_dps: 1196
+    total_alpha: 17175
+    total_ehp: 344867
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 2
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Preserver
+      class: cruiser
+      count: 2
+      dps: 77
+      alpha: 540
+      ehp: 16800
+      scram: false
+      web: false
+      neut: 0
+      rrep: 52
+    - name: Sleepless Preserver
+      class: battleship
+      count: 3
+      dps: 308
+      alpha: 4962
+      ehp: 85867
+      scram: false
+      web: false
+      neut: 0
+      rrep: 65
+- slug: integrated-terminus
+  name: Integrated Terminus
+  type: anomaly
+  wh_class: 4
+  blue_loot: 86100000
+  waves:
+  - name: Wave 1
+    total_dps: 579
+    total_alpha: 7186
+    total_ehp: 176400
+    trigger: Awakened Defender
+    trigger_note: null
+    npcs:
+    - name: Wakeful Sentry Tower
+      class: tower
+      count: 4
+      dps: 73
+      alpha: 1092
+      ehp: 15167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Upholder
+      class: frigate
+      count: 3
+      dps: 17
+      alpha: 133
+      ehp: 2800
+      scram: false
+      web: false
+      neut: -3
+      rrep: 19
+    - name: Awakened Defender
+      class: cruiser
+      count: 4
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 391
+    total_alpha: 3025
+    total_ehp: 86240
+    trigger: Awakened Upholder
+    trigger_note: null
+    npcs:
+    - name: Emergent Preserver
+      class: frigate
+      count: 2
+      dps: 32
+      alpha: 228
+      ehp: 1820
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Preserver
+      class: cruiser
+      count: 2
+      dps: 77
+      alpha: 540
+      ehp: 16800
+      scram: false
+      web: false
+      neut: 0
+      rrep: 52
+    - name: Awakened Upholder
+      class: cruiser
+      count: 4
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 665
+    total_alpha: 7406
+    total_ehp: 187268
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Emergent Upholder
+      class: frigate
+      count: 2
+      dps: 17
+      alpha: 133
+      ehp: 2800
+      scram: false
+      web: false
+      neut: -3
+      rrep: 19
+    - name: Sleepless Safeguard
+      class: battleship
+      count: 1
+      dps: 539
+      alpha: 6496
+      ehp: 164868
+      scram: true
+      web: true
+      neut: -20
+      rrep: 0
+  - name: Wave 1
+    total_dps: 738
+    total_alpha: 10934
+    total_ehp: 201833
+    trigger: Sleepless Preserver
+    trigger_note: null
+    npcs:
+    - name: Awakened Upholder
+      class: cruiser
+      count: 2
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Sleepless Preserver
+      class: battleship
+      count: 2
+      dps: 308
+      alpha: 4962
+      ehp: 85867
+      scram: false
+      web: false
+      neut: 0
+      rrep: 65
+      is_trigger: true
+    - name: Emergent Upholder
+      class: frigate
+      count: 2
+      dps: 17
+      alpha: 133
+      ehp: 2800
+      scram: false
+      web: false
+      neut: -3
+      rrep: 19
+      is_optional: true
+  - name: Wave 2
+    total_dps: 1623
+    total_alpha: 19902
+    total_ehp: 446868
+    trigger: Sleepless Safeguard
+    trigger_note: null
+    npcs:
+    - name: Sleepless Defender
+      class: battleship
+      count: 3
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Safeguard
+      class: battleship
+      count: 1
+      dps: 539
+      alpha: 6496
+      ehp: 164868
+      scram: true
+      web: true
+      neut: -20
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 356
+    total_alpha: 2680
+    total_ehp: 70140
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Preserver
+      class: frigate
+      count: 2
+      dps: 32
+      alpha: 228
+      ehp: 1820
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Emergent Upholder
+      class: frigate
+      count: 3
+      dps: 17
+      alpha: 133
+      ehp: 2800
+      scram: false
+      web: false
+      neut: -3
+      rrep: 19
+    - name: Awakened Preserver
+      class: cruiser
+      count: 2
+      dps: 77
+      alpha: 540
+      ehp: 16800
+      scram: false
+      web: false
+      neut: 0
+      rrep: 52
+    - name: Awakened Upholder
+      class: cruiser
+      count: 2
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+- slug: unsecured-frontier-digital-nexus
+  name: Unsecured Frontier Digital Nexus
+  type: data
+  wh_class: 4
+  blue_loot: 130100000
+  waves:
+  - name: Wave 1
+    total_dps: 984
+    total_alpha: 10769
+    total_ehp: 342668
+    trigger: null
+    trigger_note: on hack
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Defender
+      class: cruiser
+      count: 6
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Safeguard
+      class: battleship
+      count: 1
+      dps: 539
+      alpha: 6496
+      ehp: 164868
+      scram: true
+      web: true
+      neut: -20
+      rrep: 0
+      is_optional: true
+  - name: Wave 2
+    total_dps: 1446
+    total_alpha: 16736
+    total_ehp: 396613
+    trigger: Sleepless Defender
+    trigger_note: null
+    npcs:
+    - name: Emergent Preserver
+      class: frigate
+      count: 4
+      dps: 32
+      alpha: 228
+      ehp: 1820
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Defender
+      class: cruiser
+      count: 4
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Defender
+      class: battleship
+      count: 3
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 2155
+    total_alpha: 25984
+    total_ehp: 659474
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Sleepless Safeguard
+      class: battleship
+      count: 4
+      dps: 539
+      alpha: 6496
+      ehp: 164868
+      scram: true
+      web: true
+      neut: -20
+      rrep: 0
+- slug: unsecured-frontier-trinary-hub
+  name: Unsecured Frontier Trinary Hub
+  type: data
+  wh_class: 4
+  blue_loot: 91600000
+  waves:
+  - name: Wave 1
+    total_dps: 761
+    total_alpha: 10074
+    total_ehp: 196667
+    trigger: Sleepless Preserver
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 4
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Preserver
+      class: battleship
+      count: 1
+      dps: 308
+      alpha: 4962
+      ehp: 85867
+      scram: false
+      web: false
+      neut: 0
+      rrep: 65
+      is_trigger: true
+    - name: Sleepless Defender
+      class: battleship
+      count: 1
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_optional: true
+  - name: Wave 2
+    total_dps: 852
+    total_alpha: 12342
+    total_ehp: 279067
+    trigger: Sleepless Preserver
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 4
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Sleepless Preserver
+      class: battleship
+      count: 2
+      dps: 308
+      alpha: 4962
+      ehp: 85867
+      scram: false
+      web: false
+      neut: 0
+      rrep: 65
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 1339
+    total_alpha: 18861
+    total_ehp: 359733
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Sleepless Defender
+      class: battleship
+      count: 2
+      dps: 362
+      alpha: 4469
+      ehp: 94000
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Preserver
+      class: battleship
+      count: 2
+      dps: 308
+      alpha: 4962
+      ehp: 85867
+      scram: false
+      web: false
+      neut: 0
+      rrep: 65
+- slug: core-garrison
+  name: Core Garrison
+  type: anomaly
+  wh_class: 5
+  blue_loot: 253400000
+  waves:
+  - name: Wave 1
+    total_dps: 807
+    total_alpha: 9135
+    total_ehp: 315333
+    trigger: Awakened Sentinel
+    trigger_note: null
+    npcs:
+    - name: Restless Sentry Tower
+      class: tower
+      count: 3
+      dps: 94
+      alpha: 1404
+      ehp: 23833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Sentinel
+      class: frigate
+      count: 5
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 5
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 1528
+    total_alpha: 18263
+    total_ehp: 469543
+    trigger: Emergent Keeper
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 6
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+      is_trigger: true
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 3
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+  - name: Wave 3
+    total_dps: 1941
+    total_alpha: 22561
+    total_ehp: 711726
+    trigger: Sleepless Sentinel
+    trigger_note: null
+    npcs:
+    - name: Awakened Keeper
+      class: cruiser
+      count: 3
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 3
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+      is_trigger: true
+  - name: Wave 4
+    total_dps: 1403
+    total_alpha: 10036
+    total_ehp: 270170
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Warden
+      class: frigate
+      count: 3
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 2
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+- slug: core-stronghold
+  name: Core Stronghold
+  type: anomaly
+  wh_class: 5
+  blue_loot: 234900000
+  waves:
+  - name: Wave 1
+    total_dps: 679
+    total_alpha: 9252
+    total_ehp: 169400
+    trigger: Emergent Sentinel
+    trigger_note: null
+    npcs:
+    - name: Restless Sentry Tower
+      class: tower
+      count: 6
+      dps: 94
+      alpha: 1404
+      ehp: 23833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Sentinel
+      class: frigate
+      count: 4
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 1922
+    total_alpha: 20362
+    total_ehp: 447124
+    trigger: Sleepless Warden
+    trigger_note: null
+    npcs:
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 2
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 774
+    total_alpha: 7198
+    total_ehp: 312327
+    trigger: Awakened Sentinel
+    trigger_note: null
+    npcs:
+    - name: Emergent Warden
+      class: frigate
+      count: 6
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 7
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_trigger: true
+  - name: Wave 4
+    total_dps: 2714
+    total_alpha: 29520
+    total_ehp: 687657
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Warden
+      class: cruiser
+      count: 4
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Warden
+      class: battleship
+      count: 3
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+- slug: forgotten-core-data-field
+  name: Forgotten Core Data Field
+  type: relic
+  wh_class: 5
+  blue_loot: 279000000
+  waves:
+  - name: Wave 1
+    total_dps: 456
+    total_alpha: 3636
+    total_ehp: 135850
+    trigger: Awakened Keeper
+    trigger_note: null
+    npcs:
+    - name: Emergent Sentinel
+      class: frigate
+      count: 6
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Keeper
+      class: cruiser
+      count: 5
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 868
+    total_alpha: 6930
+    total_ehp: 250323
+    trigger: Awakened Keeper
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 4
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Emergent Warden
+      class: frigate
+      count: 4
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Keeper
+      class: cruiser
+      count: 3
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+      is_trigger: true
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 2
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 3
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+  - name: Wave 3
+    total_dps: 2302
+    total_alpha: 20849
+    total_ehp: 489846
+    trigger: Sleepless Keeper
+    trigger_note: null
+    npcs:
+    - name: Emergent Warden
+      class: frigate
+      count: 6
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 2
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+  - name: Wave 4
+    total_dps: 2232
+    total_alpha: 22709
+    total_ehp: 538424
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Keeper
+      class: cruiser
+      count: 2
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 2
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 2
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+- slug: forgotten-core-information-pen
+  name: Forgotten Core Information Pen
+  type: relic
+  wh_class: 5
+  blue_loot: 332900000
+  waves:
+  - name: Wave 1
+    total_dps: 1694
+    total_alpha: 11405
+    total_ehp: 265886
+    trigger: Sleepless Keeper
+    trigger_note: null
+    npcs:
+    - name: Sleepless Keeper
+      class: battleship
+      count: 3
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 1
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+      is_optional: true
+  - name: Wave 2
+    total_dps: 1615
+    total_alpha: 11066
+    total_ehp: 300457
+    trigger: null
+    trigger_note: on hack
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 4
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Awakened Warden
+      class: cruiser
+      count: 4
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+  - name: Wave 3
+    total_dps: 2507
+    total_alpha: 17907
+    total_ehp: 519766
+    trigger: Awakened Warden
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 3
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Emergent Warden
+      class: frigate
+      count: 3
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 3
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 4
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+      is_trigger: true
+    - name: Sleepless Keeper
+      class: battleship
+      count: 3
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+  - name: Wave 4
+    total_dps: 3210
+    total_alpha: 22093
+    total_ehp: 531583
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Warden
+      class: frigate
+      count: 4
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Keeper
+      class: cruiser
+      count: 4
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Sleepless Keeper
+      class: battleship
+      count: 5
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+- slug: oruze-osobnyk
+  name: Oruze Osobnyk
+  type: anomaly
+  wh_class: 5
+  blue_loot: 164700000
+  waves:
+  - name: Wave 1
+    total_dps: 2077
+    total_alpha: 21866
+    total_ehp: 558171
+    trigger: Sleepless Sentinel
+    trigger_note: null
+    npcs:
+    - name: Emergent Sentinel
+      class: frigate
+      count: 4
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Keeper
+      class: battleship
+      count: 1
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+      is_optional: true
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 3
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 1148
+    total_alpha: 13018
+    total_ehp: 512079
+    trigger: Sleepless Guardian
+    trigger_note: null
+    npcs:
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 6
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Guardian
+      class: battleship
+      count: 1
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 467
+    total_alpha: 3353
+    total_ehp: 102520
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Warden
+      class: frigate
+      count: 2
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 3
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+- slug: quarantine-area
+  name: Quarantine Area
+  type: anomaly
+  wh_class: 5
+  blue_loot: 146900000
+  waves:
+  - name: Wave 1
+    total_dps: 1019
+    total_alpha: 12807
+    total_ehp: 285448
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Restless Sentry Tower
+      class: tower
+      count: 4
+      dps: 94
+      alpha: 1404
+      ehp: 23833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Escort
+      class: frigate
+      count: 3
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Keeper
+      class: cruiser
+      count: 2
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 1
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+  - name: Wave 2
+    total_dps: 1233
+    total_alpha: 14602
+    total_ehp: 464095
+    trigger: Sleepless Sentinel
+    trigger_note: null
+    npcs:
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 4
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 2
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 1574
+    total_alpha: 10723
+    total_ehp: 289457
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Sentinel
+      class: frigate
+      count: 5
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 3
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+- slug: unsecured-frontier-enclave-relay
+  name: Unsecured Frontier Enclave Relay
+  type: data
+  wh_class: 5
+  blue_loot: 329900000
+  waves:
+  - name: Wave 1
+    total_dps: 2159
+    total_alpha: 17150
+    total_ehp: 413600
+    trigger: Sleepless Keeper
+    trigger_note: null
+    npcs:
+    - name: Sleepless Keeper
+      class: battleship
+      count: 3
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 1
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+      is_optional: true
+  - name: Wave 2
+    total_dps: 1637
+    total_alpha: 11237
+    total_ehp: 304857
+    trigger: Sleepless Keeper
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 5
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Awakened Warden
+      class: cruiser
+      count: 4
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 1982
+    total_alpha: 14398
+    total_ehp: 433997
+    trigger: Sleepless Keeper
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 3
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Emergent Warden
+      class: frigate
+      count: 4
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 3
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 4
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+      is_trigger: true
+  - name: Wave 4
+    total_dps: 2399
+    total_alpha: 34858
+    total_ehp: 762447
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Warden
+      class: frigate
+      count: 3
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 3
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Warden
+      class: battleship
+      count: 5
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+- slug: unsecured-frontier-server-bank
+  name: Unsecured Frontier Server Bank
+  type: data
+  wh_class: 5
+  blue_loot: 272100000
+  waves:
+  - name: Wave 1
+    total_dps: 427
+    total_alpha: 3429
+    total_ehp: 129250
+    trigger: Awakened Keeper
+    trigger_note: null
+    npcs:
+    - name: Emergent Sentinel
+      class: frigate
+      count: 5
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Keeper
+      class: cruiser
+      count: 5
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 960
+    total_alpha: 7640
+    total_ehp: 288713
+    trigger: Awakened Keeper
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 3
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Emergent Warden
+      class: frigate
+      count: 3
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Keeper
+      class: cruiser
+      count: 4
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+      is_trigger: true
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 2
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 4
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+  - name: Wave 3
+    total_dps: 1797
+    total_alpha: 14811
+    total_ehp: 339271
+    trigger: Sleepless Keeper
+    trigger_note: null
+    npcs:
+    - name: Emergent Warden
+      class: frigate
+      count: 5
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 1
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+  - name: Wave 4
+    total_dps: 2331
+    total_alpha: 23404
+    total_ehp: 564824
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Keeper
+      class: cruiser
+      count: 2
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 3
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 2
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+- slug: core-bastion
+  name: Core Bastion
+  type: anomaly
+  wh_class: 6
+  blue_loot: 445600000
+  waves:
+  - name: Wave 1
+    total_dps: 2058
+    total_alpha: 22691
+    total_ehp: 663379
+    trigger: Emergent Keeper
+    trigger_note: null
+    npcs:
+    - name: Restless Sentry Tower
+      class: tower
+      count: 3
+      dps: 94
+      alpha: 1404
+      ehp: 23833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Keeper
+      class: frigate
+      count: 3
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+      is_trigger: true
+    - name: Emergent Sentinel
+      class: frigate
+      count: 3
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Keeper
+      class: cruiser
+      count: 3
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 3
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 3
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 2
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+  - name: Wave 2
+    total_dps: 2959
+    total_alpha: 21096
+    total_ehp: 628781
+    trigger: Awakened Warden
+    trigger_note: null
+    npcs:
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 4
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 4
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+      is_trigger: true
+    - name: Sleepless Keeper
+      class: battleship
+      count: 4
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+  - name: Wave 3
+    total_dps: 3510
+    total_alpha: 38637
+    total_ehp: 1185476
+    trigger: Sleepless Guardian
+    trigger_note: null
+    npcs:
+    - name: Emergent Warden
+      class: frigate
+      count: 6
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 5
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Guardian
+      class: battleship
+      count: 4
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+      is_trigger: true
+  - name: Wave 4
+    total_dps: 3245
+    total_alpha: 39686
+    total_ehp: 1109015
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 4
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+- slug: core-citadel
+  name: Core Citadel
+  type: anomaly
+  wh_class: 6
+  blue_loot: 310100000
+  waves:
+  - name: Wave 1
+    total_dps: 1426
+    total_alpha: 15926
+    total_ehp: 371276
+    trigger: Sleepless Warden
+    trigger_note: null
+    npcs:
+    - name: Sleepless Keeper
+      class: battleship
+      count: 1
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 1
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 1
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 1968
+    total_alpha: 24984
+    total_ehp: 613276
+    trigger: Sleepless Warden
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 8
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 3
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 1
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 3060
+    total_alpha: 31910
+    total_ehp: 705886
+    trigger: Sleepless Keeper
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 8
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Sleepless Keeper
+      class: battleship
+      count: 3
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Warden
+      class: battleship
+      count: 3
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+  - name: Wave 4
+    total_dps: 1519
+    total_alpha: 17730
+    total_ehp: 544558
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Sleepless Guardian
+      class: battleship
+      count: 2
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+- slug: forgotten-core-assembly-hall
+  name: Forgotten Core Assembly Hall
+  type: relic
+  wh_class: 6
+  blue_loot: 642500000
+  waves:
+  - name: Wave 1
+    total_dps: 5678
+    total_alpha: 65590
+    total_ehp: 1548908
+    trigger: Sleepless Warden
+    trigger_note: null
+    npcs:
+    - name: Restless Sentry Tower
+      class: tower
+      count: 6
+      dps: 94
+      alpha: 1404
+      ehp: 23833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Sentinel
+      class: frigate
+      count: 5
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Keeper
+      class: battleship
+      count: 3
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 3
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 3
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+      is_trigger: true
+    - name: Sleepless Guardian
+      class: battleship
+      count: 1
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+      is_optional: true
+  - name: Wave 2
+    total_dps: 3356
+    total_alpha: 32148
+    total_ehp: 811748
+    trigger: Sleepless Warden
+    trigger_note: null
+    npcs:
+    - name: Awakened Keeper
+      class: cruiser
+      count: 6
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Sleepless Keeper
+      class: battleship
+      count: 3
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 2
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 1
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 4011
+    total_alpha: 39823
+    total_ehp: 989581
+    trigger: Sleepless Warden
+    trigger_note: null
+    npcs:
+    - name: Awakened Warden
+      class: cruiser
+      count: 6
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Keeper
+      class: battleship
+      count: 3
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 2
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 2
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+      is_trigger: true
+  - name: Wave 4
+    total_dps: 4906
+    total_alpha: 56848
+    total_ehp: 1873474
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Sentinel
+      class: frigate
+      count: 10
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 6
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Guardian
+      class: battleship
+      count: 6
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+- slug: forgotten-core-circuitry-disassembler
+  name: Forgotten Core Circuitry Disassembler
+  type: relic
+  wh_class: 6
+  blue_loot: 657600000
+  waves:
+  - name: Wave 1
+    total_dps: 2115
+    total_alpha: 23279
+    total_ehp: 524652
+    trigger: Emergent Warden
+    trigger_note: null
+    npcs:
+    - name: Wakeful Sentry Tower
+      class: tower
+      count: 3
+      dps: 73
+      alpha: 1092
+      ehp: 15167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Restless Sentry Tower
+      class: tower
+      count: 4
+      dps: 94
+      alpha: 1404
+      ehp: 23833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Sentinel
+      class: frigate
+      count: 9
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Emergent Keeper
+      class: frigate
+      count: 9
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Emergent Warden
+      class: frigate
+      count: 9
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Guardian
+      class: battleship
+      count: 1
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+      is_optional: true
+  - name: Wave 2
+    total_dps: 1778
+    total_alpha: 14828
+    total_ehp: 626157
+    trigger: Awakened Warden
+    trigger_note: null
+    npcs:
+    - name: Emergent Warden
+      class: frigate
+      count: 4
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 7
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Keeper
+      class: cruiser
+      count: 7
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 7
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 5117
+    total_alpha: 57166
+    total_ehp: 1405908
+    trigger: Sleepless Guardian
+    trigger_note: null
+    npcs:
+    - name: Emergent Sentinel
+      class: frigate
+      count: 5
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Guardian
+      class: battleship
+      count: 1
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Keeper
+      class: battleship
+      count: 3
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 3
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 3
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+  - name: Wave 4
+    total_dps: 6060
+    total_alpha: 66226
+    total_ehp: 1915056
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 4
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Emergent Sentinel
+      class: frigate
+      count: 4
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Keeper
+      class: cruiser
+      count: 4
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 4
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 4
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Guardian
+      class: battleship
+      count: 3
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 2
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 2
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+- slug: strange-energy-readings
+  name: Strange Energy Readings
+  type: anomaly
+  wh_class: 6
+  blue_loot: 291800000
+  waves:
+  - name: Wave 1
+    total_dps: 1736
+    total_alpha: 11932
+    total_ehp: 331257
+    trigger: Awakened Warden
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 5
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Awakened Warden
+      class: cruiser
+      count: 5
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+      is_trigger: true
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+      is_optional: true
+  - name: Wave 2
+    total_dps: 2414
+    total_alpha: 27929
+    total_ehp: 892737
+    trigger: Sleepless Guardian
+    trigger_note: null
+    npcs:
+    - name: Awakened Keeper
+      class: cruiser
+      count: 6
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Sleepless Guardian
+      class: battleship
+      count: 3
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 3354
+    total_alpha: 22813
+    total_ehp: 575143
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 6
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Awakened Warden
+      class: cruiser
+      count: 4
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+- slug: the-mirror
+  name: The Mirror
+  type: anomaly
+  wh_class: 6
+  blue_loot: 363200000
+  waves:
+  - name: Wave 1
+    total_dps: 3319
+    total_alpha: 43587
+    total_ehp: 965989
+    trigger: Sleepless Warden
+    trigger_note: null
+    npcs:
+    - name: Restless Sentry Tower
+      class: tower
+      count: 6
+      dps: 94
+      alpha: 1404
+      ehp: 23833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Warden
+      class: frigate
+      count: 6
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 4
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 2
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 3
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 3384
+    total_alpha: 33901
+    total_ehp: 994094
+    trigger: Sleepless Guardian
+    trigger_note: null
+    npcs:
+    - name: Emergent Sentinel
+      class: frigate
+      count: 6
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Guardian
+      class: battleship
+      count: 3
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+  - name: Wave 3
+    total_dps: 3130
+    total_alpha: 21755
+    total_ehp: 566154
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 4
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Emergent Warden
+      class: frigate
+      count: 4
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+    - name: Awakened Keeper
+      class: cruiser
+      count: 4
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 4
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+- slug: unsecured-core-backup-array
+  name: Unsecured Core Backup Array
+  type: data
+  wh_class: 6
+  blue_loot: 688300000
+  waves:
+  - name: Wave 1
+    total_dps: 4902
+    total_alpha: 53564
+    total_ehp: 1273260
+    trigger: Sleepless Warden
+    trigger_note: null
+    npcs:
+    - name: Wakeful Sentry Tower
+      class: tower
+      count: 3
+      dps: 73
+      alpha: 1092
+      ehp: 15167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Restless Sentry Tower
+      class: tower
+      count: 3
+      dps: 94
+      alpha: 1404
+      ehp: 23833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Sentinel
+      class: frigate
+      count: 10
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Guardian
+      class: battleship
+      count: 1
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+      is_optional: true
+    - name: Sleepless Keeper
+      class: battleship
+      count: 3
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 2
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 2
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+      is_trigger: true
+  - name: Wave 2
+    total_dps: 4476
+    total_alpha: 45569
+    total_ehp: 1137295
+    trigger: Sleepless Warden
+    trigger_note: null
+    npcs:
+    - name: Awakened Warden
+      class: cruiser
+      count: 6
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Keeper
+      class: battleship
+      count: 3
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 3
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 2
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 4673
+    total_alpha: 50558
+    total_ehp: 1219429
+    trigger: Sleepless Warden
+    trigger_note: null
+    npcs:
+    - name: Awakened Warden
+      class: cruiser
+      count: 4
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Keeper
+      class: battleship
+      count: 3
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 3
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 3
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+      is_trigger: true
+  - name: Wave 4
+    total_dps: 5058
+    total_alpha: 58403
+    total_ehp: 1957807
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Sentinel
+      class: frigate
+      count: 10
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 8
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Guardian
+      class: battleship
+      count: 6
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+- slug: unsecured-core-emergence
+  name: Unsecured Core Emergence
+  type: data
+  wh_class: 6
+  blue_loot: 627100000
+  waves:
+  - name: Wave 1
+    total_dps: 2187
+    total_alpha: 24371
+    total_ehp: 539819
+    trigger: Emergent Warden
+    trigger_note: null
+    npcs:
+    - name: Wakeful Sentry Tower
+      class: tower
+      count: 4
+      dps: 73
+      alpha: 1092
+      ehp: 15167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Restless Sentry Tower
+      class: tower
+      count: 4
+      dps: 94
+      alpha: 1404
+      ehp: 23833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Sentinel
+      class: frigate
+      count: 9
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Emergent Keeper
+      class: frigate
+      count: 9
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Emergent Warden
+      class: frigate
+      count: 9
+      dps: 41
+      alpha: 293
+      ehp: 2860
+      scram: true
+      web: true
+      neut: -3
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Guardian
+      class: battleship
+      count: 1
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+      is_optional: true
+  - name: Wave 2
+    total_dps: 1665
+    total_alpha: 14038
+    total_ehp: 622717
+    trigger: Awakened Warden
+    trigger_note: null
+    npcs:
+    - name: Emergent Watchman
+      class: frigate
+      count: 4
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+    - name: Awakened Keeper
+      class: cruiser
+      count: 7
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 7
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 7
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+      is_trigger: true
+  - name: Wave 3
+    total_dps: 5117
+    total_alpha: 57166
+    total_ehp: 1405908
+    trigger: Sleepless Guardian
+    trigger_note: null
+    npcs:
+    - name: Emergent Sentinel
+      class: frigate
+      count: 5
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Guardian
+      class: battleship
+      count: 1
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+      is_trigger: true
+    - name: Sleepless Keeper
+      class: battleship
+      count: 3
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 3
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 3
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+  - name: Wave 4
+    total_dps: 6060
+    total_alpha: 66226
+    total_ehp: 1915056
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 4
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Emergent Sentinel
+      class: frigate
+      count: 4
+      dps: 29
+      alpha: 207
+      ehp: 6600
+      scram: true
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Keeper
+      class: cruiser
+      count: 4
+      dps: 56
+      alpha: 479
+      ehp: 19250
+      scram: true
+      web: true
+      neut: -6
+      rrep: 0
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 4
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Warden
+      class: cruiser
+      count: 4
+      dps: 99
+      alpha: 695
+      ehp: 26400
+      scram: false
+      web: false
+      neut: 0
+      rrep: 58
+    - name: Sleepless Guardian
+      class: battleship
+      count: 3
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+      is_optional: true
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 2
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+    - name: Sleepless Warden
+      class: battleship
+      count: 2
+      dps: 396
+      alpha: 6379
+      ehp: 134933
+      scram: false
+      web: false
+      neut: 0
+      rrep: 73
+- slug: barren-perimeter-reservoir
+  name: Barren Perimeter Reservoir
+  type: gas
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  blue_loot: 2000000
+  waves:
+  - name: Defenders
+    total_dps: 74
+    total_alpha: 535
+    total_ehp: 13000
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 3
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Watchman
+      class: frigate
+      count: 2
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+- slug: bountiful-frontier-reservoir
+  name: Bountiful Frontier Reservoir
+  type: gas
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  blue_loot: 20000000
+  waves:
+  - name: Defenders
+    total_dps: 373
+    total_alpha: 3385
+    total_ehp: 132533
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 6
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Defender
+      class: cruiser
+      count: 4
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: instrumental-core-reservoir
+  name: Instrumental Core Reservoir
+  type: gas
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  blue_loot: 63600000
+  waves:
+  - name: Defenders
+    total_dps: 1859
+    total_alpha: 22982
+    total_ehp: 590857
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 4
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+- slug: minor-perimeter-reservoir
+  name: Minor Perimeter Reservoir
+  type: gas
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  blue_loot: 2000000
+  waves:
+  - name: Defenders
+    total_dps: 84
+    total_alpha: 864
+    total_ehp: 38333
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Patroller
+      class: cruiser
+      count: 2
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: ordinary-perimeter-reservoir
+  name: Ordinary Perimeter Reservoir
+  type: gas
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  blue_loot: 0
+  waves:
+  - name: Defenders
+    total_dps: 260
+    total_alpha: 3900
+    total_ehp: 54167
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Vigilant Sentry Tower
+      class: tower
+      count: 5
+      dps: 52
+      alpha: 780
+      ehp: 10833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: sizeable-perimeter-reservoir
+  name: Sizeable Perimeter Reservoir
+  type: gas
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  blue_loot: 2400000
+  waves:
+  - name: Defenders
+    total_dps: 86
+    total_alpha: 630
+    total_ehp: 15000
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 3
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Watchman
+      class: frigate
+      count: 3
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+- slug: token-perimeter-reservoir
+  name: Token Perimeter Reservoir
+  type: gas
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  blue_loot: 1800000
+  waves:
+  - name: Defenders
+    total_dps: 76
+    total_alpha: 591
+    total_ehp: 11350
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 2
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Watchman
+      class: cruiser
+      count: 1
+      dps: 31
+      alpha: 266
+      ehp: 8750
+      scram: false
+      web: false
+      neut: -6
+      rrep: 0
+- slug: vast-frontier-reservoir
+  name: Vast Frontier Reservoir
+  type: gas
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  blue_loot: 23200000
+  waves:
+  - name: Defenders
+    total_dps: 410
+    total_alpha: 3909
+    total_ehp: 156333
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 4
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Upholder
+      class: cruiser
+      count: 4
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+- slug: vital-core-reservoir
+  name: Vital Core Reservoir
+  type: gas
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  blue_loot: 74800000
+  waves:
+  - name: Defenders
+    total_dps: 2348
+    total_alpha: 15890
+    total_ehp: 372114
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 4
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+    - name: Sleepless Keeper
+      class: battleship
+      count: 4
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+- slug: average-frontier-deposit
+  name: Average Frontier Deposit
+  type: ore
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  blue_loot: 4200000
+  waves:
+  - name: Defenders
+    total_dps: 91
+    total_alpha: 777
+    total_ehp: 28167
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 3
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Patroller
+      class: cruiser
+      count: 1
+      dps: 42
+      alpha: 432
+      ehp: 19167
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: common-perimeter-deposit
+  name: Common Perimeter Deposit
+  type: ore
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  blue_loot: 2000000
+  waves:
+  - name: Defenders
+    total_dps: 82
+    total_alpha: 575
+    total_ehp: 15000
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 5
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: exceptional-core-deposit
+  name: Exceptional Core Deposit
+  type: ore
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  blue_loot: 15900000
+  waves:
+  - name: Defenders
+    total_dps: 465
+    total_alpha: 5746
+    total_ehp: 147714
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 1
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+- slug: infrequent-core-deposit
+  name: Infrequent Core Deposit
+  type: ore
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  blue_loot: 5800000
+  waves:
+  - name: Defenders
+    total_dps: 118
+    total_alpha: 1210
+    total_ehp: 53667
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 2
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: isolated-core-deposit
+  name: Isolated Core Deposit
+  type: ore
+  wh_classes:
+  - 4
+  - 5
+  - 6
+  blue_loot: 1800000
+  waves:
+  - name: Defenders
+    total_dps: 64
+    total_alpha: 496
+    total_ehp: 14750
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 2
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Watchman
+      class: cruiser
+      count: 1
+      dps: 31
+      alpha: 266
+      ehp: 8750
+      scram: false
+      web: false
+      neut: -6
+      rrep: 0
+- slug: ordinary-permiter-deposit
+  name: Ordinary Permiter Deposit
+  type: ore
+  blue_loot: 2000000
+  waves:
+  - name: Defenders
+    total_dps: 74
+    total_alpha: 535
+    total_ehp: 13000
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Patroller
+      class: frigate
+      count: 3
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Watchman
+      class: frigate
+      count: 2
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+- slug: rarified-core-deposit
+  name: Rarified Core Deposit
+  type: ore
+  wh_classes:
+  - 4
+  - 5
+  - 6
+  blue_loot: 37600000
+  waves:
+  - name: Defenders
+    total_dps: 616
+    total_alpha: 7301
+    total_ehp: 232048
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 2
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Sleepless Sentinel
+      class: battleship
+      count: 1
+      dps: 465
+      alpha: 5746
+      ehp: 147714
+      scram: true
+      web: true
+      neut: -18
+      rrep: 0
+- slug: uncommon-core-deposit
+  name: Uncommon Core Deposit
+  type: ore
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  blue_loot: 1800000
+  waves:
+  - name: Defenders
+    total_dps: 80
+    total_alpha: 576
+    total_ehp: 16000
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Watchman
+      class: frigate
+      count: 2
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+    - name: Awakened Escort
+      class: cruiser
+      count: 1
+      dps: 55
+      alpha: 386
+      ehp: 12000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: unexceptional-frontier-deposit
+  name: Unexceptional Frontier Deposit
+  type: ore
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  blue_loot: 2000000
+  waves:
+  - name: Defenders
+    total_dps: 80
+    total_alpha: 583
+    total_ehp: 11300
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Escort
+      class: frigate
+      count: 1
+      dps: 23
+      alpha: 163
+      ehp: 1300
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Emergent Patroller
+      class: frigate
+      count: 2
+      dps: 16
+      alpha: 115
+      ehp: 3000
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Emergent Watchman
+      class: frigate
+      count: 2
+      dps: 12
+      alpha: 95
+      ehp: 2000
+      scram: false
+      web: false
+      neut: -3
+      rrep: 0
+- slug: unusual-core-deposit
+  name: Unusual Core Deposit
+  type: ore
+  blue_loot: 5800000
+  waves:
+  - name: Defenders
+    total_dps: 102
+    total_alpha: 977
+    total_ehp: 39083
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Awakened Defender
+      class: cruiser
+      count: 1
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+    - name: Awakened Upholder
+      class: cruiser
+      count: 1
+      dps: 43
+      alpha: 372
+      ehp: 12250
+      scram: false
+      web: true
+      neut: -6
+      rrep: 0
+- slug: shattered-debris-field
+  name: Shattered Debris Field
+  type: ore
+  blue_loot: 0
+  waves:
+  - name: Defenders
+    total_dps: 105
+    total_alpha: 927
+    total_ehp: 35233
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 2
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Defender
+      class: cruiser
+      count: 1
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
+- slug: shattered-ice-field
+  name: Shattered Ice Field
+  type: ore
+  blue_loot: 0
+  waves:
+  - name: Defenders
+    total_dps: 105
+    total_alpha: 927
+    total_ehp: 35233
+    trigger: null
+    trigger_note: null
+    npcs:
+    - name: Emergent Defender
+      class: frigate
+      count: 2
+      dps: 23
+      alpha: 161
+      ehp: 4200
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+    - name: Awakened Defender
+      class: cruiser
+      count: 1
+      dps: 59
+      alpha: 605
+      ehp: 26833
+      scram: false
+      web: false
+      neut: 0
+      rrep: 0
