@@ -428,6 +428,7 @@
       neut: 0
       rrep: 0
       is_trigger: true
+      trigger_type: first death
     - name: Emergent Escort
       class: frigate
       count: 2
@@ -3537,6 +3538,17 @@
     trigger: Sleepless Sentinel
     trigger_note: null
     npcs:
+    - name: Awakened Sentinel
+      class: cruiser
+      count: 5
+      dps: 76
+      alpha: 778
+      ehp: 42167
+      scram: false
+      web: true
+      neut: 0
+      rrep: 0
+      is_dta: true
     - name: Awakened Keeper
       class: cruiser
       count: 3
@@ -3702,6 +3714,17 @@
       web: false
       neut: 0
       rrep: 58
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+      is_dta: true
     - name: Sleepless Warden
       class: battleship
       count: 3
@@ -4136,6 +4159,17 @@
     trigger: null
     trigger_note: null
     npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 4
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+      is_dta: true
     - name: Emergent Warden
       class: frigate
       count: 2
@@ -4264,6 +4298,17 @@
       web: false
       neut: 0
       rrep: 58
+    - name: Sleepless Keeper
+      class: battleship
+      count: 2
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+      is_dta: true
 - slug: unsecured-frontier-enclave-relay
   name: Unsecured Frontier Enclave Relay
   type: data
@@ -4776,6 +4821,17 @@
     trigger: null
     trigger_note: null
     npcs:
+    - name: Sleepless Guardian
+      class: battleship
+      count: 2
+      dps: 693
+      alpha: 8352
+      ehp: 259079
+      scram: true
+      web: true
+      neut: -36
+      rrep: 0
+      is_dta: true
     - name: Sleepless Sentinel
       class: battleship
       count: 4
@@ -4913,6 +4969,17 @@
     trigger: null
     trigger_note: null
     npcs:
+    - name: Emergent Keeper
+      class: frigate
+      count: 6
+      dps: 22
+      alpha: 171
+      ehp: 4400
+      scram: false
+      web: false
+      neut: -3
+      rrep: 26
+      is_dta: true
     - name: Sleepless Guardian
       class: battleship
       count: 2
@@ -5509,6 +5576,17 @@
       web: false
       neut: 0
       rrep: 58
+    - name: Sleepless Keeper
+      class: battleship
+      count: 5
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+      is_dta: true
 - slug: the-mirror
   name: The Mirror
   type: anomaly
@@ -5658,6 +5736,17 @@
       web: false
       neut: 0
       rrep: 58
+    - name: Sleepless Keeper
+      class: battleship
+      count: 4
+      dps: 565
+      alpha: 3802
+      ehp: 88629
+      scram: false
+      web: false
+      neut: -12
+      rrep: 0
+      is_dta: true
 - slug: unsecured-core-backup-array
   name: Unsecured Core Backup Array
   type: data
@@ -6620,6 +6709,12 @@
 - slug: ordinary-permiter-deposit
   name: Ordinary Permiter Deposit
   type: ore
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
   blue_loot: 2000000
   waves:
   - name: Defenders
@@ -6773,6 +6868,11 @@
 - slug: unusual-core-deposit
   name: Unusual Core Deposit
   type: ore
+  wh_classes:
+  - 3
+  - 4
+  - 5
+  - 6
   blue_loot: 5800000
   waves:
   - name: Defenders
@@ -6805,6 +6905,13 @@
 - slug: shattered-debris-field
   name: Shattered Debris Field
   type: ore
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
   blue_loot: 0
   waves:
   - name: Defenders
@@ -6837,6 +6944,13 @@
 - slug: shattered-ice-field
   name: Shattered Ice Field
   type: ore
+  wh_classes:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
   blue_loot: 0
   waves:
   - name: Defenders
