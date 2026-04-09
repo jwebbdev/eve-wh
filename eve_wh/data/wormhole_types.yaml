@@ -1,326 +1,784 @@
 # Wormhole Type Database
-# Source: EVE SDE + anoik.is + EVE University Wiki (cross-referenced)
+# Source: EVE University Wiki (Wormhole_attributes) — 2026-04-09
 # NOTE: Total mass has ±10% variance at spawn. Max jump mass is fixed.
-# Values in kg.
+# Values in kg. Masses from wiki are in metric tons (×1000 for kg).
 #
 # size_class: frigate (<5M jump), medium (<62M), large (<375M), very_large (<1B), capital (<2B)
+# origin: which space class this WH type spawns in
+# destination: where this WH type leads to
 
 wormhole_types:
-  # === HIGHSEC CONNECTIONS ===
-  - id: B274
-    destination: Highsec
-    total_mass: 2000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 24
-    size_class: large
 
-  - id: A641
-    destination: Highsec
-    total_mass: 2000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 16
-    size_class: large
-
-  - id: D382
-    destination: Highsec
-    total_mass: 2000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 16
-    size_class: large
-
-  - id: N110
-    destination: Highsec
-    total_mass: 1000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 24
-    size_class: large
-
-  - id: Z971
-    destination: Highsec
-    total_mass: 3000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 24
-    size_class: large
-
-  - id: R943
-    destination: Highsec
-    total_mass: 750000000
-    max_jump_mass: 375000000
-    max_stable_hours: 16
-    size_class: large
-
-  # === LOWSEC CONNECTIONS ===
-  - id: A239
-    destination: Lowsec
-    total_mass: 2000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 24
-    size_class: large
-
-  - id: J244
-    destination: Lowsec
-    total_mass: 1000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 24
-    size_class: large
-
-  - id: U210
-    destination: Lowsec
-    total_mass: 3000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 24
-    size_class: large
-
-  - id: N432
-    destination: Lowsec
-    total_mass: 3000000000
-    max_jump_mass: 2000000000
-    max_stable_hours: 24
-    size_class: capital
-
-  # === NULLSEC CONNECTIONS ===
-  - id: K346
-    destination: Nullsec
-    total_mass: 3000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 24
-    size_class: large
-
-  - id: Z142
-    destination: Nullsec
-    total_mass: 3000000000
-    max_jump_mass: 2000000000
-    max_stable_hours: 24
-    size_class: capital
-
-  - id: N770
-    destination: Nullsec
-    total_mass: 3000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 24
-    size_class: large
-
-  - id: S199
-    destination: Nullsec
-    total_mass: 3000000000
-    max_jump_mass: 2000000000
-    max_stable_hours: 24
-    size_class: capital
-
-  # === C1 WORMSPACE ===
+  # === C1 ORIGIN ===
   - id: H121
+    origin: C1
     destination: C1
     total_mass: 500000000
     max_jump_mass: 62000000
     max_stable_hours: 16
     size_class: medium
 
-  - id: E175
-    destination: C1
-    total_mass: 2000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 16
-    size_class: large
-
-  - id: Z060
-    destination: C1
+  - id: C125
+    origin: C1
+    destination: C2
     total_mass: 1000000000
     max_jump_mass: 62000000
     max_stable_hours: 16
     size_class: medium
 
-  # === C2 WORMSPACE ===
-  - id: O477
+  - id: O883
+    origin: C1
+    destination: C3
+    total_mass: 1000000000
+    max_jump_mass: 62000000
+    max_stable_hours: 16
+    size_class: medium
+
+  - id: M609
+    origin: C1
+    destination: C4
+    total_mass: 1000000000
+    max_jump_mass: 62000000
+    max_stable_hours: 16
+    size_class: medium
+
+  - id: L614
+    origin: C1
+    destination: C5
+    total_mass: 1000000000
+    max_jump_mass: 62000000
+    max_stable_hours: 24
+    size_class: medium
+
+  - id: S804
+    origin: C1
+    destination: C6
+    total_mass: 1000000000
+    max_jump_mass: 62000000
+    max_stable_hours: 24
+    size_class: medium
+
+  - id: N110
+    origin: C1
+    destination: Highsec
+    total_mass: 1000000000
+    max_jump_mass: 62000000
+    max_stable_hours: 24
+    size_class: medium
+
+  - id: J244
+    origin: C1
+    destination: Lowsec
+    total_mass: 1000000000
+    max_jump_mass: 62000000
+    max_stable_hours: 24
+    size_class: medium
+
+  - id: Z060
+    origin: C1
+    destination: Nullsec
+    total_mass: 1000000000
+    max_jump_mass: 62000000
+    max_stable_hours: 24
+    size_class: medium
+
+  - id: E004
+    origin: C1
+    destination: C1 (frigate)
+    total_mass: 1000000000
+    max_jump_mass: 5000000
+    max_stable_hours: 4
+    size_class: frigate
+
+  # === C2 ORIGIN ===
+  - id: Z647
+    origin: C2
+    destination: C1
+    total_mass: 500000000
+    max_jump_mass: 62000000
+    max_stable_hours: 16
+    size_class: medium
+
+  - id: D382
+    origin: C2
     destination: C2
+    total_mass: 2000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: O477
+    origin: C2
+    destination: C3
     total_mass: 2000000000
     max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
   - id: Y683
-    destination: C2
+    origin: C2
+    destination: C4
     total_mass: 2000000000
     max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
-  - id: Z647
-    destination: C2
-    total_mass: 2000000000
+  - id: N062
+    origin: C2
+    destination: C5
+    total_mass: 3000000000
     max_jump_mass: 375000000
-    max_stable_hours: 16
+    max_stable_hours: 24
     size_class: large
 
-  # === C3 WORMSPACE ===
-  - id: M267
-    destination: C3
+  - id: R474
+    origin: C2
+    destination: C6
+    total_mass: 3000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: B274
+    origin: C2
+    destination: Highsec
+    total_mass: 2000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: A239
+    origin: C2
+    destination: Lowsec
+    total_mass: 2000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: E545
+    origin: C2
+    destination: Nullsec
+    total_mass: 2000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: L005
+    origin: C2
+    destination: C2 (frigate)
     total_mass: 1000000000
+    max_jump_mass: 5000000
+    max_stable_hours: 4
+    size_class: frigate
+
+  # === C3 ORIGIN ===
+  - id: V301
+    origin: C3
+    destination: C1
+    total_mass: 500000000
+    max_jump_mass: 62000000
+    max_stable_hours: 16
+    size_class: medium
+
+  - id: I182
+    origin: C3
+    destination: C2
+    total_mass: 2000000000
     max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
   - id: N968
+    origin: C3
     destination: C3
     total_mass: 2000000000
     max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
-  - id: L031
-    destination: C3
-    total_mass: 1000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 16
-    size_class: large
-
-  - id: O883
-    destination: C3
-    total_mass: 1000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 16
-    size_class: large
-
-  # === C4 WORMSPACE ===
-  - id: C247
+  - id: T405
+    origin: C3
     destination: C4
+    total_mass: 2000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: N770
+    origin: C3
+    destination: C5
+    total_mass: 3000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: A982
+    origin: C3
+    destination: C6
+    total_mass: 3000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: D845
+    origin: C3
+    destination: Highsec
+    total_mass: 5000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: U210
+    origin: C3
+    destination: Lowsec
+    total_mass: 3000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: K346
+    origin: C3
+    destination: Nullsec
+    total_mass: 3000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: Z006
+    origin: C3
+    destination: C3 (frigate)
+    total_mass: 1000000000
+    max_jump_mass: 5000000
+    max_stable_hours: 4
+    size_class: frigate
+
+  # === C4 ORIGIN ===
+  - id: P060
+    origin: C4
+    destination: C1
+    total_mass: 500000000
+    max_jump_mass: 62000000
+    max_stable_hours: 16
+    size_class: medium
+
+  - id: N766
+    origin: C4
+    destination: C2
+    total_mass: 2000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: C247
+    origin: C4
+    destination: C3
     total_mass: 2000000000
     max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
   - id: X877
+    origin: C4
     destination: C4
     total_mass: 2000000000
     max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
-  - id: O128
-    destination: C4
-    total_mass: 1000000000
+  - id: H900
+    origin: C4
+    destination: C5
+    total_mass: 3000000000
     max_jump_mass: 375000000
     max_stable_hours: 24
     size_class: large
 
-  # === C5 WORMSPACE ===
-  - id: H296
-    destination: C5
+  - id: U574
+    origin: C4
+    destination: C6
     total_mass: 3000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: S047
+    origin: C4
+    destination: Highsec
+    total_mass: 3000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: N290
+    origin: C4
+    destination: Lowsec
+    total_mass: 3000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: K329
+    origin: C4
+    destination: Nullsec
+    total_mass: 3000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: M001
+    origin: C4
+    destination: C4 (frigate)
+    total_mass: 1000000000
+    max_jump_mass: 5000000
+    max_stable_hours: 4
+    size_class: frigate
+
+  # === C5 ORIGIN ===
+  - id: Y790
+    origin: C5
+    destination: C1
+    total_mass: 500000000
+    max_jump_mass: 62000000
+    max_stable_hours: 16
+    size_class: medium
+
+  - id: D364
+    origin: C5
+    destination: C2
+    total_mass: 1000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: M267
+    origin: C5
+    destination: C3
+    total_mass: 1000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: E175
+    origin: C5
+    destination: C4
+    total_mass: 2000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: H296
+    origin: C5
+    destination: C5
+    total_mass: 3300000000
     max_jump_mass: 2000000000
     max_stable_hours: 24
     size_class: capital
 
+  - id: V753
+    origin: C5
+    destination: C6
+    total_mass: 3300000000
+    max_jump_mass: 2000000000
+    max_stable_hours: 24
+    size_class: capital
+
+  - id: D792
+    origin: C5
+    destination: Highsec
+    total_mass: 3000000000
+    max_jump_mass: 1000000000
+    max_stable_hours: 24
+    size_class: very_large
+
+  - id: C008
+    origin: C5
+    destination: C5 (frigate)
+    total_mass: 1000000000
+    max_jump_mass: 5000000
+    max_stable_hours: 4
+    size_class: frigate
+
+  # === C6 ORIGIN ===
+  - id: Q317
+    origin: C6
+    destination: C1
+    total_mass: 500000000
+    max_jump_mass: 62000000
+    max_stable_hours: 16
+    size_class: medium
+
+  - id: G024
+    origin: C6
+    destination: C2
+    total_mass: 2000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: L477
+    origin: C6
+    destination: C3
+    total_mass: 2000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: Z457
+    origin: C6
+    destination: C4
+    total_mass: 2000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: V911
+    origin: C6
+    destination: C5
+    total_mass: 3300000000
+    max_jump_mass: 2000000000
+    max_stable_hours: 24
+    size_class: capital
+
+  - id: W237
+    origin: C6
+    destination: C6
+    total_mass: 3300000000
+    max_jump_mass: 2000000000
+    max_stable_hours: 24
+    size_class: capital
+
+  - id: B520
+    origin: C6
+    destination: Highsec
+    total_mass: 5000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
+
+  - id: C391
+    origin: C6
+    destination: Lowsec
+    total_mass: 5000000000
+    max_jump_mass: 2000000000
+    max_stable_hours: 24
+    size_class: capital
+
+  - id: C248
+    origin: C6
+    destination: Nullsec
+    total_mass: 3300000000
+    max_jump_mass: 2000000000
+    max_stable_hours: 24
+    size_class: capital
+
+  - id: G008
+    origin: C6
+    destination: C6 (frigate)
+    total_mass: 1000000000
+    max_jump_mass: 5000000
+    max_stable_hours: 4
+    size_class: frigate
+
+  # === C5/C6 SHARED ===
+  - id: C140
+    origin: C5/C6
+    destination: Lowsec
+    total_mass: 3300000000
+    max_jump_mass: 2000000000
+    max_stable_hours: 24
+    size_class: capital
+
+  - id: Z142
+    origin: C5/C6
+    destination: Nullsec
+    total_mass: 3300000000
+    max_jump_mass: 2000000000
+    max_stable_hours: 24
+    size_class: capital
+
+  # === HIGHSEC ORIGIN ===
+  - id: A641
+    origin: Highsec
+    destination: Highsec
+    total_mass: 2000000000
+    max_jump_mass: 1000000000
+    max_stable_hours: 16
+    size_class: very_large
+
+  - id: R051
+    origin: Highsec
+    destination: Lowsec
+    total_mass: 3000000000
+    max_jump_mass: 1000000000
+    max_stable_hours: 16
+    size_class: very_large
+
+  - id: V283
+    origin: Highsec
+    destination: Nullsec
+    total_mass: 3000000000
+    max_jump_mass: 1000000000
+    max_stable_hours: 24
+    size_class: very_large
+
+  - id: B041
+    origin: Highsec
+    destination: C6
+    total_mass: 5000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 48
+    size_class: large
+
   - id: M555
+    origin: Highsec
     destination: C5
     total_mass: 3000000000
     max_jump_mass: 1000000000
     max_stable_hours: 24
     size_class: very_large
 
-  - id: D364
-    destination: C5
-    total_mass: 1000000000
-    max_jump_mass: 375000000
+  - id: T458
+    origin: Highsec
+    destination: Thera
+    total_mass: 500000000
+    max_jump_mass: 62000000
     max_stable_hours: 16
-    size_class: large
+    size_class: medium
 
-  - id: H900
-    destination: C5
-    total_mass: 3000000000
-    max_jump_mass: 375000000
-    max_stable_hours: 24
-    size_class: large
+  # === LOWSEC/NULLSEC ORIGIN ===
+  - id: B449
+    origin: Lowsec/Nullsec
+    destination: Highsec
+    total_mass: 2000000000
+    max_jump_mass: 1000000000
+    max_stable_hours: 16
+    size_class: very_large
 
-  # === C6 WORMSPACE ===
-  - id: V911
-    destination: C6
-    total_mass: 3000000000
+  - id: N944
+    origin: Lowsec/Nullsec
+    destination: Lowsec
+    total_mass: 3300000000
     max_jump_mass: 2000000000
     max_stable_hours: 24
     size_class: capital
 
-  - id: W237
-    destination: C6
-    total_mass: 3000000000
+  - id: S199
+    origin: Lowsec/Nullsec
+    destination: Nullsec
+    total_mass: 3300000000
     max_jump_mass: 2000000000
     max_stable_hours: 24
     size_class: capital
 
-  - id: U574
+  - id: N432
+    origin: Lowsec/Nullsec
+    destination: C5
+    total_mass: 3300000000
+    max_jump_mass: 2000000000
+    max_stable_hours: 24
+    size_class: capital
+
+  - id: U319
+    origin: Lowsec/Nullsec
     destination: C6
-    total_mass: 3000000000
+    total_mass: 3300000000
+    max_jump_mass: 2000000000
+    max_stable_hours: 48
+    size_class: capital
+
+  # === K-SPACE (ANY) ORIGIN ===
+  - id: R943
+    origin: K-space
+    destination: C2
+    total_mass: 750000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: X702
+    origin: K-space
+    destination: C3
+    total_mass: 1000000000
     max_jump_mass: 375000000
     max_stable_hours: 24
     size_class: large
 
-  # === FRIGATE HOLES ===
-  - id: E004
-    destination: C1 (frigate)
+  - id: O128
+    origin: K-space
+    destination: C4
     total_mass: 1000000000
-    max_jump_mass: 5000000
-    max_stable_hours: 16
-    size_class: frigate
+    max_jump_mass: 375000000
+    max_stable_hours: 24
+    size_class: large
 
-  - id: L005
-    destination: C2 (frigate)
-    total_mass: 1000000000
-    max_jump_mass: 5000000
+  - id: Z971
+    origin: K-space
+    destination: C1
+    total_mass: 100000000
+    max_jump_mass: 62000000
     max_stable_hours: 16
-    size_class: frigate
-
-  - id: Z006
-    destination: C3 (frigate)
-    total_mass: 1000000000
-    max_jump_mass: 5000000
-    max_stable_hours: 16
-    size_class: frigate
-
-  - id: M001
-    destination: C4 (frigate)
-    total_mass: 1000000000
-    max_jump_mass: 5000000
-    max_stable_hours: 16
-    size_class: frigate
-
-  - id: C008
-    destination: C5 (frigate)
-    total_mass: 1000000000
-    max_jump_mass: 5000000
-    max_stable_hours: 16
-    size_class: frigate
-
-  - id: G008
-    destination: C6 (frigate)
-    total_mass: 1000000000
-    max_jump_mass: 5000000
-    max_stable_hours: 16
-    size_class: frigate
+    size_class: medium
 
   - id: Q003
+    origin: Nullsec
     destination: Nullsec (frigate)
     total_mass: 1000000000
     max_jump_mass: 5000000
-    max_stable_hours: 16
-    size_class: frigate
-
-  - id: A009
-    destination: C13 (frigate)
-    total_mass: 500000000
-    max_jump_mass: 5000000
-    max_stable_hours: 16
+    max_stable_hours: 4
     size_class: frigate
 
   # === THERA ===
+  - id: F353
+    origin: C1
+    destination: Thera
+    total_mass: 100000000
+    max_jump_mass: 62000000
+    max_stable_hours: 16
+    size_class: medium
+
+  - id: F135
+    origin: C2/C3
+    destination: Thera
+    total_mass: 750000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
   - id: M164
+    origin: Lowsec
     destination: Thera
     total_mass: 2000000000
     max_jump_mass: 375000000
     max_stable_hours: 16
     size_class: large
 
-  - id: T458
-    destination: Thera (small)
+  - id: L031
+    origin: Nullsec
+    destination: Thera
+    total_mass: 3000000000
+    max_jump_mass: 1000000000
+    max_stable_hours: 16
+    size_class: very_large
+
+  - id: Q063
+    origin: Thera
+    destination: Highsec
     total_mass: 500000000
     max_jump_mass: 62000000
     max_stable_hours: 16
+    size_class: medium
+
+  - id: V898
+    origin: Thera
+    destination: Lowsec
+    total_mass: 2000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: E587
+    origin: Thera
+    destination: Nullsec
+    total_mass: 3000000000
+    max_jump_mass: 1000000000
+    max_stable_hours: 16
+    size_class: very_large
+
+  # === POCHVEN ===
+  - id: C729
+    origin: Adjacent
+    destination: Pochven
+    total_mass: 1000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: F216
+    origin: C2-C6
+    destination: Pochven
+    total_mass: 1000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: R081
+    origin: Pochven
+    destination: C4
+    total_mass: 1000000000
+    max_jump_mass: 450000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: U372
+    origin: Drone Nullsec
+    destination: Pochven
+    total_mass: 1000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: X450
+    origin: Pochven
+    destination: Drone Nullsec
+    total_mass: 1000000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  # === DRIFTER ===
+  - id: B735
+    origin: Drifter-Barbican
+    destination: Drifter
+    total_mass: 750000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: C414
+    origin: Drifter-Conflux
+    destination: Drifter
+    total_mass: 750000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: R259
+    origin: Drifter-Redoubt
+    destination: Drifter
+    total_mass: 750000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: S877
+    origin: Drifter-Sentinel
+    destination: Drifter
+    total_mass: 750000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  - id: V928
+    origin: Drifter-Vidette
+    destination: Drifter
+    total_mass: 750000000
+    max_jump_mass: 375000000
+    max_stable_hours: 16
+    size_class: large
+
+  # === SPECIAL ===
+  - id: A009
+    origin: C13
+    destination: C13
+    total_mass: 500000000
+    max_jump_mass: 5000000
+    max_stable_hours: 4
+    size_class: frigate
+
+  - id: J377
+    origin: C1-C4
+    destination: Turnur
+    total_mass: 1000000000
+    max_jump_mass: 62000000
+    max_stable_hours: 24
     size_class: medium

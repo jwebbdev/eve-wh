@@ -21,10 +21,11 @@ class RiskLevel(str, Enum):
 class WormholeType:
     """A wormhole type definition from the database."""
     id: str                  # e.g., "C140", "B274"
-    destination: str         # e.g., "Highsec", "C3", "Nullsec"
-    total_mass: int          # Listed total mass in kg
-    max_jump_mass: int       # Max mass per single jump in kg
-    max_stable_hours: int    # Lifetime in hours
+    origin: str = ""         # e.g., "C2", "C5/C6", "K-space" — where this WH spawns
+    destination: str = ""    # e.g., "Highsec", "C3", "Nullsec" — where it leads
+    total_mass: int = 0      # Listed total mass in kg
+    max_jump_mass: int = 0   # Max mass per single jump in kg
+    max_stable_hours: int = 0  # Lifetime in hours
     size_class: str = ""     # "frigate", "medium", "large", "very_large", "capital"
 
 

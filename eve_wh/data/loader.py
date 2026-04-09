@@ -18,6 +18,7 @@ def load_wormhole_types() -> dict[str, WormholeType]:
     for wh in data["wormhole_types"]:
         wht = WormholeType(
             id=wh["id"],
+            origin=wh.get("origin", ""),
             destination=wh["destination"],
             total_mass=wh["total_mass"],
             max_jump_mass=wh["max_jump_mass"],
