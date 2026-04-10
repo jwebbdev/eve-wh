@@ -126,45 +126,21 @@ def valuate_system(
             val.link = "/eve/gas"
 
         elif category == "ore":
-            # Ore site estimates based on tier (rough ISK values at average ore prices)
-            # Perimeter (C1-C2): 50-200M, Frontier (C1-C3): 100-350M,
-            # Core Deposits (C3-C4): 200-600M, Core Reservoirs (C5-C6): 400-1B+
+            # Only the 11 actual WH ore sites + ice field that appear on probe scanner
+            # Values are rough estimates based on ore composition × average Jita prices
             ore_estimates = {
                 "Common Perimeter Deposit": 150000000,
                 "Ordinary Perimeter Deposit": 130000000,
-                "Uncommon Perimeter Deposit": 100000000,
-                "Average Perimeter Deposit": 80000000,
-                "Infrequent Perimeter Deposit": 70000000,
-                "Unusual Perimeter Deposit": 60000000,
-                "Exceptional Perimeter Deposit": 180000000,
-                "Rarified Perimeter Deposit": 200000000,
-                "Ordinary Frontier Deposit": 80000000,
-                "Common Frontier Deposit": 100000000,
-                "Uncommon Frontier Deposit": 120000000,
                 "Average Frontier Deposit": 350000000,
                 "Unexceptional Frontier Deposit": 200000000,
-                "Infrequent Frontier Deposit": 250000000,
-                "Unusual Frontier Deposit": 300000000,
-                "Exceptional Frontier Deposit": 400000000,
-                "Rarified Frontier Deposit": 450000000,
-                "Ordinary Core Deposit": 200000000,
-                "Common Core Deposit": 250000000,
-                "Uncommon Core Deposit": 300000000,
-                "Average Core Deposit": 350000000,
-                "Infrequent Core Deposit": 400000000,
-                "Unusual Core Deposit": 450000000,
                 "Exceptional Core Deposit": 550000000,
-                "Rarified Core Deposit": 700000000,
+                "Infrequent Core Deposit": 400000000,
                 "Isolated Core Deposit": 500000000,
-                "Ordinary Core Reservoir": 400000000,
-                "Common Core Reservoir": 500000000,
-                "Uncommon Core Reservoir": 600000000,
-                "Average Core Reservoir": 750000000,
-                "Infrequent Core Reservoir": 850000000,
-                "Unusual Core Reservoir": 900000000,
-                "Exceptional Core Reservoir": 1000000000,
-                "Rarified Core Reservoir": 1200000000,
+                "Rarified Core Deposit": 700000000,
+                "Uncommon Core Deposit": 300000000,
+                "Unusual Core Deposit": 450000000,
                 "Shattered Debris Field": 100000000,
+                "Shattered Ice Field": 500000000,
             }
             if sig.name and sig.name in ore_estimates:
                 val.total_est = ore_estimates[sig.name]
