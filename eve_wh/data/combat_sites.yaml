@@ -706,7 +706,7 @@ sites:
     classes: [3]
     blue_loot: 92500000
     salvage_est: 35000000
-    threats: [web, scram, neut, rr]
+    threats: [web, scram, neut]
     notes: "Most valuable C3 site. 4 waves with heavy ewar. Emergent Preservers have scram."
     wave_data:
       - name: "Wave 1 -- Initial"
@@ -742,7 +742,7 @@ sites:
     classes: [3]
     blue_loot: 88400000
     salvage_est: 33000000
-    threats: [web, scram, neut, rr]
+    threats: [web, scram, neut]
     notes: "High value data site. Emergent Preservers have scram."
     wave_data:
       - name: "Wave 1 -- Initial"
