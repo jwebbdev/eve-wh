@@ -1,214 +1,572 @@
 # Wormhole Mining/Ore Sites Database
-# Source: EVE University Wiki + community data
-# All ore sites are anomalies (no scanning required, show on probe scanner)
-# Sleeper NPCs must be cleared before mining
+# Source: EVE University Wiki (individual site pages, April 2026)
+# All ore sites are anomalies (show on probe scanner)
+# Additional asteroids spawn over the site's 3-5 day lifetime
 #
-# tier order: ordinary < common < uncommon < average < infrequent < unusual < exceptional < rarified
+# The 11 named ore sites that appear on probe scanner (user's list):
+#   Common Perimeter Deposit, Ordinary Perimeter Deposit,
+#   Average Frontier Deposit, Unexceptional Frontier Deposit,
+#   Exceptional Core Deposit, Infrequent Core Deposit,
+#   Isolated Core Deposit, Rarified Core Deposit,
+#   Uncommon Core Deposit, Unusual Core Deposit,
+#   Shattered Debris Field
+# Plus: Shattered Ice Field (ice, shattered WHs only)
 
 ore_sites:
-  # === C1/C2 PERIMETER DEPOSITS ===
-  - name: Ordinary Perimeter Deposit
-    classes: [1, 2]
-    tier: ordinary
-    ores: [Veldspar, Scordite, Pyroxeres]
-    sleeper_difficulty: low
-
   - name: Common Perimeter Deposit
-    classes: [1, 2]
-    tier: common
-    ores: [Veldspar, Scordite, Pyroxeres, Plagioclase]
-    sleeper_difficulty: low
+    classes: [1, 2, 3, 4, 5, 6]
+    ores:
+      - type: Arkonor
+        asteroids: 1
+        size: 320000
+        units: 20000
+        volume: 320000
+      - type: Bistot
+        asteroids: 1
+        size: 480000
+        units: 30000
+        volume: 480000
+      - type: Gneiss
+        asteroids: 1
+        size: 200000
+        units: 40000
+        volume: 200000
+      - type: Kernite
+        asteroids: 1
+        size: 360000
+        units: 300000
+        volume: 360000
+      - type: Omber
+        asteroids: 1
+        size: 180000
+        units: 300000
+        volume: 180000
+      - type: Pyroxeres
+        asteroids: 2
+        size: 78000
+        units: 520000
+        volume: 156000
+    sleepers:
+      - name: Emergent Patroller
+        class: frigate
+        count: 5
+        dps: 18
+        ehp: 3000
+        threats: []
+    blue_loot: 0
 
-  - name: Uncommon Perimeter Deposit
-    classes: [1, 2]
-    tier: uncommon
-    ores: [Scordite, Pyroxeres, Plagioclase, Omber]
-    sleeper_difficulty: low
-
-  - name: Average Perimeter Deposit
-    classes: [1, 2]
-    tier: average
-    ores: [Pyroxeres, Plagioclase, Omber, Kernite]
-    sleeper_difficulty: low
-
-  - name: Infrequent Perimeter Deposit
-    classes: [1, 2]
-    tier: infrequent
-    ores: [Plagioclase, Omber, Kernite, Jaspet]
-    sleeper_difficulty: low
-
-  - name: Unusual Perimeter Deposit
-    classes: [1, 2]
-    tier: unusual
-    ores: [Omber, Kernite, Jaspet, Hemorphite]
-    sleeper_difficulty: low
-
-  - name: Exceptional Perimeter Deposit
-    classes: [1, 2]
-    tier: exceptional
-    ores: [Hemorphite, Hedbergite, Gneiss, Dark Ochre]
-    sleeper_difficulty: low
-
-  - name: Rarified Perimeter Deposit
-    classes: [1, 2]
-    tier: rarified
-    ores: [Hedbergite, Gneiss, Dark Ochre, Crokite]
-    sleeper_difficulty: low
-
-  # === C1/C2/C3 FRONTIER DEPOSITS ===
-  - name: Ordinary Frontier Deposit
-    classes: [1, 2, 3]
-    tier: ordinary
-    ores: [Scordite, Pyroxeres, Plagioclase]
-    sleeper_difficulty: low
-
-  - name: Common Frontier Deposit
-    classes: [1, 2, 3]
-    tier: common
-    ores: [Pyroxeres, Plagioclase, Omber, Kernite]
-    sleeper_difficulty: low
-
-  - name: Uncommon Frontier Deposit
-    classes: [1, 2, 3]
-    tier: uncommon
-    ores: [Plagioclase, Omber, Kernite, Jaspet]
-    sleeper_difficulty: medium
+  - name: Ordinary Perimeter Deposit
+    classes: [1, 2, 3, 4, 5, 6]
+    ores:
+      - type: Arkonor
+        asteroids: 1
+        size: 160000
+        units: 10000
+        volume: 160000
+      - type: Bistot
+        asteroids: 1
+        size: 320000
+        units: 20000
+        volume: 320000
+      - type: Gneiss
+        asteroids: 1
+        size: 100000
+        units: 20000
+        volume: 100000
+      - type: Kernite
+        asteroids: 4
+        size_range: [36000, 84000]
+        units: 200000
+        volume: 240000
+      - type: Omber
+        asteroids: 4
+        size_range: [18000, 42000]
+        units: 200000
+        volume: 120000
+      - type: Pyroxeres
+        asteroids: 13
+        size_range: [24000, 60000]
+        units: 1620000
+        volume: 486000
+    sleepers:
+      - name: Emergent Patroller
+        class: frigate
+        count: 3
+        dps: 18
+        ehp: 3000
+        threats: []
+      - name: Emergent Watchman
+        class: frigate
+        count: 2
+        dps: 14
+        ehp: 2000
+        threats: [neut]
+    blue_loot: 0
 
   - name: Average Frontier Deposit
-    classes: [1, 2, 3]
-    tier: average
-    ores: [Omber, Kernite, Jaspet, Hemorphite]
-    sleeper_difficulty: medium
+    classes: [1, 2, 3, 4, 5, 6]
+    ores:
+      - type: Arkonor
+        asteroids: 3
+        size: 160000
+        units: 30000
+        volume: 480000
+      - type: Bistot
+        asteroids: 3
+        size: 213328
+        units: 39999
+        volume: 639984
+      - type: Gneiss
+        asteroids: 6
+        size_range: [50000, 2000000]
+        units: 450000
+        volume: 2250000
+      - type: Kernite
+        asteroids: 20
+        size: 18000
+        units: 300000
+        volume: 360000
+      - type: Omber
+        asteroids: 15
+        size: 12000
+        units: 300000
+        volume: 180000
+      - type: Pyroxeres
+        asteroids: 3
+        size_range: [60000, 90000]
+        units: 700000
+        volume: 210000
+    sleepers:
+      - name: Emergent Patroller
+        class: frigate
+        count: 3
+        dps: 18
+        ehp: 3000
+        threats: []
+      - name: Awakened Patroller
+        class: cruiser
+        count: 1
+        dps: 40
+        ehp: 19167
+        threats: []
+    blue_loot: 700000
 
-  - name: Infrequent Frontier Deposit
-    classes: [2, 3]
-    tier: infrequent
-    ores: [Kernite, Jaspet, Hemorphite, Hedbergite]
-    sleeper_difficulty: medium
-
-  - name: Unusual Frontier Deposit
-    classes: [2, 3]
-    tier: unusual
-    ores: [Jaspet, Hemorphite, Hedbergite, Gneiss]
-    sleeper_difficulty: medium
-
-  - name: Exceptional Frontier Deposit
-    classes: [2, 3]
-    tier: exceptional
-    ores: [Hedbergite, Gneiss, Dark Ochre, Crokite]
-    sleeper_difficulty: medium
-
-  - name: Rarified Frontier Deposit
-    classes: [2, 3]
-    tier: rarified
-    ores: [Gneiss, Dark Ochre, Crokite, Spodumain]
-    sleeper_difficulty: medium
-
-  # === C3/C4 CORE DEPOSITS ===
-  - name: Ordinary Core Deposit
-    classes: [3, 4]
-    tier: ordinary
-    ores: [Kernite, Jaspet, Hemorphite, Hedbergite]
-    sleeper_difficulty: medium
-
-  - name: Common Core Deposit
-    classes: [3, 4]
-    tier: common
-    ores: [Jaspet, Hemorphite, Hedbergite, Gneiss]
-    sleeper_difficulty: medium
-
-  - name: Uncommon Core Deposit
-    classes: [3, 4]
-    tier: uncommon
-    ores: [Hemorphite, Hedbergite, Gneiss, Dark Ochre]
-    sleeper_difficulty: high
-
-  - name: Average Core Deposit
-    classes: [3, 4]
-    tier: average
-    ores: [Hedbergite, Gneiss, Dark Ochre, Crokite]
-    sleeper_difficulty: high
-
-  - name: Infrequent Core Deposit
-    classes: [3, 4]
-    tier: infrequent
-    ores: [Gneiss, Dark Ochre, Crokite, Spodumain]
-    sleeper_difficulty: high
-
-  - name: Unusual Core Deposit
-    classes: [3, 4]
-    tier: unusual
-    ores: [Dark Ochre, Crokite, Spodumain, Arkonor]
-    sleeper_difficulty: high
+  - name: Unexceptional Frontier Deposit
+    classes: [1, 2, 3, 4, 5, 6]
+    ores:
+      - type: Arkonor
+        asteroids: 1
+        size: 480000
+        units: 30000
+        volume: 480000
+      - type: Bistot
+        asteroids: 1
+        size: 800000
+        units: 50000
+        volume: 800000
+      - type: Gneiss
+        asteroids: 1
+        size: 300000
+        units: 60000
+        volume: 300000
+      - type: Kernite
+        asteroids: 1
+        size: 480000
+        units: 400000
+        volume: 480000
+      - type: Omber
+        asteroids: 1
+        size: 240000
+        units: 400000
+        volume: 240000
+    sleepers:
+      - name: Emergent Escort
+        class: frigate
+        count: 1
+        dps: 24
+        ehp: 1300
+        threats: [web]
+      - name: Emergent Patroller
+        class: frigate
+        count: 2
+        dps: 18
+        ehp: 3000
+        threats: []
+      - name: Emergent Watchman
+        class: frigate
+        count: 2
+        dps: 14
+        ehp: 2000
+        threats: [neut]
+    blue_loot: 0
 
   - name: Exceptional Core Deposit
-    classes: [3, 4]
-    tier: exceptional
-    ores: [Crokite, Spodumain, Arkonor, Bistot]
-    sleeper_difficulty: high
+    classes: [3, 4, 5, 6]
+    ores:
+      - type: Arkonor
+        asteroids: 4
+        size: 320000
+        units: 80000
+        volume: 1280000
+      - type: Bistot
+        asteroids: 5
+        size_range: [320000, 640000]
+        units: 120000
+        volume: 1920000
+      - type: Gneiss
+        asteroids: 6
+        size_range: [100000, 200000]
+        units: 160000
+        volume: 800000
+      - type: Kernite
+        asteroids: 12
+        size_range: [48000, 144000]
+        units: 1000000
+        volume: 1200000
+      - type: Omber
+        asteroids: 12
+        size_range: [24000, 72000]
+        units: 1000000
+        volume: 600000
+      - type: Pyroxeres
+        asteroids: 10
+        size_range: [36000, 54000]
+        units: 1530000
+        volume: 459000
+    sleepers:
+      - name: Sleepless Sentinel
+        class: battleship
+        count: 1
+        dps: 465
+        ehp: 147714
+        threats: [web, scram, neut]
+    blue_loot: 15000000
+
+  - name: Infrequent Core Deposit
+    classes: [3, 4, 5, 6]
+    ores:
+      - type: Arkonor
+        asteroids: 2
+        units: 50000
+        volume: 800000
+      - type: Bistot
+        asteroids: 3
+        units: 70000
+        volume: 1120000
+      - type: Gneiss
+        asteroids: 4
+        units: 90000
+        volume: 450000
+      - type: Kernite
+        asteroids: 11
+        units: 400000
+        volume: 480000
+      - type: Omber
+        asteroids: 10
+        units: 400000
+        volume: 240000
+      - type: Pyroxeres
+        asteroids: 11
+        units: 868000
+        volume: 260400
+    sleepers:
+      - name: Awakened Defender
+        class: cruiser
+        count: 2
+        dps: 56
+        ehp: 26833
+        threats: []
+    blue_loot: 0
+
+  - name: Isolated Core Deposit
+    classes: [3, 4, 5, 6]
+    ores:
+      - type: Arkonor
+        asteroids: 6
+        size: 96000
+        units: 36000
+        volume: 576000
+      - type: Bistot
+        asteroids: 6
+        size: 128000
+        units: 48000
+        volume: 768000
+      - type: Gneiss
+        asteroids: 6
+        size: 60000
+        units: 72000
+        volume: 360000
+      - type: Kernite
+        asteroids: 6
+        size: 144000
+        units: 720000
+        volume: 864000
+      - type: Omber
+        asteroids: 6
+        size: 72000
+        units: 720000
+        volume: 432000
+    sleepers:
+      - name: Awakened Watchman
+        class: cruiser
+        count: 1
+        dps: 30
+        ehp: 8750
+        threats: [neut]
+      - name: Emergent Patroller
+        class: frigate
+        count: 2
+        dps: 18
+        ehp: 3000
+        threats: []
+    blue_loot: 0
 
   - name: Rarified Core Deposit
-    classes: [3, 4]
-    tier: rarified
-    ores: [Spodumain, Arkonor, Bistot, Mercoxit]
-    sleeper_difficulty: high
+    classes: [3, 4, 5, 6]
+    ores:
+      - type: Arkonor
+        asteroids: 1
+        size: 1600000
+        units: 100000
+        volume: 1600000
+      - type: Bistot
+        asteroids: 1
+        size: 2560000
+        units: 160000
+        volume: 2560000
+      - type: Gneiss
+        asteroids: 1
+        size: 1000000
+        units: 200000
+        volume: 1000000
+      - type: Kernite
+        asteroids: 4
+        size: 360000
+        units: 1200000
+        volume: 1440000
+      - type: Omber
+        asteroids: 3
+        size_range: [180000, 240000]
+        units: 1000000
+        volume: 600000
+      - type: Pyroxeres
+        asteroids: 6
+        size: 48000
+        units: 960000
+        volume: 288000
+    sleepers:
+      - name: Sleepless Sentinel
+        class: battleship
+        count: 1
+        dps: 465
+        ehp: 147714
+        threats: [web, scram, neut]
+      - name: Awakened Sentinel
+        class: cruiser
+        count: 2
+        dps: 72
+        ehp: 42167
+        threats: [web]
+    blue_loot: 23000000
 
-  # === C5/C6 CORE RESERVOIRS ===
-  - name: Ordinary Core Reservoir
-    classes: [5, 6]
-    tier: ordinary
-    ores: [Gneiss, Dark Ochre, Crokite, Spodumain]
-    sleeper_difficulty: very_high
+  - name: Uncommon Core Deposit
+    classes: [3, 4, 5, 6]
+    ores:
+      - type: Arkonor
+        asteroids: 4
+        size: 160000
+        units: 40000
+        volume: 640000
+      - type: Bistot
+        asteroids: 6
+        size: 160000
+        units: 60000
+        volume: 960000
+      - type: Gneiss
+        asteroids: 1
+        size: 350000
+        units: 70000
+        volume: 350000
+      - type: Kernite
+        asteroids: 7
+        size_range: [98400, 103200]
+        units: 590000
+        volume: 708000
+      - type: Omber
+        asteroids: 5
+        size: 72000
+        units: 600000
+        volume: 360000
+      - type: Pyroxeres
+        asteroids: 5
+        size_range: [23400, 42000]
+        units: 500000
+        volume: 150000
+    sleepers:
+      - name: Awakened Escort
+        class: cruiser
+        count: 1
+        dps: 54
+        ehp: 12000
+        threats: []
+      - name: Emergent Watchman
+        class: frigate
+        count: 2
+        dps: 14
+        ehp: 2000
+        threats: [neut]
+    blue_loot: 0
 
-  - name: Common Core Reservoir
-    classes: [5, 6]
-    tier: common
-    ores: [Dark Ochre, Crokite, Spodumain, Arkonor]
-    sleeper_difficulty: very_high
+  - name: Unusual Core Deposit
+    classes: [3, 4, 5, 6]
+    ores:
+      - type: Arkonor
+        asteroids: 1
+        units: 70000
+        volume: 1120000
+      - type: Bistot
+        asteroids: 1
+        units: 100000
+        volume: 1600000
+      - type: Gneiss
+        asteroids: 1
+        units: 120000
+        volume: 600000
+      - type: Kernite
+        asteroids: 4
+        units: 800000
+        volume: 960000
+      - type: Omber
+        asteroids: 3
+        units: 800000
+        volume: 480000
+    sleepers:
+      - name: Awakened Patroller
+        class: cruiser
+        count: 2
+        dps: 40
+        ehp: 19167
+        threats: []
+    blue_loot: 0
 
-  - name: Uncommon Core Reservoir
-    classes: [5, 6]
-    tier: uncommon
-    ores: [Crokite, Spodumain, Arkonor, Bistot]
-    sleeper_difficulty: very_high
+  - name: Shattered Debris Field
+    classes: [shattered]
+    ores:
+      - type: Prime Arkonor
+        asteroids: 4
+        size_range: [800000, 1200000]
+        units: 250000
+        volume: 4000000
+      - type: Monoclinic Bistot
+        asteroids: 7
+        size_range: [640000, 1280000]
+        units: 460000
+        volume: 7360000
+      - type: Prismatic Gneiss
+        asteroids: 3
+        size_range: [300000, 350000]
+        units: 200000
+        volume: 1000000
+      - type: Fiery Kernite
+        asteroids: 1
+        size: 25612
+        units: 21344
+        volume: 25612
+      - type: Luminous Kernite
+        asteroids: 7
+        size_range: [20884, 38515]
+        units: 159218
+        volume: 191058
+      - type: Kernite
+        asteroids: 10
+        size_range: [14395, 32688]
+        units: 203168
+        volume: 243798
+      - type: Viscous Pyroxeres
+        asteroids: 3
+        size_range: [19890, 26350]
+        units: 236952
+        volume: 71084
+      - type: Solid Pyroxeres
+        asteroids: 3
+        size_range: [17965, 25792]
+        units: 230394
+        volume: 69117
+      - type: Pyroxeres
+        asteroids: 16
+        size_range: [11544, 34777]
+        units: 1163934
+        volume: 349174
+    sleepers:
+      - name: Emergent Defender
+        class: frigate
+        count: 2
+        dps: 24
+        ehp: 4200
+        threats: [web]
+      - name: Awakened Defender
+        class: cruiser
+        count: 1
+        dps: 56
+        ehp: 26833
+        threats: []
+    blue_loot: 0
 
-  - name: Average Core Reservoir
-    classes: [5, 6]
-    tier: average
-    ores: [Spodumain, Arkonor, Bistot, Mercoxit]
-    sleeper_difficulty: very_high
-
-  - name: Infrequent Core Reservoir
-    classes: [5, 6]
-    tier: infrequent
-    ores: [Arkonor, Bistot, Mercoxit]
-    sleeper_difficulty: very_high
-
-  - name: Unusual Core Reservoir
-    classes: [5, 6]
-    tier: unusual
-    ores: [Arkonor, Bistot, Mercoxit]
-    sleeper_difficulty: very_high
-
-  - name: Exceptional Core Reservoir
-    classes: [5, 6]
-    tier: exceptional
-    ores: [Arkonor, Bistot, Mercoxit, Crokite]
-    sleeper_difficulty: very_high
-
-  - name: Rarified Core Reservoir
-    classes: [5, 6]
-    tier: rarified
-    ores: [Arkonor, Bistot, Mercoxit, Crokite]
-    sleeper_difficulty: very_high
-
-# Moon mining in wormholes
-moon_mining:
-  note: "Only R4 (ubiquitous) and R8 (common) moon ores spawn on WH moons. No R16/R32/R64."
-  available_ores:
-    ubiquitous_r4: [Zeolites, Sylvite, Bitumite, Coesite]
-    common_r8: [Cobaltite, Euxenite, Titanite, Scheelite]
-
-# Ice mining
-ice_mining:
-  note: "Ice anomalies do not spawn in standard wormhole systems."
+ice_sites:
+  - name: Shattered Ice Field
+    classes: [shattered]
+    ices:
+      - type: Thick Blue Ice
+        asteroids: 22
+        size_range: [278000, 326000]
+        units: 6868
+        volume: 6868000
+      - type: Enriched Clear Icicle
+        asteroids: 22
+        size_range: [278000, 326000]
+        units: 6868
+        volume: 6868000
+      - type: Dark Glitter
+        asteroids: 27
+        size_range: [383000, 417000]
+        units: 10802
+        volume: 10802000
+      - type: Gelidus
+        asteroids: 23
+        size_range: [110000, 130000]
+        units: 2756
+        volume: 2756000
+      - type: Smooth Glacial Mass
+        asteroids: 21
+        size_range: [278000, 326000]
+        units: 6456
+        volume: 6456000
+      - type: Glare Crust
+        asteroids: 45
+        size_range: [72000, 112000]
+        units: 4080
+        volume: 2040000
+      - type: Krystallos
+        asteroids: 26
+        size_range: [88000, 112000]
+        units: 2620
+        volume: 2620000
+      - type: Pristine White Glaze
+        asteroids: 20
+        size_range: [278000, 326000]
+        units: 6200
+        volume: 6200000
+    sleepers:
+      - name: Emergent Defender
+        class: frigate
+        count: 2
+        dps: 24
+        ehp: 4200
+        threats: [web]
+      - name: Awakened Defender
+        class: cruiser
+        count: 1
+        dps: 56
+        ehp: 26833
+        threats: []
+    blue_loot: 0
