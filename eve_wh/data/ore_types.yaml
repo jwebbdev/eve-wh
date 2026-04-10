@@ -1,0 +1,134 @@
+# EVE Online ore and ice type IDs for ESI market lookups
+# Source: EVE SDE / everef.net
+# Volume is m3 per unit.
+
+ore_types:
+  # Base ores (found in WH sites)
+  - id: arkonor
+    name: Arkonor
+    type_id: 22
+    volume: 16.0
+  - id: bistot
+    name: Bistot
+    type_id: 1223
+    volume: 16.0
+  - id: crokite
+    name: Crokite
+    type_id: 1225
+    volume: 16.0
+  - id: dark_ochre
+    name: Dark Ochre
+    type_id: 1232
+    volume: 8.0
+  - id: gneiss
+    name: Gneiss
+    type_id: 1229
+    volume: 5.0
+  - id: hedbergite
+    name: Hedbergite
+    type_id: 21
+    volume: 3.0
+  - id: hemorphite
+    name: Hemorphite
+    type_id: 1231
+    volume: 3.0
+  - id: jaspet
+    name: Jaspet
+    type_id: 1226
+    volume: 2.0
+  - id: kernite
+    name: Kernite
+    type_id: 20
+    volume: 1.2
+  - id: mercoxit
+    name: Mercoxit
+    type_id: 11396
+    volume: 40.0
+  - id: omber
+    name: Omber
+    type_id: 1227
+    volume: 0.6
+  - id: plagioclase
+    name: Plagioclase
+    type_id: 18
+    volume: 0.35
+  - id: pyroxeres
+    name: Pyroxeres
+    type_id: 1224
+    volume: 0.3
+  - id: scordite
+    name: Scordite
+    type_id: 1228
+    volume: 0.15
+  - id: spodumain
+    name: Spodumain
+    type_id: 19
+    volume: 16.0
+  - id: veldspar
+    name: Veldspar
+    type_id: 1230
+    volume: 0.1
+
+  # Named variants (Shattered Debris Field)
+  - id: prime_arkonor
+    name: Prime Arkonor
+    type_id: 17425
+    volume: 16.0
+  - id: monoclinic_bistot
+    name: Monoclinic Bistot
+    type_id: 17428
+    volume: 16.0
+  - id: prismatic_gneiss
+    name: Prismatic Gneiss
+    type_id: 17865
+    volume: 5.0
+  - id: fiery_kernite
+    name: Fiery Kernite
+    type_id: 17452
+    volume: 1.2
+  - id: luminous_kernite
+    name: Luminous Kernite
+    type_id: 17453
+    volume: 1.2
+  - id: viscous_pyroxeres
+    name: Viscous Pyroxeres
+    type_id: 17459
+    volume: 0.3
+  - id: solid_pyroxeres
+    name: Solid Pyroxeres
+    type_id: 17460
+    volume: 0.3
+
+ice_types:
+  - id: thick_blue_ice
+    name: Thick Blue Ice
+    type_id: 16264
+    volume: 1000.0
+  - id: enriched_clear_icicle
+    name: Enriched Clear Icicle
+    type_id: 16262
+    volume: 1000.0
+  - id: dark_glitter
+    name: Dark Glitter
+    type_id: 16267
+    volume: 1000.0
+  - id: gelidus
+    name: Gelidus
+    type_id: 16268
+    volume: 1000.0
+  - id: smooth_glacial_mass
+    name: Smooth Glacial Mass
+    type_id: 16265
+    volume: 1000.0
+  - id: glare_crust
+    name: Glare Crust
+    type_id: 16266
+    volume: 1000.0
+  - id: krystallos
+    name: Krystallos
+    type_id: 16269
+    volume: 1000.0
+  - id: pristine_white_glaze
+    name: Pristine White Glaze
+    type_id: 16263
+    volume: 1000.0
