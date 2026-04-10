@@ -41,6 +41,25 @@ def _attr(obj, key, default=None):
     return default
 
 
+# Pirate exploration site name prefixes (non-Sleeper data/relic in C1-C3 WHs)
+_PIRATE_RELIC_PREFIXES = ("crumbling", "decayed", "ruined")
+_PIRATE_DATA_PREFIXES = ("local", "regional", "central")
+# Known factions that spawn pirate sites
+_PIRATE_FACTIONS = ("angel", "blood", "guristas", "sansha", "serpentis")
+
+
+def _is_pirate_exploration_site(name: str) -> bool:
+    """Check if a site name matches pirate relic/data naming patterns."""
+    lower = name.lower()
+    # Pirate sites follow: "[Prefix] [Faction] [Site Name]"
+    for prefix in (*_PIRATE_RELIC_PREFIXES, *_PIRATE_DATA_PREFIXES):
+        if lower.startswith(prefix):
+            for faction in _PIRATE_FACTIONS:
+                if faction in lower:
+                    return True
+    return False
+
+
 def _match_combat_site(name: str, combat_sites) -> object | None:
     """Find a combat site by name (case-insensitive, handles trailing ...)."""
     if not name:
@@ -113,6 +132,14 @@ def valuate_system(
                 bl = val.blue_loot or 0
                 sv = val.salvage_est or 0
                 val.total_est = bl + sv if (bl or sv) else None
+            elif sig.name and _is_pirate_exploration_site(sig.name):
+                # Pirate relic/data sites in C1-C3 WHs — rough average estimates
+                # Relic sites average ~15M (T2 salvage, highly variable)
+                # Data sites average ~8M (decryptors, datacores, lower value)
+                if category == "relic":
+                    val.total_est = 15000000  # ~15M average
+                else:
+                    val.total_est = 8000000   # ~8M average
 
         valuations.append(val)
 
