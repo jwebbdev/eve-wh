@@ -123,6 +123,7 @@ def valuate_system(
                 val.ninja_value_min = _attr(matched, "ninja_value_min")
                 val.ninja_value_max = _attr(matched, "ninja_value_max")
                 val.total_est = val.gas_value
+            val.link = "/eve/gas"
 
         elif category == "ore":
             # Ore site estimates based on tier (rough ISK values at average ore prices)
@@ -177,6 +178,7 @@ def valuate_system(
                 bl = val.blue_loot or 0
                 sv = val.salvage_est or 0
                 val.total_est = bl + sv if (bl or sv) else None
+                val.link = "/eve/wh/sites"
             elif sig.name and _is_pirate_exploration_site(sig.name):
                 # Pirate relic/data sites in C1-C3 WHs — rough average estimates
                 # Relic sites average ~15M (T2 salvage, highly variable)
