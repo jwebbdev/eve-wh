@@ -26,11 +26,11 @@ class ParseResult:
 # Header detection: the first column is "ID" in the header row
 _HEADER_PATTERN = re.compile(r"^ID\t", re.IGNORECASE)
 
-# Signal strength: number with optional decimal + % suffix
-_STRENGTH_PATTERN = re.compile(r"^([\d.]+)%$")
+# Signal strength: number with optional decimal (dot or comma) + % suffix
+_STRENGTH_PATTERN = re.compile(r"^([\d.,]+)%$")
 
-# Distance: number with optional decimal + space + AU
-_DISTANCE_PATTERN = re.compile(r"^([\d.]+)\s*AU$", re.IGNORECASE)
+# Distance: number with optional decimal (dot or comma) + space + AU
+_DISTANCE_PATTERN = re.compile(r"^([\d.,]+)\s*AU$", re.IGNORECASE)
 
 VALID_SCAN_GROUPS = {"Cosmic Signature", "Cosmic Anomaly"}
 VALID_GROUPS = {"Gas Site", "Combat Site", "Wormhole", "Relic Site", "Data Site", "Ore Site"}
@@ -102,7 +102,7 @@ def parse_scan(text: str) -> ParseResult:
                 f"Line {i + 1}: invalid signal strength '{strength_str}'"
             )
             continue
-        signal_strength = float(m.group(1))
+        signal_strength = float(m.group(1).replace(",", "."))
 
         # Parse distance
         distance_str = distance_str.strip()
@@ -112,7 +112,7 @@ def parse_scan(text: str) -> ParseResult:
                 f"Line {i + 1}: invalid distance '{distance_str}'"
             )
             continue
-        distance_au = float(m.group(1))
+        distance_au = float(m.group(1).replace(",", "."))
 
         result.signatures.append(ScannedSig(
             sig_id=sig_id,
