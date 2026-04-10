@@ -19,17 +19,17 @@ CACHE_TTL = 3600  # 1 hour
 DATA_DIR = Path(__file__).parent.parent / "data"
 
 
-def _load_ore_type_ids() -> dict[str, int]:
-    """Load ore/ice name → type_id mapping from YAML."""
+def _load_ore_type_info() -> dict[str, dict]:
+    """Load ore/ice name → {type_id, volume} mapping from YAML."""
     path = DATA_DIR / "ore_types.yaml"
     with open(path, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
 
     mapping = {}
     for ore in data.get("ore_types", []):
-        mapping[ore["name"]] = ore["type_id"]
+        mapping[ore["name"]] = {"type_id": ore["type_id"], "volume": ore["volume"]}
     for ice in data.get("ice_types", []):
-        mapping[ice["name"]] = ice["type_id"]
+        mapping[ice["name"]] = {"type_id": ice["type_id"], "volume": ice["volume"]}
     return mapping
 
 
@@ -46,10 +46,12 @@ def fetch_ore_prices(force_refresh: bool = False) -> tuple[dict, str]:
     if not force_refresh and _price_cache and (time.time() - _cache_time) < CACHE_TTL:
         return _price_cache, _cache_updated_at
 
-    type_ids = _load_ore_type_ids()
+    ore_info = _load_ore_type_info()
     prices = {}
 
-    for name, type_id in type_ids.items():
+    for name, info in ore_info.items():
+        type_id = info["type_id"]
+        volume = info["volume"]
         buy_price = 0.0
         sell_price = 0.0
 
@@ -85,7 +87,7 @@ def fetch_ore_prices(force_refresh: bool = False) -> tuple[dict, str]:
         except Exception:
             pass
 
-        prices[name] = {"buy": round(buy_price, 2), "sell": round(sell_price, 2)}
+        prices[name] = {"buy": round(buy_price, 2), "sell": round(sell_price, 2), "volume": volume}
 
     updated_at = datetime.now(timezone.utc).isoformat()
 
