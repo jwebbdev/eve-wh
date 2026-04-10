@@ -9,6 +9,7 @@ description = "EVE Online wormhole rolling calculator — mass tracking and risk
 requires-python = ">=3.11"
 dependencies = [
     "pyyaml>=6.0",
+    "requests>=2.28",
 ]
 
 [project.optional-dependencies]
