@@ -93,6 +93,7 @@ def valuate_system(
     sigs: list[ScannedSig],
     combat_sites: list[dict[str, Any]],
     gas_sites: list[dict[str, Any]],
+    ore_sites: list[dict[str, Any]] | None = None,
 ) -> list[SiteValuation]:
     """Match parsed sigs to known sites and calculate values.
 
@@ -102,6 +103,7 @@ def valuate_system(
             The type field distinguishes anomaly/relic/data combat sites.
         gas_sites: List of dicts from gas sites.yaml (each has name, gas_value, ninja_value_min, ninja_value_max).
             Gas values should be pre-computed from gas cloud composition and market prices.
+        ore_sites: List of dicts with name and total_est, pre-computed from ore composition and market prices.
 
     Returns:
         List of SiteValuation sorted by total_est descending (None values sort last).
@@ -126,24 +128,10 @@ def valuate_system(
             val.link = "/eve/gas"
 
         elif category == "ore":
-            # Only the 11 actual WH ore sites + ice field that appear on probe scanner
-            # Values are rough estimates based on ore composition × average Jita prices
-            ore_estimates = {
-                "Common Perimeter Deposit": 150000000,
-                "Ordinary Perimeter Deposit": 130000000,
-                "Average Frontier Deposit": 350000000,
-                "Unexceptional Frontier Deposit": 200000000,
-                "Exceptional Core Deposit": 550000000,
-                "Infrequent Core Deposit": 400000000,
-                "Isolated Core Deposit": 500000000,
-                "Rarified Core Deposit": 700000000,
-                "Uncommon Core Deposit": 300000000,
-                "Unusual Core Deposit": 450000000,
-                "Shattered Debris Field": 100000000,
-                "Shattered Ice Field": 500000000,
-            }
-            if sig.name and sig.name in ore_estimates:
-                val.total_est = ore_estimates[sig.name]
+            if ore_sites and sig.name:
+                matched = _match_gas_site(sig.name, ore_sites)  # reuse name matcher
+                if matched:
+                    val.total_est = _attr(matched, "total_est")
             val.link = "/eve/wh/mining"
 
         elif category in ("combat", "relic", "data"):
