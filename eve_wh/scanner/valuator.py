@@ -32,14 +32,23 @@ _GROUP_TO_CATEGORY = {
 }
 
 
-def _match_combat_site(name: str, combat_sites: list[dict]) -> dict | None:
+def _attr(obj, key, default=None):
+    """Get attribute from object or dict."""
+    if hasattr(obj, key):
+        return getattr(obj, key, default)
+    if hasattr(obj, 'get'):
+        return obj.get(key, default)
+    return default
+
+
+def _match_combat_site(name: str, combat_sites) -> object | None:
     """Find a combat site by name (case-insensitive, handles trailing ...)."""
     if not name:
         return None
     # Scanner truncates long names with "..."
     clean = name.rstrip(".")
     for site in combat_sites:
-        site_name = site.get("name", "")
+        site_name = site.name if hasattr(site, 'name') else site.get("name", "")
         if site_name.lower() == name.lower():
             return site
         if clean and site_name.lower().startswith(clean.lower()):
@@ -47,13 +56,13 @@ def _match_combat_site(name: str, combat_sites: list[dict]) -> dict | None:
     return None
 
 
-def _match_gas_site(name: str, gas_sites: list[dict]) -> dict | None:
+def _match_gas_site(name: str, gas_sites) -> object | None:
     """Find a gas site by name (case-insensitive, handles trailing ...)."""
     if not name:
         return None
     clean = name.rstrip(".")
     for site in gas_sites:
-        site_name = site.get("name", "")
+        site_name = site.name if hasattr(site, 'name') else site.get("name", "")
         if site_name.lower() == name.lower():
             return site
         if clean and site_name.lower().startswith(clean.lower()):
@@ -91,16 +100,16 @@ def valuate_system(
         elif category == "gas":
             matched = _match_gas_site(sig.name, gas_sites)
             if matched:
-                val.gas_value = matched.get("gas_value")
-                val.ninja_value_min = matched.get("ninja_value_min")
-                val.ninja_value_max = matched.get("ninja_value_max")
+                val.gas_value = _attr(matched, "gas_value")
+                val.ninja_value_min = _attr(matched, "ninja_value_min")
+                val.ninja_value_max = _attr(matched, "ninja_value_max")
                 val.total_est = val.gas_value
 
         elif category in ("combat", "relic", "data"):
             matched = _match_combat_site(sig.name, combat_sites)
             if matched:
-                val.blue_loot = matched.get("blue_loot")
-                val.salvage_est = matched.get("salvage_est")
+                val.blue_loot = _attr(matched, "blue_loot")
+                val.salvage_est = _attr(matched, "salvage_est")
                 bl = val.blue_loot or 0
                 sv = val.salvage_est or 0
                 val.total_est = bl + sv if (bl or sv) else None
