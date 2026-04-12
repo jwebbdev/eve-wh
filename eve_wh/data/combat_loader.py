@@ -147,8 +147,11 @@ def load_combat_sites() -> list[CombatSite]:
     for s in data["sites"]:
         wave_data_raw = s.get("wave_data", [])
         wave_data = [_parse_wave(w) for w in wave_data_raw]
-        cap_esc_raw = s.get("capital_escalation", [])
-        cap_esc = [_parse_escalation(e) for e in cap_esc_raw]
+        cap_esc_raw = s.get("capital_escalation_waves", [])
+        if isinstance(cap_esc_raw, list):
+            cap_esc = [_parse_escalation(e) for e in cap_esc_raw]
+        else:
+            cap_esc = []
 
         sites.append(CombatSite(
             slug=s["slug"],
