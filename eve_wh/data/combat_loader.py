@@ -61,6 +61,8 @@ class CombatSite:
     waves: int
     threats: list[str]
     notes: str = ""
+    has_capital_escalation: bool = False
+    random_triggers: bool = False
     wave_data: list[Wave] = field(default_factory=list)
     capital_escalation: list[CapitalEscalation] = field(default_factory=list)
 
@@ -158,6 +160,8 @@ def load_combat_sites() -> list[CombatSite]:
             waves=len(wave_data),
             threats=s.get("threats", []),
             notes=s.get("notes", ""),
+            has_capital_escalation=s.get("capital_escalation", False),
+            random_triggers=s.get("random_triggers", False),
             wave_data=wave_data,
             capital_escalation=cap_esc,
         ))

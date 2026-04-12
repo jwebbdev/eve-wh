@@ -180,7 +180,7 @@ sites:
   salvage_est: 3000000
   threats:
   - web
-  notes: Entry-level anomaly. Safe for T1 cruisers.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Escort
@@ -245,6 +245,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 130300
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: perimeter-camp
   name: Perimeter Camp
   type: anomaly
@@ -254,7 +256,7 @@ sites:
   salvage_est: 3500000
   threats:
   - neut
-  notes: Slightly harder than Ambush Point.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Emergent Watchman
@@ -336,6 +338,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 130917
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: phase-catalyst-node
   name: Phase Catalyst Node
   type: anomaly
@@ -346,7 +350,7 @@ sites:
   threats:
   - web
   - neut
-  notes: Sentry towers are the trigger for wave 2.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Vigilant Sentry Tower
@@ -415,6 +419,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 128266
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: the-line
   name: The Line
   type: anomaly
@@ -425,7 +431,7 @@ sites:
   threats:
   - web
   - neut
-  notes: Best C1 anomaly by blue loot value. Waves spawn at range.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Watchman
@@ -490,6 +496,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 112734
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: forgotten-perimeter-coronation-platform
   name: Forgotten Perimeter Coronation Platform
   type: relic
@@ -500,7 +508,7 @@ sites:
   threats:
   - web
   - neut
-  notes: Relic site. Hack after clearing NPCs.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Patroller
@@ -574,6 +582,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 178019
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: forgotten-perimeter-power-array
   name: Forgotten Perimeter Power Array
   type: relic
@@ -583,7 +593,7 @@ sites:
   salvage_est: 3000000
   threats:
   - neut
-  notes: Relic site.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Patroller
@@ -639,6 +649,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 121834
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: unsecured-perimeter-amplifier
   name: Unsecured Perimeter Amplifier
   type: data
@@ -648,7 +660,7 @@ sites:
   salvage_est: 3500000
   threats:
   - neut
-  notes: Data site.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Patroller
@@ -704,6 +716,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 121834
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: unsecured-perimeter-information-center
   name: Unsecured Perimeter Information Center
   type: data
@@ -714,7 +728,7 @@ sites:
   threats:
   - web
   - neut
-  notes: Data site. Contains 3 Malfunctioning Sleeper Databanks.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Patroller
@@ -789,6 +803,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 159552
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: perimeter-checkpoint
   name: Perimeter Checkpoint
   type: anomaly
@@ -797,7 +813,7 @@ sites:
   blue_loot: 12900000
   salvage_est: 5000000
   threats: []
-  notes: No ewar documented. Introduces battleships.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Patroller
@@ -861,6 +877,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 246501
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: perimeter-hangar
   name: Perimeter Hangar
   type: anomaly
@@ -870,7 +888,7 @@ sites:
   salvage_est: 6000000
   threats:
   - neut
-  notes: Sleepless variants present.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Patroller
@@ -930,6 +948,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 211120
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: sleeper-data-sanctuary
   name: Sleeper Data Sanctuary
   type: anomaly
@@ -940,7 +960,7 @@ sites:
   threats:
   - web
   - neut
-  notes: Sleepless Outguard has energy neut.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Escort
@@ -1001,6 +1021,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 244532
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: the-ruins-of-enclave-cohort-27
   name: The Ruins of Enclave Cohort 27
   type: anomaly
@@ -1010,7 +1032,7 @@ sites:
   salvage_est: 6000000
   threats:
   - neut
-  notes: Optional wave triggers. Possible additional BS spawns.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Emergent Patroller
@@ -1064,6 +1086,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 267168
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: forgotten-perimeter-gateway
   name: Forgotten Perimeter Gateway
   type: relic
@@ -1073,7 +1097,7 @@ sites:
   salvage_est: 7000000
   threats:
   - neut
-  notes: Introduces Sleepless-class NPCs. Peak DPS in wave 3.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Watchman
@@ -1141,6 +1165,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 293037
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: forgotten-perimeter-habitation-coils
   name: Forgotten Perimeter Habitation Coils
   type: relic
@@ -1150,7 +1176,7 @@ sites:
   salvage_est: 9000000
   threats:
   - web
-  notes: 4-wave relic site. Most valuable C2 relic.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Emergent Escort
@@ -1254,6 +1280,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 342522
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: unsecured-perimeter-comms-relay
   name: Unsecured Perimeter Comms Relay
   type: data
@@ -1263,7 +1291,7 @@ sites:
   salvage_est: 7500000
   threats:
   - neut
-  notes: Sleepless Outguard possible spawn in wave 1.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Watchman
@@ -1339,6 +1367,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 389120
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: unsecured-perimeter-transponder-farm
   name: Unsecured Perimeter Transponder Farm
   type: data
@@ -1349,7 +1379,7 @@ sites:
   threats:
   - web
   - neut
-  notes: Most valuable C2 data site. 4 waves.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: null
@@ -1455,6 +1485,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 395354
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: fortification-frontier-stronghold
   name: Fortification Frontier Stronghold
   type: anomaly
@@ -1466,7 +1498,7 @@ sites:
   - web
   - neut
   - rr
-  notes: 'WARNING: Killing Awakened Preserver in wave 3 despawns the site.'
+  notes: Killing the Awakened Preserver in wave 3 despawns the site.
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Defender
@@ -1549,6 +1581,8 @@ sites:
     total_rep_hp_s: 52
   total_ehp: 279348
   total_rep_hp_s: 52
+  capital_escalation: false
+  random_triggers: false
 - slug: outpost-frontier-stronghold
   name: Outpost Frontier Stronghold
   type: anomaly
@@ -1558,7 +1592,7 @@ sites:
   salvage_est: 17000000
   threats:
   - web
-  notes: No neuts. Sentry tower heavy. Straightforward site.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Sleepless Defender
@@ -1613,6 +1647,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 451633
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: solar-cell
   name: Solar Cell
   type: anomaly
@@ -1625,8 +1661,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Only C3 anomaly with warp scram (Emergent Preserver). Kill Preserver carefully
-    -- premature kill despawns site.
+  notes: Killing the Sleepless Preserver in the final wave despawns the site.
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Emergent Preserver
@@ -1731,6 +1766,8 @@ sites:
     total_rep_hp_s: 65
   total_ehp: 448352
   total_rep_hp_s: 103
+  capital_escalation: false
+  random_triggers: false
 - slug: the-oruze-construct
   name: The Oruze Construct
   type: anomaly
@@ -1742,7 +1779,7 @@ sites:
   - web
   - neut
   - rr
-  notes: Awakened Preserver possible additional spawn in wave 1.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Upholder
@@ -1821,6 +1858,8 @@ sites:
     total_rep_hp_s: 104
   total_ehp: 296934
   total_rep_hp_s: 156
+  capital_escalation: false
+  random_triggers: false
 - slug: forgotten-frontier-quarantine-outpost
   name: Forgotten Frontier Quarantine Outpost
   type: relic
@@ -1832,7 +1871,7 @@ sites:
   - web
   - neut
   - rr
-  notes: 4 waves. Lots of DPS -- shoot triggers last!
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Preserver
@@ -1938,6 +1977,8 @@ sites:
     total_rep_hp_s: 130
   total_ehp: 520183
   total_rep_hp_s: 466
+  capital_escalation: false
+  random_triggers: false
 - slug: forgotten-frontier-recursive-depot
   name: Forgotten Frontier Recursive Depot
   type: relic
@@ -1949,8 +1990,7 @@ sites:
   - web
   - scram
   - neut
-  notes: Most valuable C3 site. 4 waves with heavy ewar. Emergent Preservers have
-    scram.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Defender
@@ -2060,6 +2100,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 521235
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: unsecured-frontier-database
   name: Unsecured Frontier Database
   type: data
@@ -2071,7 +2113,7 @@ sites:
   - web
   - scram
   - neut
-  notes: High value data site. Emergent Preservers have scram.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Emergent Preserver
@@ -2181,6 +2223,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 501231
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: unsecured-frontier-receiver
   name: Unsecured Frontier Receiver
   type: data
@@ -2192,7 +2236,7 @@ sites:
   - web
   - neut
   - rr
-  notes: Wave 3 trigger is on aggression of Sleepless Defender.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Preserver
@@ -2298,6 +2342,8 @@ sites:
     total_rep_hp_s: 130
   total_ehp: 496383
   total_rep_hp_s: 395
+  capital_escalation: false
+  random_triggers: false
 - slug: frontier-barracks
   name: Frontier Barracks
   type: anomaly
@@ -2310,7 +2356,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Emergent Preservers have scram. Heavy remote repair.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Sleepless Preserver
@@ -2398,6 +2444,8 @@ sites:
     total_rep_hp_s: 338
   total_ehp: 589461
   total_rep_hp_s: 507
+  capital_escalation: false
+  random_triggers: false
 - slug: frontier-command-post
   name: Frontier Command Post
   type: anomaly
@@ -2410,7 +2458,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Emergent Preservers have scram. Heavy composition.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Emergent Preserver
@@ -2506,6 +2554,8 @@ sites:
     total_rep_hp_s: 299
   total_ehp: 804980
   total_rep_hp_s: 375
+  capital_escalation: false
+  random_triggers: false
 - slug: integrated-terminus
   name: Integrated Terminus
   type: anomaly
@@ -2518,7 +2568,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Lowest value C4 anomaly. Sleepless Safeguard has scram.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Defender
@@ -2622,6 +2672,8 @@ sites:
     total_rep_hp_s: 38
   total_ehp: 442540
   total_rep_hp_s: 199
+  capital_escalation: false
+  random_triggers: false
 - slug: sleeper-information-sanctum
   name: Sleeper Information Sanctum
   type: anomaly
@@ -2634,7 +2686,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Sleepless Safeguard has scram.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Sleepless Preserver
@@ -2745,6 +2797,8 @@ sites:
     total_rep_hp_s: 161
   total_ehp: 711474
   total_rep_hp_s: 329
+  capital_escalation: false
+  random_triggers: false
 - slug: forgotten-frontier-conversion-module
   name: Forgotten Frontier Conversion Module
   type: relic
@@ -2756,8 +2810,8 @@ sites:
   - web
   - scram
   - neut
-  notes: Most valuable C4 site. Sleepless Safeguard has scram. Conditional spawn if
-    Talocan relic can appears.
+  notes: Wave 2 triggered by failing a hack. Conditional Sleepless Safeguard if Talocan
+    relic spawns.
   wave_data:
   - name: Wave 1 -- Initial
     trigger: null
@@ -2846,6 +2900,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 1482430
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: forgotten-frontier-evacuation-center
   name: Forgotten Frontier Evacuation Center
   type: relic
@@ -2856,7 +2912,7 @@ sites:
   threats:
   - web
   - rr
-  notes: Conditional BS spawn if Talocan relic can spawns.
+  notes: Conditional Sleepless Defender if Talocan relic spawns.
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Sleepless Preserver
@@ -2935,6 +2991,8 @@ sites:
     total_rep_hp_s: 130
   total_ehp: 835467
   total_rep_hp_s: 325
+  capital_escalation: false
+  random_triggers: false
 - slug: unsecured-frontier-digital-nexus
   name: Unsecured Frontier Digital Nexus
   type: data
@@ -2946,7 +3004,7 @@ sites:
   - web
   - scram
   - neut
-  notes: Wave 2 triggered by hacking cans. Sleepless Safeguard has scram.
+  notes: Wave 2 triggered by hacking any container.
   wave_data:
   - name: Wave 1 -- Initial
     trigger: hack
@@ -3024,6 +3082,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 1361910
   total_rep_hp_s: 0
+  capital_escalation: false
+  random_triggers: false
 - slug: unsecured-frontier-trinary-hub
   name: Unsecured Frontier Trinary Hub
   type: data
@@ -3113,6 +3173,8 @@ sites:
     total_rep_hp_s: 130
   total_ehp: 835467
   total_rep_hp_s: 325
+  capital_escalation: false
+  random_triggers: false
 - slug: core-garrison
   name: Core Garrison
   type: anomaly
@@ -3125,7 +3187,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Capital escalation possible. 4 waves. Heavy neut pressure.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Sentinel
@@ -3243,31 +3305,10 @@ sites:
     total_dps: 1402
     total_ehp: 270172
     total_rep_hp_s: 0
-  capital_escalation:
-  - wave: 1
-    npcs:
-    - name: Sleepless Guardian
-      class: battleship
-      count: 6
-      dps: 694
-      threats:
-      - web
-      - scram
-      - neut
-    total_dps: 4164
-  - wave: 2
-    npcs:
-    - name: Sleepless Guardian
-      class: battleship
-      count: 8
-      dps: 694
-      threats:
-      - web
-      - scram
-      - neut
-    total_dps: 5552
+  capital_escalation: true
   total_ehp: 1766775
   total_rep_hp_s: 0
+  random_triggers: false
 - slug: core-stronghold
   name: Core Stronghold
   type: anomaly
@@ -3280,7 +3321,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Capital escalation possible.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Emergent Sentinel
@@ -3383,31 +3424,10 @@ sites:
     total_dps: 2718
     total_ehp: 687657
     total_rep_hp_s: 451
-  capital_escalation:
-  - wave: 1
-    npcs:
-    - name: Sleepless Guardian
-      class: battleship
-      count: 6
-      dps: 694
-      threats:
-      - web
-      - scram
-      - neut
-    total_dps: 4164
-  - wave: 2
-    npcs:
-    - name: Sleepless Guardian
-      class: battleship
-      count: 8
-      dps: 694
-      threats:
-      - web
-      - scram
-      - neut
-    total_dps: 5552
+  capital_escalation: true
   total_ehp: 1616508
   total_rep_hp_s: 597
+  random_triggers: false
 - slug: oruze-osobnyk
   name: Oruze Osobnyk
   type: anomaly
@@ -3420,7 +3440,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: No capital escalation.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Sleepless Sentinel
@@ -3514,6 +3534,8 @@ sites:
     total_rep_hp_s: 174
   total_ehp: 1161193
   total_rep_hp_s: 174
+  capital_escalation: true
+  random_triggers: false
 - slug: quarantine-area
   name: Quarantine Area
   type: anomaly
@@ -3526,7 +3548,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: No capital escalation. TRIGGERS ARE RANDOM.
+  notes: Triggers are random.
   wave_data:
   - name: Wave 1 -- Initial
     trigger: random
@@ -3624,6 +3646,8 @@ sites:
     total_rep_hp_s: 174
   total_ehp: 1039000
   total_rep_hp_s: 174
+  capital_escalation: true
+  random_triggers: true
 - slug: forgotten-core-data-field
   name: Forgotten Core Data Field
   type: relic
@@ -3636,7 +3660,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Capital escalation possible.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Keeper
@@ -3792,31 +3816,10 @@ sites:
     total_dps: 2232
     total_ehp: 538424
     total_rep_hp_s: 262
-  capital_escalation:
-  - wave: 1
-    npcs:
-    - name: Sleepless Guardian
-      class: battleship
-      count: 6
-      dps: 694
-      threats:
-      - web
-      - scram
-      - neut
-    total_dps: 4164
-  - wave: 2
-    npcs:
-    - name: Sleepless Guardian
-      class: battleship
-      count: 8
-      dps: 694
-      threats:
-      - web
-      - scram
-      - neut
-    total_dps: 5552
+  capital_escalation: true
   total_ehp: 1407844
   total_rep_hp_s: 436
+  random_triggers: false
 - slug: forgotten-core-information-pen
   name: Forgotten Core Information Pen
   type: relic
@@ -3829,7 +3832,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Most valuable C5 site. Capital escalation. Wave 3 triggered by hacking.
+  notes: Wave 3 triggered randomly after 1-3 cans hacked or failed.
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Sleepless Keeper
@@ -3974,6 +3977,8 @@ sites:
     total_rep_hp_s: 0
   total_ehp: 1765412
   total_rep_hp_s: 464
+  capital_escalation: true
+  random_triggers: false
 - slug: unsecured-frontier-enclave-relay
   name: Unsecured Frontier Enclave Relay
   type: data
@@ -3986,7 +3991,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Capital escalation possible.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Sleepless Keeper
@@ -4131,31 +4136,10 @@ sites:
     total_dps: 2410
     total_ehp: 762445
     total_rep_hp_s: 539
-  capital_escalation:
-  - wave: 1
-    npcs:
-    - name: Sleepless Guardian
-      class: battleship
-      count: 6
-      dps: 694
-      threats:
-      - web
-      - scram
-      - neut
-    total_dps: 4164
-  - wave: 2
-    npcs:
-    - name: Sleepless Guardian
-      class: battleship
-      count: 8
-      dps: 694
-      threats:
-      - web
-      - scram
-      - neut
-    total_dps: 5552
+  capital_escalation: true
   total_ehp: 2003532
   total_rep_hp_s: 1003
+  random_triggers: false
 - slug: unsecured-frontier-server-bank
   name: Unsecured Frontier Server Bank
   type: data
@@ -4168,7 +4152,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Capital escalation possible.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Keeper
@@ -4324,31 +4308,10 @@ sites:
     total_dps: 2198
     total_ehp: 564824
     total_rep_hp_s: 320
-  capital_escalation:
-  - wave: 1
-    npcs:
-    - name: Sleepless Guardian
-      class: battleship
-      count: 6
-      dps: 694
-      threats:
-      - web
-      - scram
-      - neut
-    total_dps: 4164
-  - wave: 2
-    npcs:
-    - name: Sleepless Guardian
-      class: battleship
-      count: 8
-      dps: 694
-      threats:
-      - web
-      - scram
-      - neut
-    total_dps: 5552
+  capital_escalation: true
   total_ehp: 1322060
   total_rep_hp_s: 552
+  random_triggers: false
 - slug: core-bastion
   name: Core Bastion
   type: anomaly
@@ -4361,7 +4324,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Highest value anomaly in the game. Capital escalation. Fleet required.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Emergent Keeper
@@ -4522,27 +4485,10 @@ sites:
     total_dps: 3252
     total_ehp: 1085856
     total_rep_hp_s: 0
-  capital_escalation:
-  - wave: 1
-    npcs:
-    - name: Sleepless Warden
-      class: battleship
-      count: 6
-      dps: 398
-      threats:
-      - rr
-    total_dps: 2388
-  - wave: 2
-    npcs:
-    - name: Sleepless Warden
-      class: battleship
-      count: 8
-      dps: 398
-      threats:
-      - rr
-    total_dps: 3184
+  capital_escalation: true
   total_ehp: 3764678
   total_rep_hp_s: 696
+  random_triggers: false
 - slug: core-citadel
   name: Core Citadel
   type: anomaly
@@ -4555,7 +4501,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Capital escalation. Fleet required.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Sleepless Warden
@@ -4684,27 +4630,10 @@ sites:
     total_dps: 1580
     total_ehp: 530200
     total_rep_hp_s: 0
-  capital_escalation:
-  - wave: 1
-    npcs:
-    - name: Sleepless Warden
-      class: battleship
-      count: 6
-      dps: 398
-      threats:
-      - rr
-    total_dps: 2388
-  - wave: 2
-    npcs:
-    - name: Sleepless Warden
-      class: battleship
-      count: 8
-      dps: 398
-      threats:
-      - rr
-    total_dps: 3184
+  capital_escalation: true
   total_ehp: 2220637
   total_rep_hp_s: 365
+  random_triggers: false
 - slug: strange-energy-readings
   name: Strange Energy Readings
   type: anomaly
@@ -4717,7 +4646,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: No capital escalation.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Awakened Warden
@@ -4813,6 +4742,8 @@ sites:
     total_rep_hp_s: 232
   total_ehp: 1764403
   total_rep_hp_s: 522
+  capital_escalation: false
+  random_triggers: false
 - slug: the-mirror
   name: The Mirror
   type: anomaly
@@ -4825,7 +4756,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: No capital escalation.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Sleepless Warden
@@ -4964,27 +4895,10 @@ sites:
     total_dps: 3216
     total_ehp: 566156
     total_rep_hp_s: 232
-  capital_escalation:
-  - wave: 1
-    npcs:
-    - name: Sleepless Warden
-      class: battleship
-      count: 6
-      dps: 398
-      threats:
-      - rr
-    total_dps: 2388
-  - wave: 2
-    npcs:
-    - name: Sleepless Warden
-      class: battleship
-      count: 8
-      dps: 398
-      threats:
-      - rr
-    total_dps: 3184
+  capital_escalation: true
   total_ehp: 2491499
   total_rep_hp_s: 683
+  random_triggers: false
 - slug: forgotten-core-assembly-hall
   name: Forgotten Core Assembly Hall
   type: relic
@@ -4997,7 +4911,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Capital escalation. Fleet required. Conditional Guardian spawn in wave 1.
+  notes: Conditional Sleepless Guardian in wave 1 if Talocan relic spawns.
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Sleepless Warden
@@ -5176,31 +5090,10 @@ sites:
     total_dps: 4916
     total_ehp: 1804002
     total_rep_hp_s: 0
-  capital_escalation:
-  - wave: 1
-    npcs:
-    - name: Sleepless Guardian
-      class: battleship
-      count: 6
-      dps: 694
-      threats:
-      - web
-      - scram
-      - neut
-    total_dps: 4164
-  - wave: 2
-    npcs:
-    - name: Sleepless Guardian
-      class: battleship
-      count: 8
-      dps: 694
-      threats:
-      - web
-      - scram
-      - neut
-    total_dps: 5552
+  capital_escalation: true
   total_ehp: 5142657
   total_rep_hp_s: 786
+  random_triggers: false
 - slug: forgotten-core-circuitry-disassembler
   name: Forgotten Core Circuitry Disassembler
   type: relic
@@ -5213,7 +5106,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Capital escalation. Massive frigate swarm in wave 1.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Emergent Warden
@@ -5453,27 +5346,10 @@ sites:
     total_dps: 6638
     total_ehp: 1880320
     total_rep_hp_s: 378
-  capital_escalation:
-  - wave: 1
-    npcs:
-    - name: Sleepless Warden
-      class: battleship
-      count: 6
-      dps: 398
-      threats:
-      - rr
-    total_dps: 2388
-  - wave: 2
-    npcs:
-    - name: Sleepless Warden
-      class: battleship
-      count: 8
-      dps: 398
-      threats:
-      - rr
-    total_dps: 3184
+  capital_escalation: true
   total_ehp: 4413880
   total_rep_hp_s: 1003
+  random_triggers: false
 - slug: unsecured-core-backup-array
   name: Unsecured Core Backup Array
   type: data
@@ -5486,7 +5362,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Capital escalation. Fleet required. Conditional Guardian spawn in wave 1.
+  notes: Conditional Sleepless Guardian in wave 1 if Talocan relic spawns.
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Sleepless Warden
@@ -5671,27 +5547,10 @@ sites:
     total_dps: 4960
     total_ehp: 1888336
     total_rep_hp_s: 0
-  capital_escalation:
-  - wave: 1
-    npcs:
-    - name: Sleepless Warden
-      class: battleship
-      count: 6
-      dps: 398
-      threats:
-      - rr
-    total_dps: 2388
-  - wave: 2
-    npcs:
-    - name: Sleepless Warden
-      class: battleship
-      count: 8
-      dps: 398
-      threats:
-      - rr
-    total_dps: 3184
+  capital_escalation: true
   total_ehp: 5463840
   total_rep_hp_s: 743
+  random_triggers: false
 - slug: unsecured-core-emergence
   name: Unsecured Core Emergence
   type: data
@@ -5704,7 +5563,7 @@ sites:
   - scram
   - neut
   - rr
-  notes: Capital escalation. Massive frigate swarm in wave 1.
+  notes: ''
   wave_data:
   - name: Wave 1 -- Initial
     trigger: Emergent Warden
@@ -5934,24 +5793,7 @@ sites:
     total_dps: 4756
     total_ehp: 1137820
     total_rep_hp_s: 378
-  capital_escalation:
-  - wave: 1
-    npcs:
-    - name: Sleepless Warden
-      class: battleship
-      count: 6
-      dps: 398
-      threats:
-      - rr
-    total_dps: 2388
-  - wave: 2
-    npcs:
-    - name: Sleepless Warden
-      class: battleship
-      count: 8
-      dps: 398
-      threats:
-      - rr
-    total_dps: 3184
+  capital_escalation: true
   total_ehp: 3686547
   total_rep_hp_s: 1003
+  random_triggers: false
