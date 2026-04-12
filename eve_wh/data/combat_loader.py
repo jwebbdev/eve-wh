@@ -15,6 +15,10 @@ class WaveNpc:
     count: int
     dps: int
     threats: list[str]
+    ehp: int = 0
+    rep_hp_s: float = 0  # remote repair HP/s
+    rep_chance: float = 0  # probability of repping per cycle
+    neut_gj_s: float = 0  # energy neutralizer GJ/s
 
 
 @dataclass
@@ -24,6 +28,8 @@ class Wave:
     trigger: str | None  # NPC name that triggers next wave, null for last wave
     npcs: list[WaveNpc]
     total_dps: int
+    total_ehp: int = 0
+    total_rep_hp_s: float = 0
 
 
 @dataclass
@@ -64,10 +70,17 @@ class CombatSite:
 
     @property
     def max_wave_dps(self) -> int:
-        """Highest single-wave DPS across all waves."""
         if not self.wave_data:
             return 0
         return max(w.total_dps for w in self.wave_data)
+
+    @property
+    def total_ehp(self) -> int:
+        return sum(w.total_ehp for w in self.wave_data)
+
+    @property
+    def total_rep_hp_s(self) -> float:
+        return sum(w.total_rep_hp_s for w in self.wave_data)
 
 
 def _parse_npc(npc_dict: dict) -> WaveNpc:
@@ -77,15 +90,22 @@ def _parse_npc(npc_dict: dict) -> WaveNpc:
         count=npc_dict["count"],
         dps=npc_dict["dps"],
         threats=npc_dict.get("threats", []),
+        ehp=npc_dict.get("ehp", 0),
+        rep_hp_s=npc_dict.get("rep_hp_s", 0),
+        rep_chance=npc_dict.get("rep_chance", 0),
+        neut_gj_s=npc_dict.get("neut_gj_s", 0),
     )
 
 
 def _parse_wave(wave_dict: dict) -> Wave:
+    npcs = [_parse_npc(n) for n in wave_dict.get("npcs", [])]
     return Wave(
         name=wave_dict["name"],
         trigger=wave_dict.get("trigger"),
-        npcs=[_parse_npc(n) for n in wave_dict.get("npcs", [])],
+        npcs=npcs,
         total_dps=wave_dict.get("total_dps", 0),
+        total_ehp=wave_dict.get("total_ehp", sum(n.ehp * n.count for n in npcs)),
+        total_rep_hp_s=wave_dict.get("total_rep_hp_s", sum(n.rep_hp_s * n.count for n in npcs)),
     )
 
 
