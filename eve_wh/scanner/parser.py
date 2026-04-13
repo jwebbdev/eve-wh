@@ -29,8 +29,8 @@ _HEADER_PATTERN = re.compile(r"^ID\t", re.IGNORECASE)
 # Signal strength: number with optional decimal (dot or comma) + % suffix
 _STRENGTH_PATTERN = re.compile(r"^([\d.,]+)%$")
 
-# Distance: number with optional decimal (dot or comma) + space + AU
-_DISTANCE_PATTERN = re.compile(r"^([\d.,]+)\s*AU$", re.IGNORECASE)
+# Distance: number with optional decimal (dot or comma) + space + AU/km/m
+_DISTANCE_PATTERN = re.compile(r"^([\d.,]+)\s*(AU|km|m)$", re.IGNORECASE)
 
 VALID_SCAN_GROUPS = {"Cosmic Signature", "Cosmic Anomaly"}
 VALID_GROUPS = {"Gas Site", "Combat Site", "Wormhole", "Relic Site", "Data Site", "Ore Site"}
@@ -112,7 +112,14 @@ def parse_scan(text: str) -> ParseResult:
                 f"Line {i + 1}: invalid distance '{distance_str}'"
             )
             continue
-        distance_au = float(m.group(1).replace(",", "."))
+        dist_val = float(m.group(1).replace(",", "."))
+        dist_unit = m.group(2).lower()
+        if dist_unit == "km":
+            distance_au = dist_val / 149597870.7  # km to AU
+        elif dist_unit == "m":
+            distance_au = dist_val / 149597870700.0  # m to AU
+        else:
+            distance_au = dist_val
 
         result.signatures.append(ScannedSig(
             sig_id=sig_id,
