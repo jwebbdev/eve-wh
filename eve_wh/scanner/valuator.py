@@ -18,6 +18,8 @@ class SiteValuation:
     ninja_value_min: int | None = None  # 15-min ninja harvest value
     ninja_value_max: int | None = None  # 20-min ninja harvest value
     total_est: int | None = None      # Best estimate of total site value
+    total_m3: int | None = None       # Total m3 volume for gas/ore sites
+    total_ehp: int | None = None      # Total EHP for combat sites
     link: str | None = None           # Cross-tool link URL
 
 
@@ -125,6 +127,7 @@ def valuate_system(
                 val.ninja_value_min = _attr(matched, "ninja_value_min")
                 val.ninja_value_max = _attr(matched, "ninja_value_max")
                 val.total_est = val.gas_value
+                val.total_m3 = _attr(matched, "total_m3")
             val.link = "/eve/gas"
 
         elif category == "ore":
@@ -132,6 +135,7 @@ def valuate_system(
                 matched = _match_gas_site(sig.name, ore_sites)  # reuse name matcher
                 if matched:
                     val.total_est = _attr(matched, "total_est")
+                    val.total_m3 = _attr(matched, "total_m3")
             val.link = "/eve/wh/mining"
 
         elif category in ("combat", "relic", "data"):
@@ -142,6 +146,7 @@ def valuate_system(
                 bl = val.blue_loot or 0
                 sv = val.salvage_est or 0
                 val.total_est = bl + sv if (bl or sv) else None
+                val.total_ehp = _attr(matched, "total_ehp")
                 val.link = "/eve/wh/sites"
             elif sig.name and _is_pirate_exploration_site(sig.name):
                 # Pirate relic/data sites in C1-C3 WHs — rough average estimates
